@@ -19,6 +19,8 @@ DMG80480C043_02W 4.3 inch 800x480 I have this one a bit small for big fingers.
 
 The WTC at the end of the part number is capacitive touch or WTR is resistive touch both are ok but the WTC versions are more sensitive.
 Obviously make sure you get a touch version!
+Caution some of the displays have a solder link to move from rs232 to ttl.
+
 
 Some of the later work here is from the excellent ideas of S21RC
 
