@@ -1,5 +1,9 @@
 Work in progress!
 
+LDMOS control software and PCB design for dxworld - QRPblog A600 - or similar amps using DWIN display.
+PCB design used Kicad.
+Software vscode and platformio.
+
 
 From the DWIN store on aliexpress
 DMG10600C070_03WTC 7inch  1024x600
