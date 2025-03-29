@@ -1,6 +1,7 @@
 #ifndef INCLUDES_H
 #define INCLUDES_H
 
+const String softVersion = "v1.32";
 /* ======= User Settings ======== */
 const uint8_t MAXTEMPALLOWED = 45;
 const uint8_t MAX_VOLTS = 53;
@@ -17,7 +18,7 @@ const uint16_t COLOR_YELLOW =0xFFE0;
 const uint16_t COLOR_ORANGE =0xFC08;
 
 /* ======= First page text each 30 chars max======== */
-const String MainText1 = "-- LDMOS Amp v1.31 --";
+const String MainText1 = "-- LDMOS Amp " + softVersion + " -- ";
 const String MainText2 = " -- YOUR CALLSIGN -- ";
 const uint16_t MainText1_Color = COLOR_GREEN;
 const uint16_t MainText2_Color = COLOR_WHITE;
@@ -39,7 +40,7 @@ const uint16_t ICALCMAJOR = 80;        // I step change in I set
 // correct would be Low = 1 - High = 4300
 // more than 4300 we are adding voltage to the reflected power
 const uint16_t swrMapLow = 1;
-const uint16_t swrMapHigh = 6000;
+const uint16_t swrMapHigh = 4300;
 const uint16_t lpfMapLow = 1;
 const uint16_t lpfMapHigh = 4300;
 
@@ -67,7 +68,6 @@ String sensor3 = "Sensor 3";
 const bool usebeep = true;
 
 /* ======= User SettingsEND ======== */
-const String softVersion = "1.31";
 
 
 /* ======= EEPROM Settings ======== */

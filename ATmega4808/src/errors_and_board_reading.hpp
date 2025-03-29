@@ -245,6 +245,7 @@ float readTemp(){
  
 #endif  //  #ifdef useLM35
 //Serial.println(temperature);
+// temperature = 55.00;  // test
 error_temp(temperature);
 return temperature;  // 18b20 return last sensor 
 }

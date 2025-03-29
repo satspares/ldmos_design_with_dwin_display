@@ -1,6 +1,6 @@
 //#define myDebug
 //#define displayDebug
-//#define display160M       // alternate icons 160m-6m or 80m-4m
+//#define display160M       // alternate icons 160m-6m or 80m-4m mine
 //#define useLM35           //else DS1820
 //#define useMAX40010HAUT   //else Id from dxworld protection board
 //#define A600_AMP          // A600 amp else dxworld or similar

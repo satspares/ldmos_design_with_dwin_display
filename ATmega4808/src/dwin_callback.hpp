@@ -120,8 +120,10 @@ void onHMIEvent(String address, int lastByte, String message, String response)
     glo_power_set_value = hmi.readVP(display_power_set_point);
     intSettingsArray[POWERSETPOINT] = glo_power_set_value;
     eeprom_write_intSetting_values();
+    delay(50);
     usebeep?hmi.beepHMI(BEEP_YES):hmi.playSound(YES);
     tx_status?hmi.setPage(txPage):hmi.setPage(startPage);
+    eeprom_read_power_calc_values();
   }
   // page 1 power set cancel button
   else if (startPage_cancel == hexAddress)        
@@ -203,9 +205,11 @@ void onHMIEvent(String address, int lastByte, String message, String response)
   // swr calc save
   else if (swr_calc_save_control == hexAddress){
       eeprom_write_power_calc_values();
+      delay(50);
       usebeep?hmi.beepHMI(BEEP_YES):hmi.playSound(YES);
       setting_swr_calc = false;
       tx_status?hmi.setPage(txPage):hmi.setPage(startPage);
+      eeprom_read_power_calc_values();
   }
   // swr test control
   else if (swr_calc_test_control == hexAddress){
