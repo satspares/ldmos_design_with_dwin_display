@@ -17162,7 +17162,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "78db4a17-6101-49ee-8a7b-a4abff79f2c4")
 		(property "Reference" "#PWR010"
 			(at 74.93 53.34 0)
@@ -17174,7 +17173,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 74.93 52.07 0)
+			(at 56.896 44.958 0)
 			(effects
 				(font
 					(size 1.27 1.27)

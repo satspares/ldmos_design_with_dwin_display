@@ -1,0 +1,11 @@
+"STARTUP_M5.obj",
+"Main.obj",
+"i2c.obj",
+"crc16.obj",
+"Sys.obj",
+"Uart.obj",
+"adc.obj",
+"Functions.obj" 
+TO "New_C_8283" 
+RAMSIZE(256) 
+XDATA( 0X8000-0XFFFF )
