@@ -35,7 +35,6 @@ void error_temp(float temperature){
 void error_swr(){
   
     uint16_t error_swr_en = digitalRead(LED_SWR);
-    //error_swr_en = 0; //test 
   
    // if (swrSoftTrip == true) error_swr_en = false;
   
@@ -53,7 +52,6 @@ void error_swr(){
   /* === Monitor and show over current error on display === */
 void error_i(){
     uint16_t error_i_en = digitalRead(LED_I);
-    //error_i_en = 0; //test 
     if (error_i_en == LOW && error_i_status == false){
       hmi.setVPByte(current_error,RED_ICON);
       error_i_status = true;
@@ -66,9 +64,9 @@ void error_i(){
   }
   
   /* === Monitor and show over Power error on display === */
+  /* === we are only showing and sounding the error and not stopping tx === */
   void error_po(){
     uint16_t error_po_en = digitalRead(LED_PO);
-    //error_po_en = 0; //test ****************************************
     if (error_po_en==LOW && error_po_status == false){
       hmi.setVPByte(power_error,RED_ICON);
       error_po_status = true;

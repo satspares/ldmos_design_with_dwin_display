@@ -145,6 +145,7 @@ bool setting_power_calc = false;   // we are in the power calc page
 bool setting_swr_calc =false;      // we are in the swr calc page
 bool setting_volt_calc = false;    // we are in the volt calc page
 bool setting_current_calc = false; // we are in the I calc page
+volatile bool intBChange = false;
 uint16_t glo_power_fwd = 0;        // power_fwd copy
 uint16_t glo_drive_power = 0;      // drive power from eeprom  
 uint16_t glo_volt_setting = 0;      // volt calc read from eeprom
@@ -406,6 +407,7 @@ const uint8_t DXBIAS = 15;  //< pin GPB7 (8) of the MCP23017.
 #define BCD_1 9
 #define BCD_2 10
 #define BCD_3 11
+#define INTB 6
 //#define A600_BIAS_ON 13
 
 
@@ -458,6 +460,8 @@ void eeprom_write_intSetting_values();
 void eeprom_read_intSetting_values();
 void a600_bias_on();
 void a600_bias_off();
+void configureInterrupts();
+void mcp23017ChangeOnPortB();
 void dx_bias_on();
 void dx_bias_off();
 void bcd_band();

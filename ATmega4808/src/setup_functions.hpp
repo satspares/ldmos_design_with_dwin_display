@@ -7,9 +7,9 @@
   /* ======= Setup DWIN Display on Startup ======== */
   void setupDisplay(){ 
     hmi.initSerial(Serial2, DGUS_BAUD );
-    hmi.hmiCallBack(onHMIEvent);
-    hmi.echoEnabled(false);
-    hmi.ackDisabled(true); //for our no ack kernel 
+    hmi.hmiCallBack(onHMIEvent);  //set callback
+    hmi.echoEnabled(false);  // dont want to see all the display transactions 
+    hmi.ackDisabled(true);   //for our no ack kernel 
     #ifdef SCREENROTATE
   /* ======= Screen rotate should be set in .cfg config file ======== */
       const byte rotate0=0; const byte rotate90=1;
@@ -55,7 +55,7 @@
       //0b00001100,   // direction (IODIRB) - set direction of pins
       //0b00001100,   // pull-up (GPPUB) - enable internal pull-up resistors on inputs
       //0b00001100);  // polarity (IPOLB) - invert logic polarity for inputs
-      // All set for outputs at the moment
+      // All set for outputs at the moment we dont want floating inputs
       0b00000000,   // direction (IODIRB) - set direction of pins
       0b00000000,   // pull-up (GPPUB) - enable internal pull-up resistors on inputs
       0b00000000);  // polarity (IPOLB) - invert logic polarity for inputs
@@ -88,6 +88,7 @@
     pinMode(BCD_1, INPUT);
     pinMode(BCD_2, INPUT);
     pinMode(BCD_3, INPUT);
+    pinMode(INTB, INPUT_PULLUP);
 
   }
   /* ======= Some Ticker Resets ======== */
@@ -113,7 +114,7 @@
   }
   #endif
 
-void setGlobalVars() {     // redo 
+void setGlobalVars() {     // redo incase of watchdog reboot
   #ifdef display160M
     const uint8_t band_display_offset = 7;   //display second band icons 160m-6m 7 icons per. display
   #else
@@ -156,4 +157,16 @@ void setScreenRotate(byte angle)
 {
    hmi.setVPWord(0x0081,((hmi.readVP(0x0081) & 0xFFFC) + angle));
    hmi.setVPWord(0x0080,0x5A00);  // set it.
+}
+
+
+void configureInterrupts() {
+  mcp23017.interruptMode(MCP23017InterruptMode::Separated); 
+  mcp23017.interrupt(MCP23017Port::B, CHANGE);  // Port B change int.
+  mcp23017.clearInterrupts();  // reset ints
+  attachInterrupt(digitalPinToInterrupt(INTB), mcp23017ChangeOnPortB, FALLING);  //active LOW
+}
+
+void mcp23017ChangeOnPortB(){
+// todo not needed on this
 }

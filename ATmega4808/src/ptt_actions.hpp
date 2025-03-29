@@ -11,7 +11,7 @@ void tx_actions()
   static bool display_dim;
   
     if ((digitalRead(PTT) == HIGH) || (error_vo_status) 
-    || (error_temp_status) || (error_od_status_stop) || (swr_soft_trip) ) 
+    || (error_temp_status) || (error_od_status_stop) || (swr_soft_trip) || (error_i_status)) 
     {  
     #ifdef A600_AMP
     a600_bias_off();
