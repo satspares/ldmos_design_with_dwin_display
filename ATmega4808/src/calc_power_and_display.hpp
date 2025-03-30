@@ -6,15 +6,22 @@
 float driveWatts()
 {
   float Voltage;
+  float Power;
   Voltage = analogRead(RFSENSE);
+  Serial.println(Voltage);
   Voltage = map(Voltage,0,1023,1,4300);
   Voltage = Voltage + diodeLossMVdrive;
   Voltage = driveFilter.filter(Voltage);
   if (Voltage <= diodeLossMVdrive +1 ){
     return 0;
   }else{
-    Voltage = Voltage/(glo_drive_power*20);
-    return pow(Voltage,2);
+     Voltage = (Voltage / (DRIVECALCMAJOR - map(glo_drive_power,1,100,1,500) ));
+     Power = (pow(Voltage,2.00)); 
+    if (Power > 9.90){   // drive set point max is 10 watts
+      return(9.90);
+    }else{
+      return Power;
+    }
   }
 }
 
@@ -146,12 +153,13 @@ void calcPowerandDisplay()
     power_swr_reset = false; // ticker reset
     if (tx_status)
     {      
+      float driveWattsIn = driveWatts(); 
       hmi.setVPWord(power_graph, (int)fwdPower_max/POWERBARMAX);
       hmi.setVPWord(swr_graph, ((int)swr_display * 10));      // 100-200
       hmi.setVPWord(power_display, (int)fwdPower_max); // int 4 digits
       hmi.setFloatValue(rev_display,refPower_max); // float
       hmi.setFloatValue(swr_digits, (float)swr_display / 10); // float int 1 decimal 2
-      hmi.setFloatValue(drive_display, driveWatts());
+      hmi.setFloatValue(drive_display, driveWattsIn);
     }
     else
     {

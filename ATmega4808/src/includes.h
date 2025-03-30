@@ -1,11 +1,8 @@
 #ifndef INCLUDES_H
 #define INCLUDES_H
 
-const String softVersion = "v1.32";
+const String softVersion = "v1.33";
 /* ======= User Settings ======== */
-const uint8_t MAXTEMPALLOWED = 45;
-const uint8_t MAX_VOLTS = 53;
-const float DRIVE_TRIP = 5.00;
 const uint8_t POWERBARMAX = 1;          // 1=600w 2=1200w 3=1800w
 const uint16_t MAXAMPPOWERCALC = 600;       // used in the power calculations keep at 600 or less?
 
@@ -32,6 +29,7 @@ const float SWRCALCMAJORSWR = 2;
 const float SWRCALCMAJORLPF = 2;     
 
 const uint16_t ICALCMAJOR = 80;        // I step change in I set
+const uint16_t DRIVECALCMAJOR = 700;   // used in the drive calc power settings
 
 //Try to correct the power ratio between fwd/ref power 
 // as tandem matches dont appear linear across power levels
@@ -46,7 +44,7 @@ const uint16_t lpfMapHigh = 4300;
 
 const uint16_t diodeLossMV = 300;  // diode detection in millivolts or something else
 // if drive detect device is using a diode eg 300 milivolts loss
-const uint16_t diodeLossMVdrive = 270;
+const uint16_t diodeLossMVdrive = 200;
 
 // user temperature settings
 #define SENSOR_COUNT (1)                //ds18b20 one sensor or multiple upto 4 not used yet!
@@ -82,7 +80,12 @@ const bool usebeep = true;
 #define eeprom_intSettings_address 200
 #define eeprom_new_on_address 240
 #define EEPROMROW 8   // we can have 8 bands
-#define POWERSETPOINT 0    // location for power set value
+#define POWERSETPOINT 0    // locations for power set value ets.
+#define TEMPSETPOINT 1
+#define VOLTSETPOINT 2
+#define DRIVESETPOINT 3
+#define UNUSEDSETPOINT 4
+
 
 /* ======= Ticker Delays ======== */
 const uint16_t peakHoldResetDelay = 400;  //should be about 400ms ?
@@ -145,6 +148,7 @@ bool setting_power_calc = false;   // we are in the power calc page
 bool setting_swr_calc =false;      // we are in the swr calc page
 bool setting_volt_calc = false;    // we are in the volt calc page
 bool setting_current_calc = false; // we are in the I calc page
+bool bias_current_test = false;    // not used
 volatile bool intBChange = false;
 uint16_t glo_power_fwd = 0;        // power_fwd copy
 uint16_t glo_drive_power = 0;      // drive power from eeprom  
@@ -165,7 +169,7 @@ uint16_t powerCalcArray[] = {42, 50, 52, 53, 54, 55, 49, 0xff,              // p
 
 // intSettingsArray[0] is glo_power_set_value - the setting to set power to set to
 //  200 watts when new
-uint16_t intSettingsArray[] =  {200, 0xff, 0xff, 0xff};  
+uint16_t intSettingsArray[] =  {200, 45, 53, 5, 10};  
 
 /* ======= Display Settings ======== */
 #define DGUS_BAUD 115200
@@ -189,6 +193,7 @@ const uint8_t driveSetPage = 2;
 const uint8_t voltSetPage = 3;
 const uint8_t swrSetPage = 4;
 const uint8_t currentSetPage = 5;
+const uint8_t tripSetPage = 6;
 const uint8_t txPage = 10;
 
 // DWIN Display memory locations
@@ -211,6 +216,7 @@ const uint16_t band_switch = 0x1012 ;           // returns 31-37 dec
 const uint16_t band_manual_switch = 0x1021;     // returns 0x01 band auto
 const uint16_t antenna_switch = 0x1020;         // returns 0x01
 const uint16_t swr_meter_change = 0x1022;       // returns 0x01
+const uint16_t trip_set_touch = 0x1023;         // returns 0x01
 
 // Page 0 Var Icons
 const uint16_t band_manual_display = 0x1031;    // 23-24 to switch image
@@ -283,8 +289,15 @@ const uint16_t current_calc_cancel_control = 0x4022;
 // Display Controls
 uint16_t current_calc_display = 0x4550;
 uint16_t current_calc_current_display = 0x4560;  //float 4 bytes
+// ******** Page 6 Trip set page
+//Touch Controls
+uint16_t trip_save_button = 0x5500;
 
-
+// Display Controls
+uint16_t trip_temp_display = 0x5501;
+uint16_t trip_volt_display = 0x5502;
+uint16_t trip_drive_display = 0x5503;
+uint16_t trip_unused_display = 0x5504;
 
 
 /* ======= Band Settings ======== */

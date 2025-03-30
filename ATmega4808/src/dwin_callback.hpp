@@ -158,13 +158,15 @@ void onHMIEvent(String address, int lastByte, String message, String response)
     setting_power_calc = true;  
     usebeep?hmi.beepHMI(BEEP_YES):hmi.playSound(YES);
     saveDrive = glo_drive_power;
-    hmi.setVPWord(power_eeprom_display2,map(glo_drive_power,1,100,100,1));
+    hmi.setVPWord(power_eeprom_display2,glo_drive_power);
     hmi.setFloatValue(power_display_page2, driveWatts());
   }
   // Save button page2 drive set
   else if (save_drive_calc == hexAddress){
     setting_power_calc = false;
+    glo_drive_power = hmi.readVP(power_eeprom_display2);
     EEPROM.update(eeprom_drive,glo_drive_power);
+    delay(50);
     usebeep?hmi.beepHMI(BEEP_YES):hmi.playSound(YES);
     tx_status?hmi.setPage(txPage):hmi.setPage(startPage);
   }
@@ -172,10 +174,8 @@ void onHMIEvent(String address, int lastByte, String message, String response)
   else if (test_drive_calc == hexAddress){
     glo_drive_power = hmi.readVP(power_eeprom_display2);
     delay(200);
-    glo_drive_power = map(glo_drive_power,1,100,100,1);
     hmi.setFloatValue(power_display_page2, driveWatts());
     usebeep?hmi.beepHMI(BEEP_YES):hmi.playSound(YES);
-   
   }
   // page 2 drive set cancel button
   else if (page2_cancel == hexAddress){
@@ -265,7 +265,6 @@ void onHMIEvent(String address, int lastByte, String message, String response)
     EEPROM.update(eeprom_current,glo_current_setting);
     usebeep?hmi.beepHMI(BEEP_YES):hmi.playSound(YES);
     tx_status?hmi.setPage(txPage):hmi.setPage(startPage);
-
   }
   else if (current_calc_test_control == hexAddress){
     glo_current_setting = hmi.readVP(current_calc_display);
@@ -277,7 +276,25 @@ void onHMIEvent(String address, int lastByte, String message, String response)
     usebeep?hmi.beepHMI(BEEP_CANCEL):hmi.playSound(BEEPERROR);
     tx_status?hmi.setPage(txPage):hmi.setPage(startPage);
   }
-  
+  /* ======= TRIP settings page 6 ======== */
+  else if (trip_set_touch == hexAddress){
+    usebeep?hmi.beepHMI(BEEP_YES):hmi.playSound(YES);
+    hmi.setVPWord(trip_temp_display,intSettingsArray[TEMPSETPOINT]);
+    hmi.setVPWord(trip_volt_display,intSettingsArray[VOLTSETPOINT]);
+    hmi.setVPWord(trip_drive_display,intSettingsArray[DRIVESETPOINT]);
+    hmi.setVPWord(trip_unused_display,intSettingsArray[UNUSEDSETPOINT]);
+    hmi.setPage(tripSetPage);
+  }
+  else if (trip_save_button == hexAddress) {
+    intSettingsArray[TEMPSETPOINT] = hmi.readVP(trip_temp_display);
+    intSettingsArray[VOLTSETPOINT] = hmi.readVP(trip_volt_display);
+    intSettingsArray[DRIVESETPOINT] = hmi.readVP(trip_drive_display);
+    intSettingsArray[UNUSEDSETPOINT] = hmi.readVP(trip_unused_display);
+    eeprom_write_intSetting_values();
+    delay(50);
+    usebeep?hmi.beepHMI(BEEP_YES):hmi.playSound(YES);
+    tx_status?hmi.setPage(txPage):hmi.setPage(startPage);
+  }
   
 } // end tag onHMIEvent
 

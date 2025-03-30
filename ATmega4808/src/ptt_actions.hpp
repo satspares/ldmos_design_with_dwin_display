@@ -9,8 +9,8 @@ void tx_actions()
 {
   static bool tx_running;
   static bool display_dim;
-  
-    if ((digitalRead(PTT) == HIGH) || (error_vo_status) 
+ 
+     if ((digitalRead(PTT) == HIGH) || (error_vo_status) 
     || (error_temp_status) || (error_od_status_stop) || (swr_soft_trip) || (error_i_status)) 
     {  
     #ifdef A600_AMP
@@ -53,7 +53,7 @@ void tx_actions()
     }
     usebeep?hmi.beepHMI(BEEP_YES):hmi.playSound(BEEP);
 
-  }
+   }
   
 }
 
