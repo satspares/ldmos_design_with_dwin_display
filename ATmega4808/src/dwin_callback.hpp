@@ -34,10 +34,10 @@ void onHMIEvent(String address, int lastByte, String message, String response)
    /* ======= Band Manual/Auto ======== */
   else if((band_manual_switch == hexAddress) && (!tx_status)) {   // band man. auto
     if (band_auto){
-     band_auto = 0; 
+     band_auto = false; 
      hmi.setVPWord(band_manual_display,BAND_MANUAL); //23 etc icon numbers
     }else{
-     band_auto = 1;  
+     band_auto = true;  
      hmi.setVPWord(band_manual_display,BAND_AUTO);  
     }
     EEPROM.update(eeprom_auto,band_auto);
@@ -75,11 +75,11 @@ void onHMIEvent(String address, int lastByte, String message, String response)
   else if(swr_meter_change == hexAddress){
 
     if(which_swr){
-      which_swr = 0;
+      which_swr = false;
       hmi.setVPWord(swr_meter_switch_display,SWR_DISPLAY);
       swrOffset = 0;
     }else{
-      which_swr = 1;
+      which_swr = true;
       hmi.setVPWord(swr_meter_switch_display,LPF_DISPLAY);  
       swrOffset = EEPROMROW;    //select lpf filter location in eeprom
     }
@@ -279,19 +279,29 @@ void onHMIEvent(String address, int lastByte, String message, String response)
   /* ======= TRIP settings page 6 ======== */
   else if (trip_set_touch == hexAddress){
     usebeep?hmi.beepHMI(BEEP_YES):hmi.playSound(YES);
+    delay(20);  // delays are test
     hmi.setVPWord(trip_temp_display,intSettingsArray[TEMPSETPOINT]);
+    delay(20);
     hmi.setVPWord(trip_volt_display,intSettingsArray[VOLTSETPOINT]);
+    delay(20);
     hmi.setVPWord(trip_drive_display,intSettingsArray[DRIVESETPOINT]);
+    delay(20);
     hmi.setVPWord(trip_unused_display,intSettingsArray[UNUSEDSETPOINT]);
+    delay(20);
     hmi.setPage(tripSetPage);
   }
   else if (trip_save_button == hexAddress) {
     intSettingsArray[TEMPSETPOINT] = hmi.readVP(trip_temp_display);
+    delay(20);
     intSettingsArray[VOLTSETPOINT] = hmi.readVP(trip_volt_display);
+    delay(20);
     intSettingsArray[DRIVESETPOINT] = hmi.readVP(trip_drive_display);
+    delay(20);
     intSettingsArray[UNUSEDSETPOINT] = hmi.readVP(trip_unused_display);
+    delay(20);
     eeprom_write_intSetting_values();
-    delay(50);
+    delay(60);
+    eeprom_read_intSetting_values(); //test
     usebeep?hmi.beepHMI(BEEP_YES):hmi.playSound(YES);
     tx_status?hmi.setPage(txPage):hmi.setPage(startPage);
   }

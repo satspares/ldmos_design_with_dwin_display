@@ -1,18 +1,19 @@
 #ifndef INCLUDES_H
 #define INCLUDES_H
 
-const String softVersion = "v1.33";
+const String softVersion = "v1.34";
 /* ======= User Settings ======== */
 const uint8_t POWERBARMAX = 1;          // 1=600w 2=1200w 3=1800w
 const uint16_t MAXAMPPOWERCALC = 600;       // used in the power calculations keep at 600 or less?
 
-/* ======= Colors or any 16bit color for below ======== */
+/* ======= Colors or any 16bit color for below text ======== */
 const uint16_t COLOR_WHITE =0xFFFF;
 const uint16_t COLOR_RED =0xF800;
 const uint16_t COLOR_GREEN =0x7E0;
 const uint16_t COLOR_BLUE =0x001F;
 const uint16_t COLOR_YELLOW =0xFFE0;
 const uint16_t COLOR_ORANGE =0xFC08;
+const uint16_t COLOR_LIGHT_BLUE = 0x87FF;
 
 /* ======= First page text each 30 chars max======== */
 const String MainText1 = "-- LDMOS Amp " + softVersion + " -- ";
@@ -25,8 +26,8 @@ const uint16_t TX_DELAY = 20;  // maybe 35 for slow relays
 
  // swr display calc control is 1-1000 we need approx 2 * this
  // to add/minus the reflected power - probably no need to touch depens on your tandem match 
-const float SWRCALCMAJORSWR = 2;
-const float SWRCALCMAJORLPF = 2;     
+const uint8_t SWRCALCMAJORSWR = 2;
+const uint8_t SWRCALCMAJORLPF = 2;     
 
 const uint16_t ICALCMAJOR = 80;        // I step change in I set
 const uint16_t DRIVECALCMAJOR = 700;   // used in the drive calc power settings
@@ -118,6 +119,7 @@ const float Res50v_1=100000.00; // Set R31 of voltage devider
 const float Res50v_2=5100.00 ; // Set R14 of voltage devider
 
 /* ======= Global Vars ======== */
+uint8_t debugTest = 0;          // looking for a problem
 bool tx_status = false;             // true when tx on
 uint8_t band_select;            // which band is active
 bool band_auto = false;             // band man auto
@@ -130,7 +132,7 @@ const uint8_t band_display_offset = 7;   //display second band icons 160m-6m 7 i
 const uint8_t band_display_offset = 0;   // display first band icons 80m-4m
 #endif
 
-uint8_t swrOffset = 0;           // offset into eeprom for swr/lpf
+uint8_t swrOffset = 0;          // offset into eeprom for swr/lpf
 
 bool temp_id_reset = false;     // ticker reset for temp and ID
 bool peak_hold_reset = false;   // ticker reset for power peak hold etc

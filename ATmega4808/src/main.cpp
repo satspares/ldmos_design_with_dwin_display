@@ -82,11 +82,12 @@ void loop() {
   houseKeeping.update();
   temperatureIDTicker.update();
   sendPowerSwrRefTicker.update();
-  if (peakHoldTicker.state() == RUNNING){
-     peakHoldTicker.update();
-  }
+  peakHoldTicker.update();
+  
   tx_actions();
+  if(tx_status){
   calcPowerandDisplay();
+  }
   if (temp_id_reset){
    //this ticker is temperatureIDTicker
    temp_id_reset = false;
@@ -94,7 +95,6 @@ void loop() {
    hmi.setFloatValue(temp_display,tempNow);
    hmi.setFloatValue(volt_display,read_volt());
    hmi.setFloatValue(current_display,readI());
-   
    error_swr();error_i();error_po(); error_odrive();
   }  
 

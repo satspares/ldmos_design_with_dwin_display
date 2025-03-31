@@ -8,7 +8,6 @@ float driveWatts()
   float Voltage;
   float Power;
   Voltage = analogRead(RFSENSE);
-  Serial.println(Voltage);
   Voltage = map(Voltage,0,1023,1,4300);
   Voltage = Voltage + diodeLossMVdrive;
   Voltage = driveFilter.filter(Voltage);
@@ -73,8 +72,7 @@ void calcPowerandDisplay()
   float powerCalc;
   uint8_t swr_calc_major;
 
-
-  if (which_swr == false)  // false the antenna tandem match
+  if ((which_swr == false))  // false the antenna tandem match
   { 
     fwdVoltage = fwd2Voltage(); refVoltage = ref2Voltage();
     swr_calc_major = SWRCALCMAJORSWR;
@@ -149,10 +147,8 @@ void calcPowerandDisplay()
     //if (true)  //test
   if (power_swr_reset)
   {        
-   // Ticker timeout
-    power_swr_reset = false; // ticker reset
-    if (tx_status)
-    {      
+   // Ticker timeout to update display
+      power_swr_reset = false; // ticker reset
       float driveWattsIn = driveWatts(); 
       hmi.setVPWord(power_graph, (int)fwdPower_max/POWERBARMAX);
       hmi.setVPWord(swr_graph, ((int)swr_display * 10));      // 100-200
@@ -160,18 +156,7 @@ void calcPowerandDisplay()
       hmi.setFloatValue(rev_display,refPower_max); // float
       hmi.setFloatValue(swr_digits, (float)swr_display / 10); // float int 1 decimal 2
       hmi.setFloatValue(drive_display, driveWattsIn);
-    }
-    else
-    {
-  
-      hmi.setVPWord(power_graph, 0);
-      hmi.setVPWord(swr_graph, 100);
-      hmi.setFloatValue(rev_display, 0.00);
-      hmi.setFloatValue(swr_digits, (float)1.00);
-      hmi.setVPWord(power_display, 0);
-      hmi.setFloatValue(drive_display, 0.00);
-    }
-
+ 
 #ifdef myDebug
     Serial.print("SWR ");
     Serial.println(SWR);
