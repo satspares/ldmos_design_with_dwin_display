@@ -38,7 +38,6 @@ void tx_actions()
     temp_id_reset = true;
     peak_hold_reset = true;
     power_swr_reset = true;
-    
     #ifdef A600_AMP
     a600_bias_on();
     #else

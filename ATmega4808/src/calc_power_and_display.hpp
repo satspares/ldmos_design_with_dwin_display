@@ -9,6 +9,7 @@ float driveWatts()
   float Power;
   Voltage = analogRead(RFSENSE);
   Voltage = map(Voltage,0,1023,1,4300);
+  //Serial.print(Voltage);
   Voltage = Voltage + diodeLossMVdrive;
   Voltage = driveFilter.filter(Voltage);
   if (Voltage <= diodeLossMVdrive +1 ){
@@ -72,6 +73,8 @@ void calcPowerandDisplay()
   float powerCalc;
   uint8_t swr_calc_major;
 
+  
+
   if ((which_swr == false))  // false the antenna tandem match
   { 
     fwdVoltage = fwd2Voltage(); refVoltage = ref2Voltage();
@@ -102,22 +105,18 @@ void calcPowerandDisplay()
   fwdPower = pow(fwdVoltage,2.00);
   refPower = pow(refVoltage,2.00);
   
-  fwdPower= fwdPower/powerCalc/MAXAMPPOWERCALC;
+  fwdPower = fwdPower/powerCalc/MAXAMPPOWERCALC;
   refPower = refPower/powerCalc/MAXAMPPOWERCALC;
   
   if (fwdPower >= fwdPower_max)
   {
     fwdPower_max = fwdPower; refPower_max = refPower;
   }
-  
-  if (peak_hold_reset)
-  {
+  if (peak_hold_reset){
     peak_hold_reset = false;
-#ifdef myDebug
-    Serial.println("peakHoldReset");
-#endif
     fwdPower_max = fwdPower; refPower_max = refPower;
   }
+  
 
   const float SWR = (1.00 + sqrt(refPower_max/fwdPower_max)) / (1.00 - sqrt(refPower_max/fwdPower_max));    
   float swr_display = ((SWR * 10.00 )); // Float x 10 for our display
@@ -128,12 +127,12 @@ void calcPowerandDisplay()
   if (setting_power_calc){
     hmi.setVPWord(power_display_startPage, (int)fwdPower_max); // update page 1 display 
     glo_power_fwd = (int)fwdPower_max; 
-    power_swr_reset = false;            // dont need below on power set page
+//    power_swr_reset = false;            // dont need below on power set page
   }
   if (setting_swr_calc){
     glo_swr_display = swr_display/10.00;   // used by calc swr
     hmi.setFloatValue(swr_display_glo_swr,glo_swr_display);
-    power_swr_reset = false;   
+   // power_swr_reset = false;   
     if (which_swr == false){
       hmi.setVPWord(fwd_millivolts,analogRead(SWR2));
       hmi.setVPWord(ref_millivolts,analogRead(REF2));
@@ -141,11 +140,10 @@ void calcPowerandDisplay()
       hmi.setVPWord(fwd_millivolts,analogRead(SWR1));
       hmi.setVPWord(ref_millivolts,analogRead(REF1));
     }
-    power_swr_reset = false;            // dont need below on swr calc page
   }  // end setting_swr_calc
 
-    //if (true)  //test
-  if (power_swr_reset)
+  //if (true)  //test
+  if(power_swr_reset)
   {        
    // Ticker timeout to update display
       power_swr_reset = false; // ticker reset

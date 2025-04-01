@@ -45,8 +45,15 @@ void setup() {
   analogReference(INTERNAL4V3);
   analogWriteFrequency(16); // 16k
   analogWrite(FANPWM,0);
-  delay(3000);
-  Serial.begin(115200);
+  /*
+    if we are using jtag2updi which is on tx0/rx0 to program
+    serial print also use the same port
+    dont serial print early or we can't program 
+    this is why we need a big delay so we can jump in
+    we can always use the updi port! much better.  
+  */
+  delay(3000);              
+  Serial.begin(115200);     
   #ifdef resetDebug
     printResetFlags();
     clearResetFlags();
@@ -72,7 +79,8 @@ void setup() {
   sendPowerSwrRefTicker.start();
   dx_error_reset();
   wdt_enable(WDT_PERIOD_4KCLK_gc);      // set watchdog to 4 secs 
-  
+  keepingHouse(); // if band auto pull band relays now
+  delay(500);    // dont start just yet
 }
 
 void loop() {
@@ -103,7 +111,6 @@ void loop() {
 void keepingHouse()
 {
   // runs continuous
-
   #ifdef blinkLED
   static bool toggle;
   digitalWrite(13,toggle);

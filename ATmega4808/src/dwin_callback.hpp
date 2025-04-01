@@ -78,10 +78,12 @@ void onHMIEvent(String address, int lastByte, String message, String response)
       which_swr = false;
       hmi.setVPWord(swr_meter_switch_display,SWR_DISPLAY);
       swrOffset = 0;
+      peak_hold_reset = true;  // reset peak on swr change
     }else{
       which_swr = true;
       hmi.setVPWord(swr_meter_switch_display,LPF_DISPLAY);  
       swrOffset = EEPROMROW;    //select lpf filter location in eeprom
+      peak_hold_reset = true;
     }
     usebeep?hmi.beepHMI(BEEP_YES):hmi.playSound(YES);
   } 
@@ -89,7 +91,6 @@ void onHMIEvent(String address, int lastByte, String message, String response)
 /* ======= Display Power Calc Settings ======== */ 
   // turn to page 1 power set
   else if (calc_power_touch == hexAddress){   
-    setting_power_calc = true;  
     hmi.setVPWord(display_power_set_point,glo_power_set_value);
     usebeep?hmi.beepHMI(BEEP_YES):hmi.playSound(YES);
     hmi.setPage(powerSetPage);
@@ -194,6 +195,11 @@ void onHMIEvent(String address, int lastByte, String message, String response)
       saveSWR = powerCalcArray[calc_array_swr_offset+swrOffset+(EEPROMROW*2)]; 
     //  Serial.println(calc_array_swr_offset+swrOffset+(EEPROMROW*2));
       hmi.setFloatValue(swr_display_glo_swr,glo_swr_display);
+      if (which_swr){
+        hmi.setText(startPage_swr_text,stringLPF); 
+      }else{
+        hmi.setText(startPage_swr_text,stringSWR);
+      }
   }
   // swr calc cancel
   else if (swr_calc_cancel_control == hexAddress){

@@ -1,7 +1,7 @@
 #ifndef INCLUDES_H
 #define INCLUDES_H
 
-const String softVersion = "v1.34";
+const String softVersion = "v1.35";
 /* ======= User Settings ======== */
 const uint8_t POWERBARMAX = 1;          // 1=600w 2=1200w 3=1800w
 const uint16_t MAXAMPPOWERCALC = 600;       // used in the power calculations keep at 600 or less?
@@ -30,22 +30,22 @@ const uint8_t SWRCALCMAJORSWR = 2;
 const uint8_t SWRCALCMAJORLPF = 2;     
 
 const uint16_t ICALCMAJOR = 80;        // I step change in I set
-const uint16_t DRIVECALCMAJOR = 700;   // used in the drive calc power settings
+const uint16_t DRIVECALCMAJOR = 1500;   // used in the drive calc power settings
 
 //Try to correct the power ratio between fwd/ref power 
 // as tandem matches dont appear linear across power levels
 // my tandem high power devices dont like to work well at power levels under about 200w
 // used in ref1Voltage and ref2Voltage
 // correct would be Low = 1 - High = 4300
-// more than 4300 we are adding voltage to the reflected power
+// more than 4300 (adc 4.3 volts) we are adding voltage to the reflected power
 const uint16_t swrMapLow = 1;
 const uint16_t swrMapHigh = 4300;
 const uint16_t lpfMapLow = 1;
 const uint16_t lpfMapHigh = 4300;
 
-const uint16_t diodeLossMV = 300;  // diode detection in millivolts or something else
+const uint16_t diodeLossMV = 300;  // diode loss in millivolts or something else
 // if drive detect device is using a diode eg 300 milivolts loss
-const uint16_t diodeLossMVdrive = 200;
+const uint16_t diodeLossMVdrive = 300;
 
 // user temperature settings
 #define SENSOR_COUNT (1)                //ds18b20 one sensor or multiple upto 4 not used yet!
@@ -137,6 +137,7 @@ uint8_t swrOffset = 0;          // offset into eeprom for swr/lpf
 bool temp_id_reset = false;     // ticker reset for temp and ID
 bool peak_hold_reset = false;   // ticker reset for power peak hold etc
 bool power_swr_reset = false;   // power swr ticker reset
+//bool peak_hold_clear = false;
 // error globaal vars
 bool error_i_status = false;
 bool error_swr_status = false;
