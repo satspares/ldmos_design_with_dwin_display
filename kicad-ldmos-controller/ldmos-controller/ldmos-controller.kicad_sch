@@ -17173,7 +17173,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 56.896 44.958 0)
+			(at 75.184 52.324 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21405,7 +21405,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "470r"
+		(property "Value" "2k2"
 			(at 42.418 39.624 0)
 			(effects
 				(font
