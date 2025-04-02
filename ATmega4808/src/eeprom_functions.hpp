@@ -38,8 +38,7 @@ void readEEPROM(){
          if (powerCalcArray[j] > 2000) powerCalcArray[j] = 50; 
         // Serial.print(powerCalcArray[j]);
         // Serial.print(" ");
-      }
-    
+      }    
       eeprom_read_intSetting_values();
       glo_power_set_value = intSettingsArray[POWERSETPOINT];
       if (glo_power_set_value > 800 || glo_power_set_value < 60) glo_power_set_value = 200;
@@ -61,3 +60,4 @@ void eeprom_read_intSetting_values(){
       EEPROM_readAnything(eeprom_intSettings_address, intSettingsArray);
 }      
    
+

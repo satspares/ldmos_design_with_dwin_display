@@ -10,7 +10,7 @@ void error_temp(float temperature){
     
     static bool highTemp;   
     if(temperature >= ( (intSettingsArray[TEMPSETPOINT])-1)){
-        highTemp = true;
+             highTemp = true;
         analogWrite(FANPWM,256); // Full Fan Speed;
     }
 
@@ -273,7 +273,8 @@ static bool returnSensorId(const OneWireNg::Id& id,uint8_t sensorCount )
 void error_odrive()
 { 
 float driveWattsIn = driveWatts();  
-if ((driveWattsIn >= ((float)intSettingsArray[DRIVESETPOINT])) && (error_od_status == false) || (error_od_status_stop) || (swr_soft_trip)) {
+if ((driveWattsIn >= ((float)intSettingsArray[DRIVESETPOINT])) && (error_od_status == false)) {
+
   error_od_status = true;
   error_od_status_stop = true;
   hmi.setVPByte(overdrive_error,RED_ICON);
@@ -282,6 +283,7 @@ if ((driveWattsIn >= ((float)intSettingsArray[DRIVESETPOINT])) && (error_od_stat
   #else
   dx_bias_off();
   #endif
+  usebeep?hmi.beepHMI(BEEP_CANCEL):hmi.playSound(BEEPERROR);
 }
 else if ((error_od_status_stop == false) && (error_od_status == true))
 {

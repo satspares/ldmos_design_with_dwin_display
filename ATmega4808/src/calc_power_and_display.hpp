@@ -9,15 +9,14 @@ float driveWatts()
   float Power;
   Voltage = analogRead(RFSENSE);
   Voltage = map(Voltage,0,1023,1,4300);
-  //Serial.print(Voltage);
   Voltage = Voltage + diodeLossMVdrive;
   Voltage = driveFilter.filter(Voltage);
   if (Voltage <= diodeLossMVdrive +1 ){
     return 0;
   }else{
-     Voltage = (Voltage / (DRIVECALCMAJOR - map(glo_drive_power,1,100,1,500) ));
-     Power = (pow(Voltage,2.00)); 
-    if (Power > 9.90){   // drive set point max is 10 watts
+     Voltage = (Voltage / (DRIVECALCMAJOR - map(glo_drive_power,1,100,1,1000) ));
+     Power = (pow(Voltage,2.00)); // should be * 50 but we would only have to div. again by 50
+    if (Power > 9.90){            // drive set point max is 10 watts
       return(9.90);
     }else{
       return Power;
@@ -73,7 +72,6 @@ void calcPowerandDisplay()
   float powerCalc;
   uint8_t swr_calc_major;
 
-  
 
   if ((which_swr == false))  // false the antenna tandem match
   { 
@@ -85,12 +83,6 @@ void calcPowerandDisplay()
     fwdVoltage = fwd1Voltage(); refVoltage = ref1Voltage();
     swr_calc_major = SWRCALCMAJORLPF;
   }
-/*
-  Serial.print("FWD ");
-  Serial.println(fwdVoltage);
-  Serial.print("REF ");
-  Serial.println(refVoltage);
-*/
 
   powerCalc = powerCalcArray[calc_array_swr_offset+swrOffset];
   powerCalc = map(powerCalc,0,250,250,0);  // reverse it
@@ -116,12 +108,12 @@ void calcPowerandDisplay()
     peak_hold_reset = false;
     fwdPower_max = fwdPower; refPower_max = refPower;
   }
-  
-
-  const float SWR = (1.00 + sqrt(refPower_max/fwdPower_max)) / (1.00 - sqrt(refPower_max/fwdPower_max));    
+  //Test both should work out the same
+  const float SWR = (fwdVoltage+refVoltage)/(fwdVoltage-refVoltage);
+  //const float SWR = (1.00 + sqrt(refPower_max/fwdPower_max)) / (1.00 - sqrt(refPower_max/fwdPower_max));    
   float swr_display = ((SWR * 10.00 )); // Float x 10 for our display
   if ((swr_display < 10.00) || isNegative(swr_display)){
-    swr_display = 10;
+    swr_display = 10;  
   } 
                    
   if (setting_power_calc){
@@ -150,8 +142,8 @@ void calcPowerandDisplay()
       float driveWattsIn = driveWatts(); 
       hmi.setVPWord(power_graph, (int)fwdPower_max/POWERBARMAX);
       hmi.setVPWord(swr_graph, ((int)swr_display * 10));      // 100-200
-      hmi.setVPWord(power_display, (int)fwdPower_max); // int 4 digits
-      hmi.setFloatValue(rev_display,refPower_max); // float
+      hmi.setVPWord(power_display, (int)fwdPower_max);        // int 4 digits
+      hmi.setFloatValue(rev_display,refPower_max);            // float
       hmi.setFloatValue(swr_digits, (float)swr_display / 10); // float int 1 decimal 2
       hmi.setFloatValue(drive_display, driveWattsIn);
  
@@ -170,7 +162,6 @@ float correctRefVoltage(float refVoltage, float fwdVoltage, uint8_t swr_calc_maj
   if (refVoltage > 1){
     float swrCalc;
     //swrCalc = (swrCalc / 1.5)  // test
-
     swrCalc = powerCalcArray[calc_array_swr_offset+swrOffset+(EEPROMROW*2)];    
     if (swrCalc <= 500){                                // 500 will be about 0 
       swrCalc = map(swrCalc,500,1,1,500); 
@@ -182,11 +173,9 @@ float correctRefVoltage(float refVoltage, float fwdVoltage, uint8_t swr_calc_maj
       refVoltage = refVoltage + (float)(swrCalc*swr_calc_major);
       if (refVoltage > fwdVoltage) refVoltage = 0;
     }
- 
   }
   return refVoltage;
 }
-
 
 static int isNegative(float swr)
 {

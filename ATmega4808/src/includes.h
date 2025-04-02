@@ -1,7 +1,7 @@
 #ifndef INCLUDES_H
 #define INCLUDES_H
 
-const String softVersion = "v1.35";
+const String softVersion = "v1.36";
 /* ======= User Settings ======== */
 const uint8_t POWERBARMAX = 1;          // 1=600w 2=1200w 3=1800w
 const uint16_t MAXAMPPOWERCALC = 600;       // used in the power calculations keep at 600 or less?
@@ -30,7 +30,7 @@ const uint8_t SWRCALCMAJORSWR = 2;
 const uint8_t SWRCALCMAJORLPF = 2;     
 
 const uint16_t ICALCMAJOR = 80;        // I step change in I set
-const uint16_t DRIVECALCMAJOR = 1500;   // used in the drive calc power settings
+const uint16_t DRIVECALCMAJOR = 2000;   // used in the drive calc power settings
 
 //Try to correct the power ratio between fwd/ref power 
 // as tandem matches dont appear linear across power levels
@@ -162,8 +162,8 @@ float glo_swr_display = 0;
 float glo_volt_display = 0;
 const float adcRef = (4.3/1023);
 // Power Calc initial values
-uint16_t powerCalcArray[] = {42, 50, 52, 53, 54, 55, 49, 0xff,              // power antenna
-                            57, 58, 59, 51, 51, 52, 52, 0xff,               // power LPF   
+uint16_t powerCalcArray[] = {50, 50, 50, 50, 50, 50, 50, 0xff,              // power antenna
+                            50, 50, 50, 50, 50, 50, 50, 0xff,               // power LPF   
                             500, 500, 500, 500, 500, 500, 500, 0xff,       // swr calc antenna   
                             500, 500, 500, 500, 500, 500, 500, 0xff,       // swr calc LPF
                             50, 50, 50, 50, 50, 50, 50, 0xff,
@@ -247,7 +247,7 @@ const uint16_t main_text2_sp = 0x5250;
 // ************** Page 1 power calc page ***********
 // Display controls
 const uint16_t startPage_band_text = 0x5030;        //String 21 dec
-const uint16_t startPage_swr_text = 0x5060;         //String 21 dec
+const uint16_t startPage_swr_text = 0x5060;         //String 21 dec also used on page 4 swr calc
 const uint16_t power_display_startPage = 0x2402;    // power in watt display
 const uint16_t display_power_set_point = 0x2404;// power set point
 
@@ -295,6 +295,7 @@ uint16_t current_calc_current_display = 0x4560;  //float 4 bytes
 // ******** Page 6 Trip set page
 //Touch Controls
 uint16_t trip_save_button = 0x5500;
+uint16_t global_reset = 0x5509;
 
 // Display Controls
 uint16_t trip_temp_display = 0x5501;

@@ -1,6 +1,6 @@
 //#define myDebug
 //#define displayDebug
-//#define display160M       // alternate icons 160m-6m or 80m-4m mine
+#define display160M       // alternate icons 160m-6m or 80m-4m mine
 //#define useLM35           //else DS1820
 //#define useMAX40010HAUT   //else Id from dxworld protection board
 //#define A600_AMP          // A600 amp else dxworld or similar
@@ -47,10 +47,10 @@ void setup() {
   analogWrite(FANPWM,0);
   /*
     if we are using jtag2updi which is on tx0/rx0 to program
-    serial print also use the same port
-    dont serial print early or we can't program 
+    the serial print functions also use the same port
+    dont serial print early or we can't program easily
     this is why we need a big delay so we can jump in
-    we can always use the updi port! much better.  
+    we can always use the updi port!  
   */
   delay(3000);              
   Serial.begin(115200);     
@@ -80,7 +80,7 @@ void setup() {
   dx_error_reset();
   wdt_enable(WDT_PERIOD_4KCLK_gc);      // set watchdog to 4 secs 
   keepingHouse(); // if band auto pull band relays now
-  delay(500);    // dont start just yet
+  delay(500);     // dont start just yet
 }
 
 void loop() {
