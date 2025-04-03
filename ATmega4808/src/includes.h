@@ -1,7 +1,7 @@
 #ifndef INCLUDES_H
 #define INCLUDES_H
 
-const String softVersion = "v1.36";
+const String softVersion = "v1.37";
 /* ======= User Settings ======== */
 const uint8_t POWERBARMAX = 1;          // 1=600w 2=1200w 3=1800w
 const uint16_t MAXAMPPOWERCALC = 600;       // used in the power calculations keep at 600 or less?
@@ -22,7 +22,7 @@ const uint16_t MainText1_Color = COLOR_GREEN;
 const uint16_t MainText2_Color = COLOR_WHITE;
 
 /* ======= TX delay before tx needed for slow relays ======== */
-const uint16_t TX_DELAY = 20;  // maybe 35 for slow relays
+const uint16_t TX_DELAY = 10;  // maybe 35 for slow relays
 
  // swr display calc control is 1-1000 we need approx 2 * this
  // to add/minus the reflected power - probably no need to touch depens on your tandem match 
@@ -152,7 +152,8 @@ bool setting_swr_calc =false;      // we are in the swr calc page
 bool setting_volt_calc = false;    // we are in the volt calc page
 bool setting_current_calc = false; // we are in the I calc page
 bool bias_current_test = false;    // not used
-volatile bool intBChange = false;
+volatile bool intBChange = false;  // mvp
+volatile bool pttIntActive = false;
 uint16_t glo_power_fwd = 0;        // power_fwd copy
 uint16_t glo_drive_power = 0;      // drive power from eeprom  
 uint16_t glo_volt_setting = 0;      // volt calc read from eeprom
@@ -477,7 +478,8 @@ void eeprom_write_intSetting_values();
 void eeprom_read_intSetting_values();
 void a600_bias_on();
 void a600_bias_off();
-void configureInterrupts();
+void configureInterrupts();   // mcp23017
+void PTTservice();
 void mcp23017ChangeOnPortB();
 void dx_bias_on();
 void dx_bias_off();

@@ -30,6 +30,7 @@ void tx_actions()
   else if((digitalRead(PTT) == LOW) && (!tx_running) && (error_od_status_stop == false))
   {
  //   Serial.println("PTT_LOW");   // tx on
+    pttIntActive = false;
     tx_status = true;
     tx_running = true;
       // may not be needed if using solid state switching
@@ -43,14 +44,13 @@ void tx_actions()
     #else
     dx_bias_on();
     #endif
-    
+    usebeep?hmi.beepHMI(BEEP_YES):hmi.playSound(BEEP);  
     if (display_dim == false)
     {
       display_dim = true;
       hmi.writeLongValue(LCDBackLightAddress,LCDBackLightNormal);
       hmi.setPage(10);
     }
-    usebeep?hmi.beepHMI(BEEP_YES):hmi.playSound(BEEP);
 
    }
   
@@ -69,4 +69,8 @@ void dx_bias_on(){
 }
 void dx_bias_off(){
   mcp23017.digitalWrite(DXBIAS,false);
+}
+
+void PTTservice(){
+  pttIntActive = true;
 }

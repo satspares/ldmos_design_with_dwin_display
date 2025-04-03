@@ -1,6 +1,6 @@
 //#define myDebug
 //#define displayDebug
-#define display160M       // alternate icons 160m-6m or 80m-4m mine
+//#define display160M       // alternate icons 160m-6m or 80m-4m mine
 //#define useLM35           //else DS1820
 //#define useMAX40010HAUT   //else Id from dxworld protection board
 //#define A600_AMP          // A600 amp else dxworld or similar
@@ -59,6 +59,8 @@ void setup() {
     clearResetFlags();
   #endif
   Wire.begin();
+  //caution rf about
+  Wire.setClock(400000UL);
   mcp23017_setup();
   readEEPROM();
   setupDisplay();
@@ -78,6 +80,7 @@ void setup() {
   peakHoldTicker.start();
   sendPowerSwrRefTicker.start();
   dx_error_reset();
+  attachInterrupt(PTT,PTTservice,FALLING); // Falling edge at PTT
   wdt_enable(WDT_PERIOD_4KCLK_gc);      // set watchdog to 4 secs 
   keepingHouse(); // if band auto pull band relays now
   delay(500);     // dont start just yet
@@ -97,13 +100,16 @@ void loop() {
   calcPowerandDisplay();
   }
   if (temp_id_reset){
+   float tempNow;
    //this ticker is temperatureIDTicker
-   temp_id_reset = false;
-   float tempNow = readTemp();
-   hmi.setFloatValue(temp_display,tempNow);
-   hmi.setFloatValue(volt_display,read_volt());
-   hmi.setFloatValue(current_display,readI());
-   error_swr();error_i();error_po(); error_odrive();
+   // pttIntActive is PTT interrupt kill below functions while tx is getting ready
+   if (!pttIntActive){tempNow = readTemp();}
+   if (!pttIntActive)hmi.setFloatValue(temp_display,tempNow);
+   if (!pttIntActive)hmi.setFloatValue(volt_display,read_volt());
+   if (!pttIntActive)hmi.setFloatValue(current_display,readI());
+   if (!pttIntActive)error_swr();if(!pttIntActive)error_i();
+   if (!pttIntActive)error_po();if(!pttIntActive)error_odrive();
+   pttIntActive = false;
   }  
 
 }
