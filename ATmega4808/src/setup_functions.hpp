@@ -25,6 +25,7 @@
     hmi.setFloatValue(swr_digits,1.00);  hmi.setVPWord(swr_graph,100);   // 100 - 200
     hmi.setVPWord(band_manual_display,(band_manual+band_auto));   
     hmi.setVPWord(antenna_switch_display,(antenna_one+which_antenna));  
+    which_antenna?mcp23017.digitalWrite(ANTSWITCH,true):mcp23017.digitalWrite(ANTSWITCH,false);
     hmi.setVPWord(swr_meter_switch_display,25);  
     hmi.setText(main_text1,MainText1);  
     hmi.setText(main_text2,MainText2);

@@ -6,8 +6,9 @@
 //#define A600_AMP          // A600 amp else dxworld or similar
 //#define resetDebug
 //#define SCREENROTATE      // see setupdisplay function
+//#define BIAS_ON             // keep bias on test etc
 #define blinkLED            // if we are not using pin13 OPTOUT1 flash onboard led
-#define SENSOR_DEBUG        // debug dallas sensors
+//#define SENSOR_DEBUG        // debug dallas sensors
 
 #include <Arduino.h>
 #include <DWIN_Arduino.h>
@@ -24,6 +25,7 @@
   #include "drivers/DSTherm.h"
   #include "utils/Placeholder.h"
   static Placeholder<OneWireNg_CurrentPlatform> ow;
+  DSTherm drv(ow);
 #endif
 #include <EEPROM.h>
 #include <includes.h>
@@ -84,6 +86,13 @@ void setup() {
   wdt_enable(WDT_PERIOD_4KCLK_gc);      // set watchdog to 4 secs 
   keepingHouse(); // if band auto pull band relays now
   delay(500);     // dont start just yet
+  #ifdef BIAS_ON
+    #ifdef A600_AMP
+      a600_bias_on();
+    #else
+      dx_bias_on();
+    #endif
+  #endif
 }
 
 void loop() {
@@ -99,11 +108,11 @@ void loop() {
   if(tx_status){
   calcPowerandDisplay();
   }
-  if (temp_id_reset){
+   if (temp_id_reset){
    float tempNow;
    //this ticker is temperatureIDTicker
    // pttIntActive is PTT interrupt kill below functions while tx is getting ready
-   if (!pttIntActive){tempNow = readTemp();}
+  if (!pttIntActive){tempNow = readTemp();}
    if (!pttIntActive)hmi.setFloatValue(temp_display,tempNow);
    if (!pttIntActive)hmi.setFloatValue(volt_display,read_volt());
    if (!pttIntActive)hmi.setFloatValue(current_display,readI());

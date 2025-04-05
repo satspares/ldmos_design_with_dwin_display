@@ -549,7 +549,7 @@ public:
     }
 
     /** Max conversion time (12 bits resolution) in milliseconds */
-    const static int MAX_CONV_TIME = 750;
+    const static int MAX_CONV_TIME = 10;
 
     /** Scan bus for operation completion. */
     const static int SCAN_BUS = -1;

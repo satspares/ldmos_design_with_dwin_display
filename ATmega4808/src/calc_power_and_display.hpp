@@ -138,6 +138,7 @@ void calcPowerandDisplay()
   if(power_swr_reset)
   {        
    // Ticker timeout to update display
+   if (fwdPower_max < 5) fwdPower_max = 0;
       power_swr_reset = false; // ticker reset
       float driveWattsIn = driveWatts(); 
       hmi.setVPWord(power_graph, (int)fwdPower_max/POWERBARMAX);

@@ -197,6 +197,7 @@ float readTemp(){
   temperature = sum/iterations;  
   #else
   /* from OneWireNg example */
+  debugTestLong = millis();
   DSTherm drv(ow);
   uint8_t sensorCount = 0;
   drv.convertTempAll(DSTherm::MAX_CONV_TIME, false);

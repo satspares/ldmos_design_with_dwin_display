@@ -1,7 +1,7 @@
 #ifndef INCLUDES_H
 #define INCLUDES_H
 
-const String softVersion = "v1.37";
+const String softVersion = "v1.38";
 /* ======= User Settings ======== */
 const uint8_t POWERBARMAX = 1;          // 1=600w 2=1200w 3=1800w
 const uint16_t MAXAMPPOWERCALC = 600;       // used in the power calculations keep at 600 or less?
@@ -120,6 +120,7 @@ const float Res50v_2=5100.00 ; // Set R14 of voltage devider
 
 /* ======= Global Vars ======== */
 uint8_t debugTest = 0;          // looking for a problem
+uint32_t debugTestLong = 0;
 bool tx_status = false;             // true when tx on
 uint8_t band_select;            // which band is active
 bool band_auto = false;             // band man auto
