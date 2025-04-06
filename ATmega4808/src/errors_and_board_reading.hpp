@@ -181,7 +181,7 @@ float readI(){
 }
 
 /* ======= Read Temperature ======== */
-float readTemp(){
+float readTemp(bool starting){
   
   float temperature = 0; 
   #ifdef useLM35
@@ -197,10 +197,14 @@ float readTemp(){
   temperature = sum/iterations;  
   #else
   /* from OneWireNg example */
-  debugTestLong = millis();
   DSTherm drv(ow);
   uint8_t sensorCount = 0;
-  drv.convertTempAll(DSTherm::MAX_CONV_TIME, false);
+  if (starting){
+    drv.convertTempAll(DSTherm::MAX_CONV_TIME_START, false);
+  }else{
+    // we probably need more MAX_CONV_TIME for multiple sensors
+    drv.convertTempAll(DSTherm::MAX_CONV_TIME, false); 
+  }
   #if SENSOR_COUNT == 1
   static PlaceholderInit<DSTherm::Scratchpad> scrpd;
   OneWireNg::ErrorCode ec = drv.readScratchpadSingle(scrpd);

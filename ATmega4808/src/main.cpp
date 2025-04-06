@@ -70,7 +70,7 @@ void setup() {
   #ifndef useLM35
     setup_dallas_sensors();
   #endif
-  
+ 
   #ifdef A600_AMP
     a600_bias_off();
   #endif
@@ -112,7 +112,7 @@ void loop() {
    float tempNow;
    //this ticker is temperatureIDTicker
    // pttIntActive is PTT interrupt kill below functions while tx is getting ready
-  if (!pttIntActive){tempNow = readTemp();}
+  if (!pttIntActive){tempNow = readTemp(false);}
    if (!pttIntActive)hmi.setFloatValue(temp_display,tempNow);
    if (!pttIntActive)hmi.setFloatValue(volt_display,read_volt());
    if (!pttIntActive)hmi.setFloatValue(current_display,readI());

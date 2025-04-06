@@ -112,6 +112,8 @@
     sensor_array[2].sensor_our_name = sensor2;
     sensor_array[3].sensor_our_name = sensor3;
     #endif
+    // read with long 
+    readTemp(true);
   }
   #endif
 
