@@ -25,3 +25,6 @@ Caution some of the displays have a solder link to move from rs232 to ttl.
 Some of the later work here is from the excellent ideas of S21RC
 
 On the PCB the potentiometers are for testing purposes only and need not be fitted.
+
+G4UFI
+
