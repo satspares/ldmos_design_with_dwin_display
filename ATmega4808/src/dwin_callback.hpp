@@ -142,6 +142,7 @@ void onHMIEvent(String address, int lastByte, String message, String response)
     }else{
       Voltfwd = fwd2Voltage();
     }
+    Voltfwd = Voltfwd+diodeLossMV;
     glo_power_set_value = hmi.readVP(display_power_set_point);
  
     powerCalcSet = ((Voltfwd*Voltfwd) / (float)glo_power_set_value/MAXAMPPOWERCALC);   // glo_power_set_value normally 100/200 watt

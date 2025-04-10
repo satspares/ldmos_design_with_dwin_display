@@ -9,10 +9,14 @@
 //#define BIAS_ON             // keep bias on test etc
 #define blinkLED            // if we are not using pin13 OPTOUT1 flash onboard led
 //#define SENSOR_DEBUG        // debug dallas sensors
+//#define ADS1115_TEST
 
 #include <Arduino.h>
 #include <DWIN_Arduino.h>
 #include <Wire.h>
+#ifdef ADS1115_TEST
+#include <ADS1115_WE.h> 
+#endif
 #include <MCP23017.h>
 #include <avr/wdt.h>
 #include <Ticker.h>
@@ -70,13 +74,10 @@ void setup() {
   #ifndef useLM35
     setup_dallas_sensors();
   #endif
- 
   #ifdef A600_AMP
     a600_bias_off();
   #endif
-  
   analogWrite(FANPWM,56);  //start fan
-
   houseKeeping.start();
   temperatureIDTicker.start();
   peakHoldTicker.start();
@@ -93,6 +94,14 @@ void setup() {
       dx_bias_on();
     #endif
   #endif
+  #ifdef ADS1115_TEST
+  if(!adc.init()){
+    Serial.println("ADS1115 not connected!");
+  }else{
+    testADS1115();
+    readADS1115();
+  }
+  #endif  //ADS1115_TEST
 }
 
 void loop() {
@@ -127,9 +136,9 @@ void keepingHouse()
 {
   // runs continuous
   #ifdef blinkLED
-  static bool toggle;
-  digitalWrite(13,toggle);
-  toggle = !toggle;
+    static bool toggle;
+    digitalWrite(13,toggle);
+    toggle = !toggle;
   #endif
  
  if ((!tx_status) && (band_auto)){

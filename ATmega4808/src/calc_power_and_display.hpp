@@ -30,8 +30,6 @@ float fwd1Voltage()
   float Voltage;
   Voltage = analogRead(SWR1);
   Voltage = map(Voltage,0,1023,1,4300);
-  Voltage = (Voltage + diodeLossMV);
-  if (Voltage <= (diodeLossMV+1)) return 0;
   return Voltage;
 }
 float ref1Voltage()
@@ -39,8 +37,6 @@ float ref1Voltage()
   float Voltage;
   Voltage = analogRead(REF1);
   Voltage = map(Voltage,0,1023,lpfMapLow,lpfMapHigh);
-  Voltage = (Voltage + diodeLossMV);
-  if (Voltage <= (diodeLossMV+1)) return 0;
   return Voltage;
 }
 float fwd2Voltage()
@@ -48,8 +44,6 @@ float fwd2Voltage()
   float Voltage;
   Voltage = analogRead(SWR2);
   Voltage = map(Voltage,0,1023,1,4300);
-  Voltage = (Voltage + diodeLossMV);
-  if (Voltage <= (diodeLossMV+1)) return 0;
   return Voltage;
 }
 float ref2Voltage()
@@ -57,49 +51,41 @@ float ref2Voltage()
   float Voltage;
   Voltage = analogRead(REF2);
   Voltage = map(Voltage,0,1023,swrMapLow,swrMapHigh);
-  Voltage = (Voltage + diodeLossMV);
-  if (Voltage <= (diodeLossMV+1)) return 0;
   return Voltage;
 }
 
 /* ======= Calc and Display Output Power/REF/SWR etc. ======== */
 void calcPowerandDisplay()
 {
-  float fwdVoltage; float refVoltage;
+  float rawFwdVoltage; float rawRefVoltage;
   float fwdPower; float refPower;
-  static float fwdPower_max;
-  static float refPower_max;
+  static float fwdPower_max; static float refPower_max;
   float powerCalc;
   uint8_t swr_calc_major;
 
-
   if ((which_swr == false))  // false the antenna tandem match
   { 
-    fwdVoltage = fwd2Voltage(); refVoltage = ref2Voltage();
+    rawFwdVoltage = fwd2Voltage(); rawRefVoltage = ref2Voltage();
     swr_calc_major = SWRCALCMAJORSWR;
   }
   else
   {
-    fwdVoltage = fwd1Voltage(); refVoltage = ref1Voltage();
+    rawFwdVoltage = fwd1Voltage(); rawRefVoltage = ref1Voltage();
     swr_calc_major = SWRCALCMAJORLPF;
   }
-
+  
   powerCalc = powerCalcArray[calc_array_swr_offset+swrOffset];
   powerCalc = map(powerCalc,0,250,250,0);  // reverse it
 
-   // something wrong with swr/ref connections?
-  if (refVoltage >= fwdVoltage)
+  if ((rawRefVoltage >= rawFwdVoltage) || (rawFwdVoltage <= (diodeLossMV)))
   {
-    refVoltage = 0.00;fwdVoltage = 0.01;
+    rawRefVoltage = 0.00;rawFwdVoltage = 0.01;
   }
+  // swr/ref power adjustment 
+  rawRefVoltage = correctRefVoltage(rawRefVoltage+diodeLossMV, rawFwdVoltage, swr_calc_major);
+  fwdPower = pow((rawFwdVoltage+diodeLossMV),2.00); refPower = pow((rawRefVoltage),2.00);
+  fwdPower = fwdPower/powerCalc/MAXAMPPOWERCALC; refPower = refPower/powerCalc/MAXAMPPOWERCALC;
 
-  refVoltage = correctRefVoltage(refVoltage, fwdVoltage, swr_calc_major);
-  fwdPower = pow(fwdVoltage,2.00);
-  refPower = pow(refVoltage,2.00);
-  
-  fwdPower = fwdPower/powerCalc/MAXAMPPOWERCALC;
-  refPower = refPower/powerCalc/MAXAMPPOWERCALC;
-  
   if (fwdPower >= fwdPower_max)
   {
     fwdPower_max = fwdPower; refPower_max = refPower;
@@ -109,7 +95,7 @@ void calcPowerandDisplay()
     fwdPower_max = fwdPower; refPower_max = refPower;
   }
   //Test both should work out the same
-  const float SWR = (fwdVoltage+refVoltage)/(fwdVoltage-refVoltage);
+  const float SWR = (rawFwdVoltage+rawRefVoltage)/(rawFwdVoltage-rawRefVoltage);
   //const float SWR = (1.00 + sqrt(refPower_max/fwdPower_max)) / (1.00 - sqrt(refPower_max/fwdPower_max));    
   float swr_display = ((SWR * 10.00 )); // Float x 10 for our display
   if ((swr_display < 10.00) || isNegative(swr_display)){

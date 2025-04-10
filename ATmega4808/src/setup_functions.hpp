@@ -173,3 +173,79 @@ void configureInterrupts() {
 void mcp23017ChangeOnPortB(){
 // todo not needed on this
 }
+
+
+#ifdef ADS1115_TEST
+float readChannel(ADS1115_MUX channel) {
+  float voltage = 0.0;
+  adc.setCompareChannels(channel);
+  adc.startSingleMeasurement();
+  while(adc.isBusy()){delay(0);}
+  voltage = adc.getResult_V(); // alternative: getResult_mV for Millivolt
+  return voltage;
+}
+
+void testADS1115() {
+  
+  adc.setVoltageRange_mV(ADS1115_RANGE_6144); 
+  adc.setCompareChannels(ADS1115_COMP_0_GND); 
+  Serial.println("ADS1115/ADS1015 Example Sketch - Who am I");
+  Serial.println("Performing 10 single ended conversions A0 vs. GND:");
+  uint16_t checkSum = 0;
+  for(int i=0; i<10; i++){
+    adc.startSingleMeasurement();
+    while(adc.isBusy()){}
+    int16_t raw = adc.getRawResult();
+    Serial.println(raw, BIN);
+    checkSum += raw & 0xF;
+  }
+  Serial.println();
+  Serial.print("Check Sum (Sum of the last 4 bits): ");
+  Serial.println(checkSum);
+
+  adc.setConvRate(ADS1115_8_SPS); // = ADS1015_128_SPS = 0x0000
+  unsigned long startingTime = millis();
+  for(int i=0; i<10; i++){
+    adc.startSingleMeasurement();
+    while(adc.isBusy()){}
+  }
+  unsigned long duration = millis() - startingTime;
+  Serial.print("Time needed for 10 conversions at slowest sample rate [ms]: ");
+  Serial.println(duration);
+  Serial.println();
+
+  if(checkSum && duration > 1000){
+    Serial.println("I am an ADS1115!");
+  }
+  else if (!checkSum && duration < 1000){
+    Serial.println("I am an ADS1015!");
+  }
+  else {
+    Serial.println("Sorry, don't know who I am!");
+  }
+}
+
+void readADS1115(){
+  Serial.println(" ");
+  Serial.println("Channel : Voltage [V]: ");
+  adc.setVoltageRange_mV(ADS1115_RANGE_4096);
+  float voltage = 0.0;
+
+  Serial.print("0: ");
+  voltage = readChannel(ADS1115_COMP_0_GND);
+  Serial.print(voltage);
+
+  Serial.print(",   1: ");
+  voltage = readChannel(ADS1115_COMP_1_GND);
+  Serial.print(voltage);
+  
+  Serial.print(",   2: ");
+  voltage = readChannel(ADS1115_COMP_2_GND);
+  Serial.print(voltage);
+
+  Serial.print(",   3: ");
+  voltage = readChannel(ADS1115_COMP_3_GND);
+  Serial.println(voltage);
+
+}
+#endif //ADS1115_TEST

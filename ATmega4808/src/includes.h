@@ -2,10 +2,10 @@
 #define INCLUDES_H
 
 
-const String softVersion = "v1.39";
+const String softVersion = "v1.41";
 /* ======= User Settings ======== */
 const uint8_t POWERBARMAX = 1;          // 1=600w 2=1200w 3=1800w
-const uint16_t MAXAMPPOWERCALC = 600;       // used in the power calculations keep at 600 or less?
+const uint16_t MAXAMPPOWERCALC = 400;   // used in the power calculations keep at 600 or less?
 
 /* ======= Colors or any 16bit color for below text ======== */
 const uint16_t COLOR_WHITE =0xFFFF;
@@ -25,10 +25,10 @@ const uint16_t MainText2_Color = COLOR_WHITE;
 /* ======= TX delay before tx needed for slow relays ======== */
 const uint16_t TX_DELAY = 10;  // maybe 35 for slow relays
 
- // swr display calc control is 1-1000 we need approx 2 * this
+ // swr display adjustment control is 1-1000 this multiples the steps
  // to add/minus the reflected power - probably no need to touch depens on your tandem match 
-const uint8_t SWRCALCMAJORSWR = 2;
-const uint8_t SWRCALCMAJORLPF = 2;     
+const uint8_t SWRCALCMAJORSWR = 1;
+const uint8_t SWRCALCMAJORLPF = 1;     
 
 const uint16_t ICALCMAJOR = 80;        // I step change in I set
 const uint16_t DRIVECALCMAJOR = 2000;   // used in the drive calc power settings
@@ -44,9 +44,12 @@ const uint16_t swrMapHigh = 4300;
 const uint16_t lpfMapLow = 1;
 const uint16_t lpfMapHigh = 4300;
 
-const uint16_t diodeLossMV = 300;  // diode loss in millivolts or something else
-// if drive detect device is using a diode eg 300 milivolts loss
-const uint16_t diodeLossMVdrive = 300;
+// The diode loss is after the resistor split on the adc inputs
+// if the split is eg. 1:4  the diode loss needs to be (real diode loss / 4) 
+// some experimentation is required 
+const uint16_t diodeLossMV = 140;  // diode loss in millivolts or something else
+// if drive detect device is using a diode eg 400 milivolts loss / input resistor split
+const uint16_t diodeLossMVdrive = 140;
 
 // user temperature settings
 #define SENSOR_COUNT (1)                //ds18b20 one sensor or multiple upto 4 not used yet!
@@ -492,8 +495,12 @@ void setScreenRotate(byte angle);
 float correctRefVoltage(float refVoltage, float fwdVoltage, uint8_t swr_calc_major);
 String bandStrings(uint16_t arrayOffset);
 String swrStrings(bool whichSWR);
-
 void(* resetFunc) (void) = 0; //declare reset function at address 0
+#ifdef ADS1115_TEST
+ void testADS1115();
+ float readChannel(ADS1115_MUX channel);
+ void readADS1115();
+#endif
 
 template <class X, class M, class N, class O, class Q>
 X map_Generic(X x, M in_min, N in_max, O out_min, Q out_max){
@@ -520,10 +527,10 @@ template <class T> int EEPROM_readAnything(int ee, T& value)
 /* ======= Global Instances ======== */
 // 
 MCP23017 mcp23017 = MCP23017(0x20);
-Ewma refFilter(0.5);
-Ewma fwdFilter(0.5);
-Ewma driveFilter(0.5); // for oDrive
-Ewma voltFilter(0.5);
+Ewma refFilter(0.3);
+Ewma fwdFilter(0.3);
+Ewma driveFilter(0.1); // for oDrive
+Ewma voltFilter(0.1);
 DWIN hmi(Serial2, DGUS_BAUD, false);     // the false do not init the port yet
 
 Ticker peakHoldTicker(peakHoldReset,peakHoldResetDelay);  //should be about 400ms
@@ -532,6 +539,9 @@ Ticker houseKeeping(keepingHouse,keepingHouseTickerDelay);
 Ticker temperatureIDTicker(tempIDTickerReset,tempIDTickerDelay);
 // Update display with Power/SWR/Ref
 Ticker sendPowerSwrRefTicker(powerSWRTickerReset,powerSwrTickerDelay);
+#ifdef ADS1115_TEST
+  ADS1115_WE adc = ADS1115_WE(0x48);
+ #endif
 
 //#endif
 
