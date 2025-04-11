@@ -23,7 +23,7 @@ const uint16_t MainText1_Color = COLOR_GREEN;
 const uint16_t MainText2_Color = COLOR_WHITE;
 
 /* ======= SWR Progress Bar Max Display eg. 200=2.00 swr 300=3.00 swr or other swr value * 100 ======== */
-static uint16_t swrRangeMax = 250;  // 250 swr graph max is swr 2.50
+const uint16_t swrRangeMax = 250;  // 250 swr graph max is swr 2.50
 
 /* ======= TX delay before tx needed for slow relays ======== */
 const uint16_t TX_DELAY = 10;  // maybe 35 for slow relays
