@@ -35,6 +35,8 @@
     hmi.setTPBeep(false); // turn off dwin touch beep use ours
     usebeep?hmi.beepHMI(BEEP_YES):hmi.playSound(STARTING3);
     hmi.writeLongValue(LCDBackLightAddress,LCDBackLightLow);
+    // 0x08 is the offset for the max value location
+    hmi.setVPWord((swr_graph_sp+0x08),swrRangeMax);
     #ifdef display160M
     select_band(band160Mtr_Selected);     // make sure we get the right icon set
     #else

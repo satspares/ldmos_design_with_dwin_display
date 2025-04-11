@@ -15,7 +15,7 @@
 #include <DWIN_Arduino.h>
 #include <Wire.h>
 #ifdef ADS1115_TEST
-#include <ADS1115_WE.h> 
+ #include <ADS1115_WE.h> 
 #endif
 #include <MCP23017.h>
 #include <avr/wdt.h>

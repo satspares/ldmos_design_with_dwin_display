@@ -2,7 +2,7 @@
 #define INCLUDES_H
 
 
-const String softVersion = "v1.41";
+const String softVersion = "v1.42";
 /* ======= User Settings ======== */
 const uint8_t POWERBARMAX = 1;          // 1=600w 2=1200w 3=1800w
 const uint16_t MAXAMPPOWERCALC = 400;   // used in the power calculations keep at 600 or less?
@@ -21,6 +21,9 @@ const String MainText1 = "-- LDMOS Amp " + softVersion + " -- ";
 const String MainText2 = " -- YOUR CALLSIGN -- ";
 const uint16_t MainText1_Color = COLOR_GREEN;
 const uint16_t MainText2_Color = COLOR_WHITE;
+
+/* ======= SWR Progress Bar Max Display eg. 200=2.00 swr 300=3.00 swr or other swr value * 100 ======== */
+static uint16_t swrRangeMax = 250;  // 250 swr graph max is swr 2.50
 
 /* ======= TX delay before tx needed for slow relays ======== */
 const uint16_t TX_DELAY = 10;  // maybe 35 for slow relays
@@ -46,7 +49,7 @@ const uint16_t lpfMapHigh = 4300;
 
 // The diode loss is after the resistor split on the adc inputs
 // if the split is eg. 1:4  the diode loss needs to be (real diode loss / 4) 
-// some experimentation is required 
+// some experimentation is required a incorrect value will make power and swr display not linear
 const uint16_t diodeLossMV = 140;  // diode loss in millivolts or something else
 // if drive detect device is using a diode eg 400 milivolts loss / input resistor split
 const uint16_t diodeLossMVdrive = 140;
@@ -123,7 +126,7 @@ const float Res50v_1=100000.00; // Set R31 of voltage devider
 const float Res50v_2=5100.00 ; // Set R14 of voltage devider
 
 /* ======= Global Vars ======== */
-uint8_t debugTest = 0;          // looking for a problem
+uint8_t debugTest = 0;          // looking for problems
 uint32_t debugTestLong = 0;
 bool tx_status = false;             // true when tx on
 uint8_t band_select;            // which band is active
@@ -236,6 +239,7 @@ const uint16_t band_display = 0x1030;           // 31-44 DECIMAL to switch image
 // Page 0 start page display controls
 const uint16_t power_graph = 0x3000; // 0-50
 const uint16_t swr_graph = 0x3010;
+const uint16_t swr_graph_sp = 0x6900;
 const uint16_t swr_digits = 0x2100;
 const uint16_t volt_display = 0x2500;
 const uint16_t power_display = 0x2400;

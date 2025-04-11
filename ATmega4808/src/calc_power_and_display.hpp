@@ -128,7 +128,7 @@ void calcPowerandDisplay()
       power_swr_reset = false; // ticker reset
       float driveWattsIn = driveWatts(); 
       hmi.setVPWord(power_graph, (int)fwdPower_max/POWERBARMAX);
-      hmi.setVPWord(swr_graph, ((int)swr_display * 10));      // 100-200
+      hmi.setVPWord(swr_graph, ((int)swr_display * 10));    // 100-200
       hmi.setVPWord(power_display, (int)fwdPower_max);        // int 4 digits
       hmi.setFloatValue(rev_display,refPower_max);            // float
       hmi.setFloatValue(swr_digits, (float)swr_display / 10); // float int 1 decimal 2
