@@ -42,9 +42,9 @@ const uint16_t DRIVECALCMAJOR = 2000;   // used in the drive calc power settings
 // used in ref1Voltage and ref2Voltage
 // correct would be Low = 1 - High = 4300
 // more than 4300 (adc 4.3 volts) we are adding voltage to the reflected power
-const uint16_t swrMapLow = 1;
+const uint16_t swrMapLow = 0;
 const uint16_t swrMapHigh = 4300;
-const uint16_t lpfMapLow = 1;
+const uint16_t lpfMapLow = 0;
 const uint16_t lpfMapHigh = 4300;
 
 // The diode loss is after the resistor split on the adc inputs
@@ -237,7 +237,7 @@ const uint16_t swr_meter_switch_display = 0x1033; //25-26 to switch image
 const uint16_t band_display = 0x1030;           // 31-44 DECIMAL to switch image
 
 // Page 0 start page display controls
-const uint16_t power_graph = 0x3000; // 0-
+const uint16_t power_graph = 0x3000; // 0-powerRangeMax
 const uint16_t power_graph_sp = 0x6800;
 const uint16_t swr_graph = 0x3010;
 const uint16_t swr_graph_sp = 0x6900;

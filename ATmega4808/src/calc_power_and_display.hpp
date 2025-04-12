@@ -29,7 +29,7 @@ float fwd1Voltage()
 {
   float Voltage;
   Voltage = analogRead(SWR1);
-  Voltage = map(Voltage,0,1023,1,4300);
+  Voltage = map(Voltage,0,1023,0,4300);
   return Voltage;
 }
 float ref1Voltage()
@@ -43,7 +43,7 @@ float fwd2Voltage()
 {
   float Voltage;
   Voltage = analogRead(SWR2);
-  Voltage = map(Voltage,0,1023,1,4300);
+  Voltage = map(Voltage,0,1023,0,4300);
   return Voltage;
 }
 float ref2Voltage()
@@ -112,11 +112,11 @@ void calcPowerandDisplay()
     hmi.setFloatValue(swr_display_glo_swr,glo_swr_display);
    // power_swr_reset = false;   
     if (which_swr == false){
-      hmi.setVPWord(fwd_millivolts,analogRead(SWR2));
-      hmi.setVPWord(ref_millivolts,analogRead(REF2));
+      hmi.setVPWord(fwd_millivolts,map(analogRead(SWR2),0,1023,0,4300));
+      hmi.setVPWord(ref_millivolts,map(analogRead(REF2),0,1023,0,4300));
     }else{
-      hmi.setVPWord(fwd_millivolts,analogRead(SWR1));
-      hmi.setVPWord(ref_millivolts,analogRead(REF1));
+      hmi.setVPWord(fwd_millivolts,map(analogRead(SWR1),0,1023,0,4300));
+      hmi.setVPWord(ref_millivolts,map(analogRead(REF1),0,1023,0,4300));
     }
   }  // end setting_swr_calc
 
