@@ -4,7 +4,6 @@
 
 const String softVersion = "v1.42";
 /* ======= User Settings ======== */
-const uint8_t POWERBARMAX = 1;          // 1=600w 2=1200w 3=1800w
 const uint16_t MAXAMPPOWERCALC = 400;   // used in the power calculations keep at 600 or less?
 
 /* ======= Colors or any 16bit color for below text ======== */
@@ -24,6 +23,7 @@ const uint16_t MainText2_Color = COLOR_WHITE;
 
 /* ======= SWR Progress Bar Max Display eg. 200=2.00 swr 300=3.00 swr or other swr value * 100 ======== */
 const uint16_t swrRangeMax = 250;  // 250 swr graph max is swr 2.50
+const uint16_t powerRangeMax = 600; // Max Power graph range eg. 600=600 watts
 
 /* ======= TX delay before tx needed for slow relays ======== */
 const uint16_t TX_DELAY = 10;  // maybe 35 for slow relays
@@ -237,7 +237,8 @@ const uint16_t swr_meter_switch_display = 0x1033; //25-26 to switch image
 const uint16_t band_display = 0x1030;           // 31-44 DECIMAL to switch image
 
 // Page 0 start page display controls
-const uint16_t power_graph = 0x3000; // 0-50
+const uint16_t power_graph = 0x3000; // 0-
+const uint16_t power_graph_sp = 0x6800;
 const uint16_t swr_graph = 0x3010;
 const uint16_t swr_graph_sp = 0x6900;
 const uint16_t swr_digits = 0x2100;

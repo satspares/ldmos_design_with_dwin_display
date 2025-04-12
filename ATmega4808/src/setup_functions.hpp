@@ -37,6 +37,7 @@
     hmi.writeLongValue(LCDBackLightAddress,LCDBackLightLow);
     // 0x08 is the offset for the max value location
     hmi.setVPWord((swr_graph_sp+0x08),swrRangeMax);
+    hmi.setVPWord((power_graph_sp+0x08),powerRangeMax);
     #ifdef display160M
     select_band(band160Mtr_Selected);     // make sure we get the right icon set
     #else
