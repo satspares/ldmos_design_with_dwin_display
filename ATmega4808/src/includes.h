@@ -4,8 +4,6 @@
 
 const String softVersion = "v1.42";
 /* ======= User Settings ======== */
-const uint16_t MAXAMPPOWERCALC = 400;   // used in the power calculations keep at 600 or less?
-
 /* ======= Colors or any 16bit color for below text ======== */
 const uint16_t COLOR_WHITE =0xFFFF;
 const uint16_t COLOR_RED =0xF800;
@@ -34,13 +32,15 @@ const uint8_t SWRCALCMAJORSWR = 1;
 const uint8_t SWRCALCMAJORLPF = 1;     
 
 const uint16_t ICALCMAJOR = 80;        // I step change in I set
-const uint16_t DRIVECALCMAJOR = 2000;   // used in the drive calc power settings
+const uint16_t DRIVECALCMAJOR = 2000;   // used in the drive calc power 
+
+const uint16_t MAXAMPPOWERCALC = 400;   // used in the power calculations keep at 600 or less?
 
 //Try to correct the power ratio between fwd/ref power 
 // as tandem matches dont appear linear across power levels
 // my tandem high power devices dont like to work well at power levels under about 200w
 // used in ref1Voltage and ref2Voltage
-// correct would be Low = 1 - High = 4300
+// correct would be Low = 0 - High = 4300
 // more than 4300 (adc 4.3 volts) we are adding voltage to the reflected power
 const uint16_t swrMapLow = 0;
 const uint16_t swrMapHigh = 4300;
