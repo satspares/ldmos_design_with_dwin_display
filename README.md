@@ -1,5 +1,9 @@
 Work in progress! since 2021
 
+7th October 2025.
+Improve Graphics.
+Add save drive settings per. band.
+
 LDMOS control software and PCB design for dxworld - QRPblog A600 - or similar amps using DWIN display.
 
 PCB design used Kicad.

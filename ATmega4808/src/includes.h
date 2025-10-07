@@ -1,9 +1,9 @@
 #ifndef INCLUDES_H
 #define INCLUDES_H
 
-
-const String softVersion = "v1.42";
+const String softVersion = "v1.43";
 /* ======= User Settings ======== */
+// Also see main.c at the top
 /* ======= Colors or any 16bit color for below text ======== */
 const uint16_t COLOR_WHITE =0xFFFF;
 const uint16_t COLOR_RED =0xF800;
@@ -15,13 +15,13 @@ const uint16_t COLOR_LIGHT_BLUE = 0x87FF;
 
 /* ======= First page text each 30 chars max======== */
 const String MainText1 = "-- LDMOS Amp " + softVersion + " -- ";
-const String MainText2 = " -- YOUR CALLSIGN -- ";
+const String MainText2 = " --- YOUR CALL --- ";
 const uint16_t MainText1_Color = COLOR_GREEN;
 const uint16_t MainText2_Color = COLOR_WHITE;
 
 /* ======= SWR Progress Bar Max Display eg. 200=2.00 swr 300=3.00 swr or other swr value * 100 ======== */
 const uint16_t swrRangeMax = 250;  // 250 swr graph max is swr 2.50
-const uint16_t powerRangeMax = 600; // Max Power graph range eg. 600=600 watts
+const uint16_t powerRangeMax = 800; // Max Power graph range eg. 600=600 watts
 
 /* ======= TX delay before tx needed for slow relays ======== */
 const uint16_t TX_DELAY = 10;  // maybe 35 for slow relays
@@ -32,7 +32,7 @@ const uint8_t SWRCALCMAJORSWR = 1;
 const uint8_t SWRCALCMAJORLPF = 1;     
 
 const uint16_t ICALCMAJOR = 80;        // I step change in I set
-const uint16_t DRIVECALCMAJOR = 2000;   // used in the drive calc power 
+const uint16_t DRIVECALCMAJOR = 1900;   // used in the drive calc power (lower = higher)
 
 const uint16_t MAXAMPPOWERCALC = 400;   // used in the power calculations keep at 600 or less?
 
@@ -87,12 +87,9 @@ const bool usebeep = true;
 #define eeprom_power_calc_address 10
 #define eeprom_intSettings_address 200
 #define eeprom_new_on_address 240
-#define EEPROMROW 8   // we can have 8 bands
-#define POWERSETPOINT 0    // locations for power set value ets.
-#define TEMPSETPOINT 1
-#define VOLTSETPOINT 2
-#define DRIVESETPOINT 3
-#define UNUSEDSETPOINT 4
+#define EEPROMROW 8   // we can have 8 bands max
+#define DRIVEOFFSET 32 // drive place in calc array
+
 
 
 /* ======= Ticker Delays ======== */
@@ -166,7 +163,7 @@ uint16_t glo_power_fwd = 0;        // power_fwd copy
 uint16_t glo_drive_power = 0;      // drive power from eeprom  
 uint16_t glo_volt_setting = 0;      // volt calc read from eeprom
 uint16_t glo_current_setting = 0;   // current calc read from eeprom
-uint16_t glo_power_set_value = 0;
+uint16_t glo_power_set_value = 0;   // power set reference value set from eeprom 200w when new
 float glo_swr_display = 0;
 float glo_volt_display = 0;
 const float adcRef = (4.3/1023);
@@ -175,12 +172,17 @@ uint16_t powerCalcArray[] = {50, 50, 50, 50, 50, 50, 50, 0xff,              // p
                             50, 50, 50, 50, 50, 50, 50, 0xff,               // power LPF   
                             500, 500, 500, 500, 500, 500, 500, 0xff,       // swr calc antenna   
                             500, 500, 500, 500, 500, 500, 500, 0xff,       // swr calc LPF
-                            50, 50, 50, 50, 50, 50, 50, 0xff,
+                            50, 50, 50, 50, 50, 50, 50, 0xff,              // drive offset 
                             50, 50, 50, 50, 50, 50, 50, 0xff,
                             50, 50, 50, 50, 50, 50, 50, 0xff};
 
 // intSettingsArray[0] is glo_power_set_value - the setting to set power to set to
 //  200 watts when new
+#define POWERSETPOINT 0    // locations for power set value etc.
+#define TEMPSETPOINT 1
+#define VOLTSETPOINT 2
+#define DRIVESETPOINT 3
+#define UNUSEDSETPOINT 4
 uint16_t intSettingsArray[] =  {200, 45, 53, 5, 10};  
 
 /* ======= Display Settings ======== */
@@ -357,6 +359,7 @@ uint16_t trip_unused_display = 0x5504;
 //offset in band array for   bands 0=80mtr
 uint8_t calc_array_swr_offset;
 uint8_t calc_array_lpf_offset;
+uint8_t calc_array_drive_offset;
 
 // Power Calc Array Offsets
 #ifndef display160M
@@ -407,9 +410,9 @@ const uint8_t band4Mtr_switch =     0b00000001;
 
 // MCP23017 port B pins 
 const uint8_t A600BIAS = 8;   //< pin GPB0 (1) of the MCP23017. via. resistor split
-const uint8_t DX_RESET = 9;   //< pin GPB1 (2) of the MCP23017.
-const uint8_t GPB2 = 10;  //< pin GPB2 (3) of the MCP23017.
-const uint8_t GPB3 = 11;  //< pin GPB3 (4) of the MCP23017.
+const uint8_t GBP1 = 9;   //< pin GPB1 (2) of the MCP23017. Transistor Base
+const uint8_t DX_RESET = 10;  //< pin GPB2 (3) of the MCP23017.
+const uint8_t RELAY2 = 11;  //< pin GPB3 (4) of the MCP23017.
 const uint8_t GPB4 = 12;  //< pin GPB4 (5) of the MCP23017.
 const uint8_t GPB5 = 13;  //< pin GPB5 (6) of the MCP23017.
 const uint8_t ANTSWITCH = 14;  //< pin GPB6 (7) of the MCP23017.

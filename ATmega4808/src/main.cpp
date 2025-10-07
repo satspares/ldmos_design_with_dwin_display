@@ -1,4 +1,4 @@
-//#define myDebug
+#define myDebug
 //#define displayDebug
 //#define display160M       // alternate icons 160m-6m or 80m-4m mine
 //#define useLM35           //else DS1820
@@ -7,8 +7,8 @@
 //#define resetDebug
 //#define SCREENROTATE      // see setupdisplay function
 //#define BIAS_ON             // keep bias on test etc
-#define blinkLED            // if we are not using pin13 OPTOUT1 flash onboard led
-//#define SENSOR_DEBUG        // debug dallas sensors
+#define blinkLED            // if we are not using pin13 OPTOUT1 (a600_bias) flash onboard led
+#define SENSOR_DEBUG        // debug dallas sensors
 //#define ADS1115_TEST
 
 #include <Arduino.h>
@@ -87,6 +87,7 @@ void setup() {
   wdt_enable(WDT_PERIOD_4KCLK_gc);      // set watchdog to 4 secs 
   keepingHouse(); // if band auto pull band relays now
   delay(500);     // dont start just yet
+  Serial.println("Starting...");
   #ifdef BIAS_ON
     #ifdef A600_AMP
       a600_bias_on();

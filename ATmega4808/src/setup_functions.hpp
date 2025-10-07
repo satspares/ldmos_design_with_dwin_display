@@ -16,7 +16,7 @@
       const byte rotate180=2; const byte rotate270=3;
       setScreenRotate(rotate90);  // some display set to portrait when new!
     #endif
-    hmi.setPage(0);
+    hmi.setPage(startPage);
     // Clear the icons
     hmi.setVPByte(swr_error,GREEN_ICON); hmi.setVPByte(power_error,GREEN_ICON);
     hmi.setVPByte(current_error,GREEN_ICON); hmi.setVPByte(volt_error,GREEN_ICON);
@@ -45,6 +45,9 @@
     #endif
     delay(500);     // debug
     select_band(band_select); //from eeprom
+    // get drive setting for calc array
+   // glo_drive_power = powerCalcArray[calc_array_drive_offset];
+    if (glo_drive_power > 100) glo_drive_power = 50;  // set drive power display page2 if out of range
   }
 
   /* ======= MCP Initial Settings ======== */
@@ -73,10 +76,7 @@
   void setupPins(){
     pinMode(FANPWM, OUTPUT);
     //pinMode(TEMPSENSOR,INPUT);
-    #ifdef blinkLED
-    pinMode(OPTOUT1,OUTPUT);      //13
-    #endif
-    pinMode(OPTOUT1,OUTPUT);      //13
+    pinMode(OPTOUT1,OUTPUT);      //13 blinkLED or a600_bias
     pinMode(VIN50V,INPUT);
     pinMode(SWR1,INPUT);
     pinMode(REF1,INPUT);
@@ -92,7 +92,7 @@
     pinMode(BCD_1, INPUT);
     pinMode(BCD_2, INPUT);
     pinMode(BCD_3, INPUT);
-    pinMode(INTB, INPUT_PULLUP);
+    pinMode(INTB, INPUT_PULLUP);                                                                                                                                                                                                                                                                                                                                                                                                                                                           
 
   }
   /* ======= Some Ticker Resets ======== */

@@ -276,7 +276,6 @@ void DWIN::setTPBeep(bool enabled){
   setVPWord(0x0080,0x5A00);  // set it.
 }
 
-
 // set text color (16-bit RGB) on controls which allow it ie. text control.
 // changes the control sp address space (sp=description pointer) content see the DWIN docs.  
 void DWIN::setTextColor(long spAddress, long spOffset, long color)

@@ -51,7 +51,7 @@ void tx_actions()
     {
       display_dim = true;
       hmi.writeLongValue(LCDBackLightAddress,LCDBackLightNormal);
-      hmi.setPage(10);
+      hmi.setPage(txPage);
     }
 
    }

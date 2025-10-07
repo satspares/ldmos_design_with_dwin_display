@@ -158,15 +158,19 @@ void onHMIEvent(String address, int lastByte, String message, String response)
     hmi.setPage(driveSetPage);
     setting_power_calc = true;  
     usebeep?hmi.beepHMI(BEEP_YES):hmi.playSound(YES);
-    saveDrive = glo_drive_power;
-    hmi.setVPWord(power_eeprom_display2,glo_drive_power);
+    saveDrive = powerCalcArray[calc_array_drive_offset];
+    hmi.setVPWord(power_eeprom_display2,saveDrive);
     hmi.setFloatValue(power_display_page2, driveWatts());
+    // use same vp as start page for band text display 
+    hmi.setText(startPage_band_text,bandStrings(calc_array_swr_offset));
   }
   // Save button page2 drive set
   else if (save_drive_calc == displayVP){
     setting_power_calc = false;
     glo_drive_power = hmi.readVP(power_eeprom_display2);
-    EEPROM.update(eeprom_drive,glo_drive_power);
+    powerCalcArray[calc_array_drive_offset] = glo_drive_power;
+   // EEPROM.update(eeprom_drive,glo_drive_power);
+    eeprom_write_power_calc_values();
     delay(50);
     usebeep?hmi.beepHMI(BEEP_YES):hmi.playSound(YES);
     tx_status?hmi.setPage(txPage):hmi.setPage(startPage);

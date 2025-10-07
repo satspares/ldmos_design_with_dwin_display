@@ -121,7 +121,7 @@ void calcPowerandDisplay()
   }  // end setting_swr_calc
 
   //if (true)  //test
-  if(power_swr_reset)
+  if(power_swr_reset)  // Ticker reset update display - powerSwrTickerDelay-300ms
   {        
    // Ticker timeout to update display
    if (fwdPower_max < 5) fwdPower_max = 0;

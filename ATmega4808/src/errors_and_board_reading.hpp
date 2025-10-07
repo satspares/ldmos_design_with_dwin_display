@@ -125,20 +125,21 @@ void fanspeed(float temperature){
  
   //analogWrite(FANPWM,0);  //TEST
   //return;
+  //temperature = 32.00;
 
-  if(temperature>20.0 && temperature<32.0){  
+  if(temperature>29.0 && temperature<42.0){  
     analogWrite(FANPWM,64);     // 25% duty cycle;
   }
-  else if(temperature>=33.0 && temperature<40.0){
-    analogWrite(FANPWM,128); //192 75% duty cycle) test 256 14-09-24
+  else if(temperature>=42.0 && temperature<44.0){
+    analogWrite(FANPWM,128); //128 50% duty cycle) test 256 14-09-24
   }
-  else if(temperature>=40.0 && temperature<45.0){
-    analogWrite(FANPWM,256);     // Full;
+  else if(temperature>=44.0 && temperature<47.0){
+    analogWrite(FANPWM,128);     // Full;
   }
-  else if(temperature>=45.0 && temperature < intSettingsArray[TEMPSETPOINT]){
+  else if(temperature>=47.0 && temperature < intSettingsArray[TEMPSETPOINT]){
     analogWrite(FANPWM,256);     // Full Fan Speed;
   }
-   else if(temperature <= 20.0){
+   else if(temperature <= 29.0){
     analogWrite(FANPWM,0);     // no Fan Speed;
   } 
 }
