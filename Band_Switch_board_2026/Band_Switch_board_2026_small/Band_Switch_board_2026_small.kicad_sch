@@ -7107,7 +7107,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "ADC Module"
+		(property "Value" "ADC Module Option"
 			(at 118.11 138.4299 0)
 			(effects
 				(font
