@@ -1,6 +1,7 @@
-Work in progress! since 2021
+﻿Work in progress! since 2021
 
-7th October 2025.
+28th April 2026.
+New Software and PCB
 Improve Graphics.
 Add save drive settings per. band.
 
@@ -11,9 +12,6 @@ PCB design used Kicad.
 Software vscode and platformio.
 
 From the DWIN store on aliexpress
-DMG10600C070_03WTC 7inch  1024x600
-
-DMG10600T070_A5WTC 1024x600 more expensive has case and rs232
 
 DMG80480C050_04W 5inch we need touch version DMG80480C050_04WTC  800x480
 
@@ -28,7 +26,6 @@ Caution some of the displays have a solder link to move from rs232 to ttl.
 
 Some of the later work here is from the excellent ideas of S21RC
 
-On the PCB the potentiometers are for testing purposes only and need not be fitted.
 
 G4UFI
 
