@@ -35143,7 +35143,7 @@
 				)
 			)
 		)
-		(property "Value" "4k7"
+		(property "Value" "1k5"
 			(at 3.81 2.37 90)
 			(layer "F.Fab")
 			(uuid "f07497fc-f4ab-4a3b-9052-f72e1f60fba6")
@@ -43025,7 +43025,7 @@
 			)
 		)
 		(property ki_fp_filters "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* SOP*5.28x5.23mm*P1.27mm* VSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm*")
-		(path "/72913ee8-38c5-40cd-8bc8-040d4d5aeeb8")
+		(path "/cac90c45-db0b-4640-970e-636d95c07c4f")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
 		(attr through_hole)
@@ -50509,7 +50509,7 @@
 				)
 			)
 		)
-		(property "Value" "4k7"
+		(property "Value" "1k5"
 			(at 3.81 2.37 90)
 			(layer "F.Fab")
 			(uuid "9be3983d-a6d3-4ba6-926c-edd6b03fd586")
@@ -51910,7 +51910,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "1milli"
+		(property "Value" "Shunt Not Fitted"
 			(at 0 0 90)
 			(layer "B.SilkS")
 			(hide yes)
@@ -58837,7 +58837,7 @@
 		(uuid "001d5eff-0409-0ff0-3c71-e57f8a7d6475")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30293)
+		(priority 30291)
 		(attr
 			(teardrop
 				(type padvia)
@@ -58877,7 +58877,7 @@
 		(uuid "011c545e-8a37-08ba-32bb-6c60ac465b01")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30297)
+		(priority 30300)
 		(attr
 			(teardrop
 				(type padvia)
@@ -58917,7 +58917,7 @@
 		(uuid "01d08213-0b38-0aff-3064-15bbea15fd08")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30066)
+		(priority 30065)
 		(attr
 			(teardrop
 				(type padvia)
@@ -59431,7 +59431,7 @@
 		(uuid "0b70bf6c-f466-033d-32bf-a66bc63d47fd")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30252)
+		(priority 30259)
 		(attr
 			(teardrop
 				(type padvia)
@@ -59627,7 +59627,7 @@
 		(uuid "0db4d7a6-ff2a-0cce-11c7-e78e8b391c21")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30301)
+		(priority 30304)
 		(attr
 			(teardrop
 				(type padvia)
@@ -59906,7 +59906,7 @@
 		(uuid "13a843e9-3599-038d-249a-0f286bab7185")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30294)
+		(priority 30297)
 		(attr
 			(teardrop
 				(type padvia)
@@ -60142,7 +60142,7 @@
 		(uuid "1a90690f-0f4f-000a-1a97-c1fe18e8257c")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30107)
+		(priority 30108)
 		(attr
 			(teardrop
 				(type padvia)
@@ -60220,7 +60220,7 @@
 		(uuid "1b133dca-2b34-0b9e-19d1-2b28c732e9ec")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30196)
+		(priority 30199)
 		(attr
 			(teardrop
 				(type padvia)
@@ -60259,7 +60259,7 @@
 		(uuid "1e938d08-16f9-0c0f-24de-b6239053f8d2")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30282)
+		(priority 30296)
 		(attr
 			(teardrop
 				(type padvia)
@@ -60656,7 +60656,7 @@
 		(uuid "286a1566-d8fe-0fd7-1001-7a5f12c5b6e4")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30315)
+		(priority 30317)
 		(attr
 			(teardrop
 				(type padvia)
@@ -60735,7 +60735,7 @@
 		(uuid "2ce9021a-7902-0806-0b08-6f94dcda9f69")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30222)
+		(priority 30223)
 		(attr
 			(teardrop
 				(type padvia)
@@ -60972,7 +60972,7 @@
 		(uuid "31020f6a-dbc5-0865-1a34-0d2482efd9d5")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30314)
+		(priority 30315)
 		(attr
 			(teardrop
 				(type padvia)
@@ -61448,7 +61448,7 @@
 		(uuid "3b6d881d-01e5-086e-3bc2-23b1b0cde145")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30193)
+		(priority 30225)
 		(attr
 			(teardrop
 				(type padvia)
@@ -61763,7 +61763,7 @@
 		(uuid "3f5e8666-ed6a-0f8d-05e4-64c243b26524")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30200)
+		(priority 30201)
 		(attr
 			(teardrop
 				(type padvia)
@@ -62040,7 +62040,7 @@
 		(uuid "414c17d5-b0a5-0874-1620-ab12e8904a87")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30076)
+		(priority 30077)
 		(attr
 			(teardrop
 				(type padvia)
@@ -62118,7 +62118,7 @@
 		(uuid "42ff16d0-ab06-05f1-1c8f-5fc34c37c61a")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30074)
+		(priority 30073)
 		(attr
 			(teardrop
 				(type padvia)
@@ -62356,7 +62356,7 @@
 		(uuid "45b8efa6-8638-03bf-3085-5334330f48a0")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30207)
+		(priority 30208)
 		(attr
 			(teardrop
 				(type padvia)
@@ -62750,7 +62750,7 @@
 		(uuid "4baf4442-ef04-0406-1f05-22b4d8d2b604")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30108)
+		(priority 30107)
 		(attr
 			(teardrop
 				(type padvia)
@@ -62829,7 +62829,7 @@
 		(uuid "4cee385a-1e95-006d-0789-efca44a54fc5")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30094)
+		(priority 30093)
 		(attr
 			(teardrop
 				(type padvia)
@@ -62869,7 +62869,7 @@
 		(uuid "4e06cd2a-01b8-0649-0d99-4cabf337730e")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30225)
+		(priority 30227)
 		(attr
 			(teardrop
 				(type padvia)
@@ -63342,7 +63342,7 @@
 		(uuid "56fab947-9a6d-01aa-3a44-06e5850564aa")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30220)
+		(priority 30193)
 		(attr
 			(teardrop
 				(type padvia)
@@ -63420,7 +63420,7 @@
 		(uuid "59d341cb-6d24-039b-378d-2f74bd713988")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30202)
+		(priority 30204)
 		(attr
 			(teardrop
 				(type padvia)
@@ -63577,7 +63577,7 @@
 		(uuid "5b77e8c9-e04e-01e4-1e26-646ade2805f7")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30290)
+		(priority 30293)
 		(attr
 			(teardrop
 				(type padvia)
@@ -63656,7 +63656,7 @@
 		(uuid "5f80128f-7f82-0de3-1dd3-68d18ed8d710")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30259)
+		(priority 30260)
 		(attr
 			(teardrop
 				(type padvia)
@@ -63815,7 +63815,7 @@
 		(uuid "62ecfef3-a746-0e89-344b-d12ee94e00a5")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30302)
+		(priority 30305)
 		(attr
 			(teardrop
 				(type padvia)
@@ -64090,7 +64090,7 @@
 		(uuid "664f4e84-f97f-0831-0e9f-51b8b15f4dbe")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30285)
+		(priority 30288)
 		(attr
 			(teardrop
 				(type padvia)
@@ -64288,7 +64288,7 @@
 		(uuid "67b1ba7e-2fa2-0cd9-10f7-04f92911c2b3")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30287)
+		(priority 30290)
 		(attr
 			(teardrop
 				(type padvia)
@@ -64604,7 +64604,7 @@
 		(uuid "6de87aea-5727-0869-3020-410fd953ac0f")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30210)
+		(priority 30219)
 		(attr
 			(teardrop
 				(type padvia)
@@ -64762,7 +64762,7 @@
 		(uuid "6f8aec34-b5f1-091c-338d-1c84c7bcdc72")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30295)
+		(priority 30298)
 		(attr
 			(teardrop
 				(type padvia)
@@ -64802,7 +64802,7 @@
 		(uuid "70630ce7-e441-0186-2f64-48f91461c4dd")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30219)
+		(priority 30210)
 		(attr
 			(teardrop
 				(type padvia)
@@ -64880,7 +64880,7 @@
 		(uuid "727fe357-a6bb-0ff6-2ff2-e8ed93a38e76")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30289)
+		(priority 30282)
 		(attr
 			(teardrop
 				(type padvia)
@@ -64999,7 +64999,7 @@
 		(uuid "742aa302-8615-0778-0f32-c637471d718d")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30291)
+		(priority 30294)
 		(attr
 			(teardrop
 				(type padvia)
@@ -65236,7 +65236,7 @@
 		(uuid "7829a967-f6d1-0a84-098b-7be2fbfe3ef8")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30071)
+		(priority 30072)
 		(attr
 			(teardrop
 				(type padvia)
@@ -65353,7 +65353,7 @@
 		(uuid "7c9d5ea7-b3e4-0f32-2249-718cad89c58a")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30334)
+		(priority 30333)
 		(attr
 			(teardrop
 				(type padvia)
@@ -65473,7 +65473,7 @@
 		(uuid "7fa81118-da55-0be1-2a9e-bc708226a7e4")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30310)
+		(priority 30307)
 		(attr
 			(teardrop
 				(type padvia)
@@ -65513,7 +65513,7 @@
 		(uuid "7fec6c29-d8ce-00f3-0410-12b21bfd9d4f")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30208)
+		(priority 30207)
 		(attr
 			(teardrop
 				(type padvia)
@@ -65591,7 +65591,7 @@
 		(uuid "814ecd6e-81be-0898-142c-d89f9cc4c3d3")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30299)
+		(priority 30301)
 		(attr
 			(teardrop
 				(type padvia)
@@ -65671,7 +65671,7 @@
 		(uuid "851c06c2-ae11-01ff-140a-074fcb872c80")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30227)
+		(priority 30220)
 		(attr
 			(teardrop
 				(type padvia)
@@ -65867,7 +65867,7 @@
 		(uuid "89a948bd-80d0-0eb0-0244-47141de5058a")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30073)
+		(priority 30074)
 		(attr
 			(teardrop
 				(type padvia)
@@ -65906,7 +65906,7 @@
 		(uuid "8bda77ef-9b65-0d3e-2f0f-e14ae18ad1c8")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30047)
+		(priority 30058)
 		(attr
 			(teardrop
 				(type padvia)
@@ -66142,7 +66142,7 @@
 		(uuid "94b8d94c-1fe0-0d74-0665-3212c833a426")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30261)
+		(priority 30256)
 		(attr
 			(teardrop
 				(type padvia)
@@ -66417,7 +66417,7 @@
 		(uuid "9a06edda-0156-0a4d-2c84-6a4223a70507")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30216)
+		(priority 30215)
 		(attr
 			(teardrop
 				(type padvia)
@@ -66771,7 +66771,7 @@
 		(uuid "9fe8c974-4d9c-0c4a-1b5e-b2f34ab7cf7e")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30253)
+		(priority 30254)
 		(attr
 			(teardrop
 				(type padvia)
@@ -67525,7 +67525,7 @@
 		(uuid "aa8d43d4-bc5b-0a7e-3bb8-4e3474592f28")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30072)
+		(priority 30071)
 		(attr
 			(teardrop
 				(type padvia)
@@ -67722,7 +67722,7 @@
 		(uuid "ac35f81f-af49-09f2-0479-06972c63314e")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30204)
+		(priority 30196)
 		(attr
 			(teardrop
 				(type padvia)
@@ -67921,7 +67921,7 @@
 		(uuid "adcf0bce-22c4-0c3c-0e04-d73e4123e4cb")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30064)
+		(priority 30066)
 		(attr
 			(teardrop
 				(type padvia)
@@ -68078,7 +68078,7 @@
 		(uuid "b2769a0b-d748-0a26-234b-51752535edf8")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30256)
+		(priority 30252)
 		(attr
 			(teardrop
 				(type padvia)
@@ -68157,7 +68157,7 @@
 		(uuid "b574c8c8-4655-064a-044a-cea1e8a6e8ff")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30093)
+		(priority 30094)
 		(attr
 			(teardrop
 				(type padvia)
@@ -68275,7 +68275,7 @@
 		(uuid "b60e0b11-f74a-05b2-3b9b-711632b1bd36")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30215)
+		(priority 30216)
 		(attr
 			(teardrop
 				(type padvia)
@@ -68314,7 +68314,7 @@
 		(uuid "b647495d-71ad-0aee-1665-2dfe98f8bbef")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30332)
+		(priority 30335)
 		(attr
 			(teardrop
 				(type padvia)
@@ -68711,7 +68711,7 @@
 		(uuid "baaf1ef4-0e1f-049b-35d4-435052276597")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30283)
+		(priority 30285)
 		(attr
 			(teardrop
 				(type padvia)
@@ -68790,7 +68790,7 @@
 		(uuid "bb832f67-bce4-0e65-3823-6c0134aa7b62")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30228)
+		(priority 30226)
 		(attr
 			(teardrop
 				(type padvia)
@@ -68947,7 +68947,7 @@
 		(uuid "bdb03791-0230-04e9-17e8-18096c05f33e")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30058)
+		(priority 30047)
 		(attr
 			(teardrop
 				(type padvia)
@@ -69025,7 +69025,7 @@
 		(uuid "beb3d10b-950d-00b7-0bb1-3e582dfa765e")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30223)
+		(priority 30222)
 		(attr
 			(teardrop
 				(type padvia)
@@ -69142,7 +69142,7 @@
 		(uuid "c17e897b-9723-0a3d-180c-63a130ce0b46")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30201)
+		(priority 30202)
 		(attr
 			(teardrop
 				(type padvia)
@@ -69221,7 +69221,7 @@
 		(uuid "c1e9e816-8f15-0592-2a21-2c08055c2b65")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30309)
+		(priority 30310)
 		(attr
 			(teardrop
 				(type padvia)
@@ -69261,7 +69261,7 @@
 		(uuid "c2c7a032-19bd-0c44-2ec6-65b240586082")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30284)
+		(priority 30287)
 		(attr
 			(teardrop
 				(type padvia)
@@ -69460,7 +69460,7 @@
 		(uuid "c50aa7b8-3fb7-0f17-2eab-5c93ab86598e")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30305)
+		(priority 30309)
 		(attr
 			(teardrop
 				(type padvia)
@@ -69580,7 +69580,7 @@
 		(uuid "c5eb03d6-64c8-06e8-2516-4f747794a843")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30077)
+		(priority 30076)
 		(attr
 			(teardrop
 				(type padvia)
@@ -69698,7 +69698,7 @@
 		(uuid "c7643c5e-b098-0d79-178b-0a9c236e08d9")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30090)
+		(priority 30088)
 		(attr
 			(teardrop
 				(type padvia)
@@ -69895,7 +69895,7 @@
 		(uuid "cd95ec65-48fd-0e8e-3dbf-7d574858e3ad")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30199)
+		(priority 30200)
 		(attr
 			(teardrop
 				(type padvia)
@@ -69934,7 +69934,7 @@
 		(uuid "d06f8626-4adf-083a-154e-4077613550f1")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30296)
+		(priority 30299)
 		(attr
 			(teardrop
 				(type padvia)
@@ -70053,7 +70053,7 @@
 		(uuid "d2faa24a-3caf-0405-17ef-be26f4ca5636")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30304)
+		(priority 30283)
 		(attr
 			(teardrop
 				(type padvia)
@@ -70490,7 +70490,7 @@
 		(uuid "de33bac2-a1dc-09cb-36f8-04e5ea807c54")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30333)
+		(priority 30334)
 		(attr
 			(teardrop
 				(type padvia)
@@ -70569,7 +70569,7 @@
 		(uuid "df4f1a08-a040-06e8-36b7-881fc45edf59")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30292)
+		(priority 30295)
 		(attr
 			(teardrop
 				(type padvia)
@@ -70805,7 +70805,7 @@
 		(uuid "e1b7881b-37ff-0dc9-2b1b-bf11df7bad08")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30288)
+		(priority 30292)
 		(attr
 			(teardrop
 				(type padvia)
@@ -70965,7 +70965,7 @@
 		(uuid "e523eebc-fba6-0789-26b0-de8ae4c23121")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30307)
+		(priority 30284)
 		(attr
 			(teardrop
 				(type padvia)
@@ -71044,7 +71044,7 @@
 		(uuid "e64af242-987f-0d29-1abc-7748c686bc69")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30286)
+		(priority 30289)
 		(attr
 			(teardrop
 				(type padvia)
@@ -71163,7 +71163,7 @@
 		(uuid "e90a4042-7c69-07bb-0c87-b4d3e2dba41e")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30226)
+		(priority 30228)
 		(attr
 			(teardrop
 				(type padvia)
@@ -71438,7 +71438,7 @@
 		(uuid "efc910f6-1449-0562-093b-3b8a5c748772")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30335)
+		(priority 30332)
 		(attr
 			(teardrop
 				(type padvia)
@@ -71477,7 +71477,7 @@
 		(uuid "f051104f-2e6f-05a6-0197-4ff1722ef618")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30298)
+		(priority 30286)
 		(attr
 			(teardrop
 				(type padvia)
@@ -71557,7 +71557,7 @@
 		(uuid "f1c3931b-53a6-04a9-29bf-04742e52b0af")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30088)
+		(priority 30090)
 		(attr
 			(teardrop
 				(type padvia)
@@ -71596,7 +71596,7 @@
 		(uuid "f322d311-2f1b-0f3c-3954-ef849ea6e94b")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30317)
+		(priority 30314)
 		(attr
 			(teardrop
 				(type padvia)
@@ -71674,7 +71674,7 @@
 		(uuid "f44af976-63cc-0d37-0e6f-3e5f421eda78")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30300)
+		(priority 30302)
 		(attr
 			(teardrop
 				(type padvia)
@@ -71793,7 +71793,7 @@
 		(uuid "f79b8487-f815-07ed-15c5-e9c2f92865b0")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30065)
+		(priority 30064)
 		(attr
 			(teardrop
 				(type padvia)
@@ -71872,7 +71872,7 @@
 		(uuid "f8bfb9e8-3d58-0c34-06d2-122e1b8b45be")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30254)
+		(priority 30253)
 		(attr
 			(teardrop
 				(type padvia)
@@ -72146,7 +72146,7 @@
 		(uuid "fe13fe4d-77ba-0845-15b1-5d08778ba4a4")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30260)
+		(priority 30261)
 		(attr
 			(teardrop
 				(type padvia)
@@ -85300,7 +85300,7 @@
 		(uuid "9bd6531f-570c-0109-35fd-412ed2e5d5c6")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30048)
+		(priority 30049)
 		(attr
 			(teardrop
 				(type padvia)
@@ -86178,7 +86178,7 @@
 		(uuid "e6145ba3-0753-05d9-33c7-ca9347dfd8ad")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30049)
+		(priority 30048)
 		(attr
 			(teardrop
 				(type padvia)

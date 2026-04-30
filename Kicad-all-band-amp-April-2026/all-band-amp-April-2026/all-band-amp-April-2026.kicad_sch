@@ -16357,7 +16357,7 @@
 		(dnp no)
 		(uuid "3a5541cf-03f3-45d5-a943-235ccb8c9f5f")
 		(property "Reference" "R44"
-			(at 252.222 87.884 0)
+			(at 255.778 96.012 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16365,8 +16365,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4k7"
-			(at 252.476 90.17 0)
+		(property "Value" "1k5"
+			(at 255.524 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17280,8 +17280,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4k7"
-			(at 258.826 85.09 0)
+		(property "Value" "1k5"
+			(at 258.064 84.582 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26686,7 +26686,7 @@
 		(dnp no)
 		(uuid "ef91f238-e07d-407d-b058-8a671607ab6e")
 		(property "Reference" "R43"
-			(at 384.81 72.898 90)
+			(at 389.128 66.548 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26694,8 +26694,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1milli"
-			(at 378.968 72.898 90)
+		(property "Value" "Shunt Not Fitted"
+			(at 374.396 72.136 90)
 			(effects
 				(font
 					(size 1.27 1.27)
