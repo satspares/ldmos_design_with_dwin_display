@@ -52,6 +52,12 @@ void select_band(uint8_t lastByteRX) {
         calc_array_swr_offset = (lastByteRX - FIRST_ICON);             // 0-6 one spare 7
         calc_array_lpf_offset = (lastByteRX - FIRST_ICON) + EEPROMROW; // 8-14 one spare 15
         calc_array_drive_offset = (lastByteRX - FIRST_ICON) + DRIVEOFFSET; // 32-37 one spare
+
+        //Serial.print("calc_array_drive_offset "); Serial.println(calc_array_drive_offset);
+        //Serial.print("calc_array_swr_offset "); Serial.println(calc_array_swr_offset);
+        //Serial.print(" calc_array_lpf_offset "); Serial.println( calc_array_lpf_offset);
+        
+
         glo_drive_power = powerCalcArray[calc_array_drive_offset];
     }
 

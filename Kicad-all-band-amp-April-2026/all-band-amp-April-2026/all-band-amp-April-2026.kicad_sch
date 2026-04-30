@@ -22138,8 +22138,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1k5"
-			(at 35.56 130.048 0)
+		(property "Value" "1k5-3k3"
+			(at 43.18 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22403,7 +22403,7 @@
 		(dnp no)
 		(uuid "a50cb7b9-8bed-4bc1-9c34-278c90a51ba7")
 		(property "Reference" "R7"
-			(at 36.83 175.006 0)
+			(at 36.576 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22411,8 +22411,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1k5"
-			(at 35.306 176.784 0)
+		(property "Value" "1k5-3k3"
+			(at 42.672 176.276 0)
 			(effects
 				(font
 					(size 1.27 1.27)

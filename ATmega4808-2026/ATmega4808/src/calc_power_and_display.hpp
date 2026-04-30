@@ -19,7 +19,7 @@ float driveWatts() {
     if (Voltage <= diodeLossMVdrive + 1) {
         return 0;
     } else {
-        Voltage = (Voltage / (map(glo_drive_power, 1, 100, DRIVECALCMAJOR, 1)));
+        Voltage = (Voltage / (float)(map(glo_drive_power, 1, 100, DRIVECALCMAJOR, 1)));
         if (isNegative(Voltage)) Voltage = 0;
         Power = (pow(Voltage, 2.00)); // should be * 50 but we would only have to div. again by 50
         if (Power > 9.90) {            // drive set point max is 10 watts

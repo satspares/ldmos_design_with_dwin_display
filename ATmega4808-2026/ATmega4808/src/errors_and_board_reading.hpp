@@ -249,6 +249,10 @@ float readI()
     }
     currentI *= adcRef;
     currentI /= 0.1;
+    if (setting_current_calc)
+    {
+        hmi.setFloatValue(current_calc_current_display, currentI);
+    }
     errorI(currentI);
     return currentI;
 
@@ -259,6 +263,10 @@ float readI()
     mA = mA + (mapResult*10);
     if (isNegative(mA) || mA < 500) mA = 0;
     currentI = (float)mA/1000;
+    if (setting_current_calc)
+    {
+        hmi.setFloatValue(current_calc_current_display, currentI);
+    }
     errorI(currentI);
     return currentI;
       

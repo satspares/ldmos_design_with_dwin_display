@@ -150,7 +150,8 @@ void mcp23017ChangeOnPortB() {
 }
 
 void swr1IntRising(){
-swr1IntCount ++;    
+swr1IntCount ++;   
+ //Serial.println("SWR1 Int Count "); Serial.println(swr1IntCount); 
 if (swr1IntCount > interrupt_Count_trigger){
     swr1IntActiveHigh = true;
 }
@@ -158,6 +159,7 @@ if (swr1IntCount > interrupt_Count_trigger){
 
 void swr2IntRising(){    
 swr2IntCount ++;  
+//Serial.println("SWR2 Int Count "); Serial.println(swr2IntCount);
 if (swr2IntCount > interrupt_Count_trigger){
     swr2IntActiveHigh = true;
 }

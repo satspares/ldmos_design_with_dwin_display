@@ -131,14 +131,14 @@ void onHMIEvent(String address, int lastByte, String message, String response) {
     hmi.setPage(powerSetPage);
     setting_power_calc = true;
         
-      //  const uint16_t arraySize = (sizeof(powerCalcArray));
-      //  for(int j = 0; j < arraySize/sizeof(uint16_t); j++)
-      //  {
-      //   Serial.print(" ");
-      //   Serial.print(powerCalcArray[j]);
-      //   Serial.print(" ");
-      //   Serial.print(j);
-      //  }
+  //      const uint16_t arraySize = (sizeof(powerCalcArray));
+  //      for(int j = 0; j < arraySize/sizeof(uint16_t); j++)
+   //     {
+  //       Serial.print(" ");
+  //       Serial.print(powerCalcArray[j],HEX);
+  //       Serial.print(" ");
+  //       Serial.print(j);
+  //      }
          
         savePowerValue = powerCalcArray[calc_array_swr_offset + swrOffset];
         hmi.setText(startPage_band_text, bandStrings(calc_array_swr_offset));
@@ -188,6 +188,7 @@ void onHMIEvent(String address, int lastByte, String message, String response) {
         powerCalcSet = map(powerCalcSet, 0, 250, 250, 0);  // reverse it.
         delay(200);
         powerCalcArray[calc_array_swr_offset + swrOffset] = powerCalcSet;
+
         usebeep ? hmi.beepHMI(BEEP_YES) : hmi.playSound(YES);
     
       }
@@ -240,7 +241,8 @@ void onHMIEvent(String address, int lastByte, String message, String response) {
         setting_swr_calc = true;
         hmi.setVPWord(swr_calc_display, powerCalcArray[calc_array_swr_offset + swrOffset + (EEPROMROW * 2)]);
         saveSWR = powerCalcArray[calc_array_swr_offset + swrOffset + (EEPROMROW * 2)];
-        //  Serial.println(calc_array_swr_offset+swrOffset+(EEPROMROW*2));
+        //Serial.print("calc_array_swr_offset ");
+        //Serial.println(calc_array_swr_offset+swrOffset+(EEPROMROW*2));
         usebeep ? hmi.beepHMI(BEEP_YES) : hmi.playSound(YES);
         hmi.setFloatValue(swr_display_glo_swr, glo_swr_display);
         if (which_swr) {

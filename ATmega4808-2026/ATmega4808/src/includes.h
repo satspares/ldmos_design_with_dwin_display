@@ -21,7 +21,7 @@ const uint8_t SWR2CALCMAJOR = 1;
 const uint8_t SWR1CALCMAJOR = 1;
 
 const uint16_t ICALCMAJOR = 80;        // I step change in I set
-const uint16_t DRIVECALCMAJOR = 200;   // used in the drive calc auto power (lower = higher)
+const uint16_t DRIVECALCMAJOR = 280;   // used in the drive calc (lower = higher)
                                        // depends on how you obtain drive power     
 const uint16_t MAXAMPPOWERCALC = 300;   // used in the auto power calculations keep at 600 or less?
 
@@ -142,14 +142,7 @@ bool band_auto = false;             // band man auto
 bool which_antenna = false;         // Antenna one
 bool which_swr = false;             // which swr result to display
 bool band_auto_touched = false; // detect band auto to manual change - used = bcd band select
-#ifdef DISPLAY160M
-const uint8_t band_display_offset = 7;   //display second band icons 160m-6m 7 icons per. display
-#else
-const uint8_t band_display_offset = 0;   // display first band icons 80m-4m
-#endif
-
 uint8_t swrOffset = 0;          // offset into eeprom for swr1/swr2
-
 bool temp_id_reset = false;     // ticker reset for temp and ID
 bool peak_hold_reset = false;   // ticker reset for power peak hold etc
 bool power_swr_reset = false;   // power swr ticker reset
@@ -180,6 +173,13 @@ uint16_t glo_volt_setting = 0;      // volt calc read from eeprom
 uint16_t glo_current_setting = 0;   // current calc read from eeprom
 float glo_swr_display = 0;
 float glo_volt_display = 0;
+
+
+#ifdef DISPLAY160M
+const uint8_t band_display_offset = 7;   //display second band icons 160m-6m 7 icons per. display
+#else
+const uint8_t band_display_offset = 0;   // display first band icons 80m-4m
+#endif
 const float adcRef = (4.3 / 1023);
 const uint8_t ADC_SAMPLES = 4;
 // Power Calc initial values
@@ -200,7 +200,7 @@ uint16_t powerCalcArray[] = { 50, 50, 50, 50, 50, 50, 50, 0xff,              // 
 #define CURRENTSETPOINT 4
 #define TEXT1COLOR 5
 #define TEXT2COLOR 6
-uint16_t intSettingsArray[] =  { 200, 45, 55, 6, 15, COLOR_WHITE, COLOR_WHITE };
+uint16_t intSettingsArray[] =  { 200, 45, 55, 8, 20, COLOR_WHITE, COLOR_WHITE };
 
 /* ======= Display Settings ======== */
 #define DGUS_BAUD 115200
@@ -484,10 +484,6 @@ const uint8_t DXBIAS = 12;      //< pin GPB4 (5) of the MCP23017.
 #define SWR2_INT    A0 //new
 #define AUX1_IN     7  // ltv-827
 #define AUX2_IN     8  // ltv-827
-//#define BCD_0 8
-//#define BCD_1 9
-//#define BCD_2 10
-//#define BCD_3 11
 #define INTB 6  //MCP Int
 //#define A600_BIAS_ON 13
 
@@ -507,6 +503,7 @@ const uint8_t DXBIAS = 12;      //< pin GPB4 (5) of the MCP23017.
 
 /* ======= function forward references ======== */
 //
+
 void select_band(uint8_t lastByteRX);
 //void setGlobalVars();
 void mcp23017_setup();
@@ -540,6 +537,8 @@ void eeprom_write_power_calc_values();
 void eeprom_read_power_calc_values();
 void eeprom_write_intSetting_values();
 void eeprom_read_intSetting_values();
+template<class T> int EEPROM_writeAnything(int ee, const T &value);
+template<class T> int EEPROM_readAnything(int ee, T &value);
 
 void configureInterrupts();   // mcp23017
 void PTTservice();
@@ -574,19 +573,7 @@ X map_Generic(X x, M in_min, N in_max, O out_min, Q out_max) {
     return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
-template<class T> int EEPROM_writeAnything(int ee, const T &value) {
-    const byte *p = (const byte *)(const void *)&value;
-    unsigned int i;
-    for (i = 0; i < sizeof(value); i++) EEPROM.write(ee++, *p++);
-    return i;
-}
 
-template<class T> int EEPROM_readAnything(int ee, T &value) {
-    byte *p = (byte *)(void *)&value;
-    unsigned int i;
-    for (i = 0; i < sizeof(value); i++) *p++ = EEPROM.read(ee++);
-    return i;
-}
 /* ======= Global Instances ======== */
 //
 MCP23017 mcp23017 = MCP23017(0x20);

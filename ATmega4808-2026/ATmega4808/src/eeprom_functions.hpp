@@ -39,9 +39,9 @@ void readEEPROM() {
         eeprom_read_power_calc_values();
         // check for out of range
         for (int j = 0; j < (sizeof(powerCalcArray) / sizeof(uint16_t)); j++) {
+             //  Serial.print(powerCalcArray[j]);
+             //  Serial.print(" ");
             if (powerCalcArray[j] > 2000) powerCalcArray[j] = 50;
-           //  Serial.print(powerCalcArray[j]);
-           //  Serial.print(" ");
         }
 
         /*
@@ -79,27 +79,53 @@ void eeprom_read_intSetting_values() {
 }
 
 
-void safeStringToEEPROM(uint16_t EEPROM_address, uint16_t  safeStringSize, SafeString& strin){
-    uint16_t i = 0;
-    uint16_t j;
-    for ( j = EEPROM_address; j < safeStringSize+EEPROM_address; j++){
-        EEPROM.update(j,strin.charAt(i));
-        i++;
+    void safeStringToEEPROM(uint16_t EEPROM_address, uint16_t safeStringSize, SafeString& strin) {
+    uint16_t maxLen = strin.length();
+    if (maxLen > safeStringSize) {
+        maxLen = safeStringSize;
     }
-    EEPROM.update(j,0); EEPROM.update(j+1,0); // end
+    uint16_t j = EEPROM_address;
+    for (uint16_t i = 0; i < maxLen; i++, j++) {
+        delay(10);
+        EEPROM.update(j, strin.charAt(i));
+    }
+    delay(10);
+    EEPROM.update(j, '\0');
+}
+    
+
+
+void safeStringFromEEPROM(uint16_t EEPROM_address,
+                          uint16_t safeStringMaxSize,
+                          SafeString& strin) {
+    strin.clear();
+    uint16_t end = EEPROM_address + safeStringMaxSize;
+    for (uint16_t j = EEPROM_address; j < end; j++) {
+        uint8_t retByte = EEPROM.read(j);
+
+        if (retByte == 0) break;
+
+        if (!strin.isFull()) {
+            strin += char(retByte);
+        } else {
+            break;
+        }
+    }
 }
 
-void safeStringFromEEPROM(uint16_t EEPROM_address,uint16_t  safeStringMaxSize, SafeString& strin){
-     uint16_t i = 0;
-     uint8_t retByte = 0;
-     strin.clear();
-    for (int j = EEPROM_address; j < safeStringMaxSize+EEPROM_address; j++){
-     retByte = EEPROM.read(j);
-     if (retByte == 0) break;
-     strin += char(retByte);
-     i++;
-      }
+template<class T> int EEPROM_writeAnything(int ee, const T &value) {
+    const byte *p = (const byte *)(const void *)&value;
+    unsigned int i;
+    for (i = 0; i < sizeof(value); i++){
+    delay(10);    
+    EEPROM.write(ee++, *p++);
     }
+    return i;
+}
 
-
-
+template<class T> int EEPROM_readAnything(int ee, T &value) {
+    byte *p = (byte *)(void *)&value;
+    unsigned int i;
+    for (i = 0; i < sizeof(value); i++) *p++ = EEPROM.read(ee++);
+    return i;
+}
