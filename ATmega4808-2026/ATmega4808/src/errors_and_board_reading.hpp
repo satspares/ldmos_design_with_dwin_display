@@ -398,10 +398,13 @@ void error_odrive()
         error_od_status = true;
         error_od_status_stop = true;
         hmi.setVPByte(overdrive_error, RED_ICON);
-#ifdef A600_AMP
+
+#ifndef DRIVE_NO_STOP        
+    #ifdef A600_AMP
         a600_bias_off();
-#else
+    #else
         bias_off();
+    #endif
 #endif
         usebeep ? hmi.beepHMI(BEEP_CANCEL) : hmi.playSound(BEEPERROR);
     }

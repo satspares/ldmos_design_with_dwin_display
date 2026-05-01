@@ -10,6 +10,7 @@
 //#define BIAS_ON           // keep bias on test etc
 //#define MY_ALL_BAND_AMP   // my amp some different pinouts
 //#define AUTO_BAND
+//#define DRIVE_NO_STOP       // overdrive error only dont stop tx
 #define BLINKLED            // if we are not using pin13 OPTOUT1 (a600_bias) flash onboard led
 #define SENSOR_DEBUG        // debug dallas sensors
 
@@ -94,7 +95,7 @@ void setup() {
     #ifdef DXWORLD_ERROR_LEDS
     dx_error_reset();
     #endif
-    attachInterrupt(PTT, PTTservice, FALLING); // Falling edge at PTT
+//    attachInterrupt(PTT, PTTservice, FALLING); // Falling edge at PTT
     attachInterrupt(SWR2_INT, swr2IntRising, RISING);
     attachInterrupt(SWR1_INT, swr1IntRising, RISING);
     clearSWRInterruptFlags();
@@ -141,14 +142,12 @@ void loop() {
     if (tx_status) {
        calcPowerandDisplay();  
     }
-   // Serial.println(pttIntActive);
+
     if (temp_id_reset) {
         
         float tempNow;
         //this ticker is temperatureIDTicker
-        //debugTestLong = millis();
         tempNow = readTemp(false);
-        //Serial.println(millis() - debugTestLong);
         hmi.setFloatValue(temp_display, tempNow);
         hmi.setFloatValue(volt_display, read_volt());
         hmi.setFloatValue(current_display, readI());

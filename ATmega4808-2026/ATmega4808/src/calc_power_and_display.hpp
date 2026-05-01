@@ -22,6 +22,7 @@ float driveWatts() {
         Voltage = (Voltage / (float)(map(glo_drive_power, 1, 100, DRIVECALCMAJOR, 1)));
         if (isNegative(Voltage)) Voltage = 0;
         Power = (pow(Voltage, 2.00)); // should be * 50 but we would only have to div. again by 50
+
         if (Power > 9.90) {            // drive set point max is 10 watts
             return (9.90);
         } else {

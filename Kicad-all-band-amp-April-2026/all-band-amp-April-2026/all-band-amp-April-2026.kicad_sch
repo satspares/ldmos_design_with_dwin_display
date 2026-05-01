@@ -8151,6 +8151,18 @@
 		)
 		(uuid "08c8f72c-a27e-4e30-b7b4-20fdbca02f55")
 	)
+	(text "Note: \nEnsure only DC is applied \nto the RF in (drive) input.\nuse a low pass filter.\nDont let rf into the board! "
+		(exclude_from_sim no)
+		(at 48.768 38.1 0)
+		(effects
+			(font
+				(size 3 3)
+				(thickness 0.6)
+				(bold yes)
+			)
+		)
+		(uuid "0f0e9a3a-5a05-4564-8621-45b96b54bfeb")
+	)
 	(text "Analog Inputs"
 		(exclude_from_sim no)
 		(at 39.37 61.722 0)

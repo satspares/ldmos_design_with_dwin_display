@@ -9,9 +9,14 @@ void tx_actions() {
     static bool tx_running;
     static bool display_dim;
 
-    if ((digitalRead(PTT) == HIGH) || (error_vo_status)
-        || (error_temp_status) || (error_od_status_stop) || (error_i_status) || 
-            (swr2IntActiveHigh) || (swr1IntActiveHigh)  ) {
+    if ((digitalRead(PTT) == HIGH) || (error_vo_status)|| 
+        (error_temp_status) || 
+        #ifndef DRIVE_NO_STOP 
+        (error_od_status_stop) || 
+        #endif
+        (error_i_status) || 
+        (swr2IntActiveHigh) || 
+        (swr1IntActiveHigh)  ) {
 #ifndef BIAS_ON
 #ifdef A600_AMP
         a600_bias_off();
@@ -28,7 +33,6 @@ void tx_actions() {
         }
     } else if ((digitalRead(PTT) == LOW) && (!tx_running) && (error_od_status_stop == false)) {
         //   Serial.println("PTT_LOW");   // tx on
-        pttIntActive = false;
         tx_status = true;
         tx_running = true;
         // may not be needed if using solid state switching
