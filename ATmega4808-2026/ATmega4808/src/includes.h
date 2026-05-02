@@ -187,9 +187,8 @@ uint16_t powerCalcArray[] = { 50, 50, 50, 50, 50, 50, 50, 0xff,              // 
     50, 50, 50, 50, 50, 50, 50, 0xff,               // power LPF
     500, 500, 500, 500, 500, 500, 500, 0xff,       // swr calc antenna
     500, 500, 500, 500, 500, 500, 500, 0xff,       // swr calc LPF
-    50, 50, 50, 50, 50, 50, 50, 0xff,              // drive offset
-    50, 50, 50, 50, 50, 50, 50, 0xff,
-    50, 50, 50, 50, 50, 50, 50, 0xff };
+    50, 50, 50, 50, 50, 50, 50, 0xff, 0xff, 0xff }; // drive offset
+   
 
 // intSettingsArray[0] is the setting to set power to set to
 //  200 watts when new

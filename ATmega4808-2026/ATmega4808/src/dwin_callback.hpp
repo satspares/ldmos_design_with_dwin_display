@@ -106,16 +106,16 @@ void onHMIEvent(String address, int lastByte, String message, String response) {
     break; 
 // ======= SWR Display input swr/lpf  ======== 
     case swr_meter_change: { 
+      peak_hold_reset = true;  // reset peak on swr change
       if (which_swr) {
             which_swr = false;
             hmi.setVPWord(swr_meter_switch_display, SWR_DISPLAY);
             swrOffset = 0;
-            peak_hold_reset = true;  // reset peak on swr change
+            
         } else {
             which_swr = true;
             hmi.setVPWord(swr_meter_switch_display, LPF_DISPLAY);
             swrOffset = EEPROMROW;    //select lpf filter location in eeprom
-            peak_hold_reset = true;
         }
         usebeep ? hmi.beepHMI(BEEP_YES) : hmi.playSound(YES);
       }
@@ -153,12 +153,11 @@ void onHMIEvent(String address, int lastByte, String message, String response) {
 // ======= save button page 1 power set ======== 
       case save_power_calc: { 
         setting_power_calc = false;
+        tx_status ? hmi.setPage(txPage) : hmi.setPage(startPage);
+        usebeep ? hmi.beepHMI(BEEP_YES) : hmi.playSound(YES);
         eeprom_write_power_calc_values();
         intSettingsArray[POWERSETPOINT] = hmi.readVP(display_power_set_point);
         eeprom_write_intSetting_values();
-        delay(50);
-        usebeep ? hmi.beepHMI(BEEP_YES) : hmi.playSound(YES);
-        tx_status ? hmi.setPage(txPage) : hmi.setPage(startPage);
         eeprom_read_power_calc_values();   
       }
     break; 
@@ -210,13 +209,12 @@ void onHMIEvent(String address, int lastByte, String message, String response) {
  // Save button page2 drive set     
     case save_drive_calc: { 
         setting_power_calc = false;
+        tx_status ? hmi.setPage(txPage) : hmi.setPage(startPage);   
         glo_drive_power = hmi.readVP(power_eeprom_display2);
         powerCalcArray[calc_array_drive_offset] = glo_drive_power;
         // EEPROM.update(eeprom_drive,glo_drive_power);
-        eeprom_write_power_calc_values();
-        delay(50);
         usebeep ? hmi.beepHMI(BEEP_YES) : hmi.playSound(YES);
-        tx_status ? hmi.setPage(txPage) : hmi.setPage(startPage);   
+        eeprom_write_power_calc_values();
       }
     break; 
 // Test button Page 2 drive set
@@ -262,18 +260,15 @@ void onHMIEvent(String address, int lastByte, String message, String response) {
     break; 
 // swr calc save
     case swr_calc_save_control: { 
-        eeprom_write_power_calc_values();
-        delay(50);
-        usebeep ? hmi.beepHMI(BEEP_YES) : hmi.playSound(YES);
-        setting_swr_calc = false;
         tx_status ? hmi.setPage(txPage) : hmi.setPage(startPage);
+        usebeep ? hmi.beepHMI(BEEP_YES) : hmi.playSound(YES);
+        eeprom_write_power_calc_values();
+        setting_swr_calc = false;
         eeprom_read_power_calc_values(); 
       }
     break; 
 // swr test control
     case swr_calc_test_control: { 
-        //hmi.setFloatValue(swr_display_glo_swr,glo_swr_display);
-        //Serial.println(hmi.r     (swr_calc_display));
         powerCalcArray[calc_array_swr_offset + swrOffset + (EEPROMROW * 2)] = hmi.readVP(swr_calc_display);
         delay(200);
         usebeep ? hmi.beepHMI(BEEP_YES) : hmi.playSound(YES);
@@ -290,10 +285,10 @@ void onHMIEvent(String address, int lastByte, String message, String response) {
     break; 
 // volt calc save
         case volt_calc_save_control: {
+        tx_status ? hmi.setPage(txPage) : hmi.setPage(startPage);  
         setting_volt_calc = false;
         EEPROM.update(eeprom_volt, glo_volt_setting);
         usebeep ? hmi.beepHMI(BEEP_YES) : hmi.playSound(YES);
-        tx_status ? hmi.setPage(txPage) : hmi.setPage(startPage);
       }
     break; 
 // Volt calc cancel
@@ -324,9 +319,9 @@ void onHMIEvent(String address, int lastByte, String message, String response) {
 
     case current_calc_save_control: { 
       setting_current_calc = false;
-        EEPROM.update(eeprom_current, glo_current_setting);
-        usebeep ? hmi.beepHMI(BEEP_YES) : hmi.playSound(YES);
+         usebeep ? hmi.beepHMI(BEEP_YES) : hmi.playSound(YES);
         tx_status ? hmi.setPage(txPage) : hmi.setPage(startPage);
+        EEPROM.update(eeprom_current, glo_current_setting);
       }
     break; 
 
@@ -360,6 +355,7 @@ void onHMIEvent(String address, int lastByte, String message, String response) {
     break;
 
      case trip_save_button: { 
+        tx_status ? hmi.setPage(txPage) : hmi.setPage(startPage);
         intSettingsArray[TEMPSETPOINT] = hmi.readVP(trip_temp_display);
         delay(20);
         intSettingsArray[VOLTSETPOINT] = hmi.readVP(trip_volt_display);
@@ -372,7 +368,6 @@ void onHMIEvent(String address, int lastByte, String message, String response) {
         delay(60);
         eeprom_read_intSetting_values(); //test
         usebeep ? hmi.beepHMI(BEEP_YES) : hmi.playSound(YES);
-        tx_status ? hmi.setPage(txPage) : hmi.setPage(startPage);
       }
     break;
 

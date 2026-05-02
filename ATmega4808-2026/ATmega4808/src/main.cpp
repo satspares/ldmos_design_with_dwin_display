@@ -10,7 +10,7 @@
 //#define BIAS_ON           // keep bias on test etc
 //#define MY_ALL_BAND_AMP   // my amp some different pinouts
 //#define AUTO_BAND
-//#define DRIVE_NO_STOP       // overdrive error only dont stop tx
+//#define DRIVE_NO_STOP     // overdrive error only dont stop tx
 #define BLINKLED            // if we are not using pin13 OPTOUT1 (a600_bias) flash onboard led
 #define SENSOR_DEBUG        // debug dallas sensors
 
