@@ -94,7 +94,7 @@ const uint16_t COLOR_LIGHT_BLUE = 0x87FF;
 #define eeprom_text2_address 170
 #define eeprom_intSettings_address 210
 #define eeprom_new_on_address 240
-#define EEPROMROW 8   // we can have 8 bands max
+#define EEPROMROW 8   // we can have 8 bands max index eeprom 0-7
 #define DRIVEOFFSET 32 // drive place in calc array
 
 
@@ -562,6 +562,7 @@ void swr2IntRising();
 void clearSWRInterruptFlags();
 void safeStringToEEPROM(uint16_t EEPROM_address, uint16_t  safeStringSize, SafeString& strin);
 void safeStringFromEEPROM(uint16_t EEPROM_address,uint16_t  safeStringMaxSize, SafeString& strin);
+bool inRange(float val, float minimum, float maximum);
 
 void (*resetFunc)(void) = 0; //declare reset function at address 0
 

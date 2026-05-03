@@ -50,8 +50,6 @@ void setupDisplay() {
 #endif
     delay(500);     // debug
     select_band(band_select); //from eeprom
-    // get drive setting for calc array
-    // glo_drive_power = powerCalcArray[calc_array_drive_offset];
     if (glo_drive_power > 100) glo_drive_power = 50;  // set drive power display page2 if out of range
 }
 

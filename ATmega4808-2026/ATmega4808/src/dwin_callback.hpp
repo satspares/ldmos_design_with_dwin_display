@@ -82,10 +82,10 @@ void onHMIEvent(String address, int lastByte, String message, String response) {
     break;
 // ========== Text strings change select keyboard page ======    
     case top_bottom_text_touch: {
-      displayText.clear();
       whichText = lastByte;
       hmi.beepHMI(BEEP_YES);
       hmi.setPage(keyboardPage);
+      displayText.clear();
       hmi.setText(tmpTextDisplay,displayText.c_str()); // clear display
       hmi.setVPByte(case_image,UPC_ICON);
       which_case = 0;  // Upper Case set
@@ -95,7 +95,7 @@ void onHMIEvent(String address, int lastByte, String message, String response) {
     case touch_reset: { 
         usebeep ? hmi.beepHMI(BEEP_YES) : hmi.playSound(YES);
         error_od_status_stop = false;
-        swr_soft_trip = false; // reset swr software trip if in use
+    //   swr_soft_trip = false; // reset swr software trip if in use
         error_i_status = false;
         error_vo_status = false;
         clearSWRInterruptFlags();  // ints set from LM393 on high swr

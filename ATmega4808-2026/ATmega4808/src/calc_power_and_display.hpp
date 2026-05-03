@@ -118,7 +118,6 @@ void calcPowerandDisplay() {
     // Display Power when setting power value
     if (setting_power_calc) {
         hmi.setVPWord(power_display_startPage, (int)fwdPower_max); // update page 1 display
-      //  glo_power_fwd = (int)fwdPower_max;
     }
     // Used when setting the SWR correction
     if (setting_swr_calc) {

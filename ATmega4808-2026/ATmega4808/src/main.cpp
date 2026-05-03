@@ -11,6 +11,7 @@
 //#define MY_ALL_BAND_AMP   // my amp some different pinouts
 //#define AUTO_BAND
 //#define DRIVE_NO_STOP     // overdrive error only dont stop tx
+#define YAESU             // auto band yaesu or otherwise icom
 #define BLINKLED            // if we are not using pin13 OPTOUT1 (a600_bias) flash onboard led
 #define SENSOR_DEBUG        // debug dallas sensors
 
@@ -144,11 +145,8 @@ void loop() {
     }
 
     if (temp_id_reset) {
-        
-        float tempNow;
         //this ticker is temperatureIDTicker
-        tempNow = readTemp(false);
-        hmi.setFloatValue(temp_display, tempNow);
+        hmi.setFloatValue(temp_display, readTemp(false));
         hmi.setFloatValue(volt_display, read_volt());
         hmi.setFloatValue(current_display, readI());
         error_swr(); 
@@ -162,7 +160,7 @@ void loop() {
         error_odrive();
         temp_id_reset = false;
         }
-    }
+    }  // end loop
 
 void keepingHouse() {
     // runs continuous every 2000ms
@@ -181,7 +179,7 @@ void keepingHouse() {
 #endif // AUTO_BAND    
     
 
-}
+}  // end keepingHouse
 
 
 

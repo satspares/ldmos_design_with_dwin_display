@@ -56,7 +56,6 @@ void select_band(uint8_t lastByteRX) {
         //Serial.print("calc_array_drive_offset "); Serial.println(calc_array_drive_offset);
         //Serial.print("calc_array_swr_offset "); Serial.println(calc_array_swr_offset);
         //Serial.print(" calc_array_lpf_offset "); Serial.println( calc_array_lpf_offset);
-        
 
         glo_drive_power = powerCalcArray[calc_array_drive_offset];
     }
@@ -101,6 +100,17 @@ void select_band(uint8_t lastByteRX) {
 }
 
 #ifdef AUTO_BAND
+
+float readChannel(ADS1015_MUX channel) {
+  float voltage = 0.0;
+  adc.setCompareChannels(channel);
+  adc.startSingleMeasurement();
+  while(adc.isBusy()){delay(0);}
+  voltage = adc.getResult_V(); // alternative: getResult_mV for Millivolt
+  return voltage;
+}
+
+#ifdef YAESU
 void bcd_band() {
     byte bcd0 = 0;
     byte bcd1 = 0;
@@ -109,7 +119,7 @@ void bcd_band() {
     byte bcd_result;
     static byte last_result;
 
-    /*  // BCD Band Switch
+    /*  // OLD BCD Band Switch
     if (!digitalRead(BCD_0)) bcd0 = 1;
     if (!digitalRead(BCD_1)) bcd1 = 2;
     if (!digitalRead(BCD_2)) bcd2 = 4;
@@ -192,16 +202,50 @@ void bcd_band() {
     } // end if
     band_auto_touched = false;
 }
+#else
+void bcd_band(){  // not tested ICOM
+if (!band_auto_touched) return;
+ float adc_result = readChannel(ADS1115_COMP_0_GND);
+ adc_result = (adc_result * 2); // make up for resistor split
+ #ifdef DISPLAY160M  // alternate icons
+   if (inRange(adc_result,7.0,8.0)){
+   select_band(band160Mtr_Selected);
+   }
+ #endif
+   if (inRange(adc_result,5.6,6.5)){
+     select_band(band80Mtr_Selected);
+   }
+   if (inRange(adc_result,4.2,5.1)){
+     select_band(band60_40Mtr_Selected);
+    }
+    if (inRange(adc_result,0,0.7)){
+        select_band(band30_20Mtr_Selected);    
+    }
+    if (inRange(adc_result,2.8,3.5)){
+        select_band(band30_20Mtr_Selected);    
+    }
+    if (inRange(adc_result,3.5,4.2)){
+         select_band(band17_15Mtr_Selected);   
+    }
+    if (inRange(adc_result,2.0,2.8)){
+         select_band(band12_10Mtr_Selected);
+    }
+    if (inRange(adc_result,2.0,2.8)){
+         select_band(band12_10Mtr_Selected);
+    }
+    if (inRange(adc_result,1.0,2.0)){
+        // 4m the same as 6m ?
+         select_band(band6Mtr_Selected);
+    }
 
+band_auto_touched = false;
+}   
+#endif // end YAESU
 
-
-float readChannel(ADS1015_MUX channel) {
-  float voltage = 0.0;
-  adc.setCompareChannels(channel);
-  adc.startSingleMeasurement();
-  while(adc.isBusy()){delay(0);}
-  voltage = adc.getResult_V(); // alternative: getResult_mV for Millivolt
-  return voltage;
-}
 
 #endif // AUTOBAND
+
+
+bool inRange(float val, float minimum, float maximum){
+  return ((minimum <= val) && (val <= maximum));
+}

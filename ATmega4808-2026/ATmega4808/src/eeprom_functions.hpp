@@ -27,13 +27,11 @@ void readEEPROM() {
         band_select = EEPROM.read(eeprom_band);
         band_auto = EEPROM.read(eeprom_auto);
         which_antenna = EEPROM.read(eeprom_antenna);
-        // glo_drive_power = EEPROM.read(eeprom_drive);
         glo_volt_setting = EEPROM.read(eeprom_volt);
         glo_current_setting = EEPROM.read(eeprom_current);
 
         if (glo_current_setting > 100) glo_current_setting = 50;
         if (glo_volt_setting > 100) glo_volt_setting = 50;
-        //  if (glo_drive_power > 100) glo_drive_power = 50;  // set drive power display page2 if out of range
         //eeprom_write_power_calc_values();  //TEST FORCE WRITE
         //eeprom_write_intSetting_values();    //TEST FORCE WRITE
         eeprom_read_power_calc_values();
