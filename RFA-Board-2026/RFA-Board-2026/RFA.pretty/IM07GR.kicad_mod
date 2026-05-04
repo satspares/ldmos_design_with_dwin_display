@@ -1,14 +1,14 @@
 (footprint "IM07GR"
-	(version 20241229)
+	(version 20260206)
 	(generator "pcbnew")
-	(generator_version "9.0")
+	(generator_version "10.0")
 	(layer "F.Cu")
 	(descr "IM07GR")
 	(tags "Relay or Contactor")
-	(property "Reference" "K**"
-		(at -0.308 -0.005 0)
+	(property "Reference" "K1"
+		(at 3.81 6.35 0)
 		(layer "F.SilkS")
-		(uuid "bd3907e4-3cde-4b7c-9ce1-85e584f6a1c9")
+		(uuid "239ad618-9fbe-4ead-bce2-350b726297da")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -16,11 +16,11 @@
 			)
 		)
 	)
-	(property "Value" "IM07GR"
+	(property "Value" "IM26GR"
 		(at -0.308 -0.005 0)
 		(layer "F.SilkS")
 		(hide yes)
-		(uuid "fd12ea85-61dd-450f-8646-c57c7696cc70")
+		(uuid "1c7aee4a-378f-4e52-9543-225a3fd3940f")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -28,11 +28,11 @@
 			)
 		)
 	)
-	(property "Datasheet" ""
+	(property "Datasheet" "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=108-98001&DocType=Data%20Sheet&DocLang=English&PartCntxt=3-1462039-1&DocFormat=pdf"
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "d09a19e0-ed62-49d7-887b-6fdd6bd6d4cd")
+		(uuid "bed136d2-d387-42f3-bfcf-1cfeb47377c1")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -40,11 +40,11 @@
 			)
 		)
 	)
-	(property "Description" ""
+	(property "Description" "Body Features: Product Weight .75 G | Insulation Special Features 2500V Initial Surge Withstand Voltage between Contacts & Coil | Product Weight .026 OZ | Contact Features: Contact Arrangement 2 Form C (2 CO) | Contact Number of Poles 2 | Contact Current Rating (Max) 2 AMP | Contact Special Features Bifurcated/Twin Contacts | Contact Plating Material Gold | Contact Base Material PdRu+Au | Contact Current Class 0  2 AMP | Dimensions: Product Length .393 INCH | Width Class (Mechanical) 0  6 MM | Product"
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "f862f314-80c1-4b9d-b7b4-1539060cf207")
+		(uuid "e5267fa0-d2a8-49db-be96-1089497ad9d6")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -52,7 +52,75 @@
 			)
 		)
 	)
+	(property "Height" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9e538601-acf2-4db5-9b0a-cfa03c68b4a2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Part Number" "655-IM26GR"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2a05e09b-4948-4f03-a1c6-f1199208c0dd")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/TE-Connectivity-Axicom/IM26GR?qs=g%252BEszo6zu8Mzp1wukcNrqQ%3D%3D"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c02c9204-fe78-40e1-8d6e-550ecc17a5e2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Name" "TE Connectivity"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "754eeecc-0f05-4017-8621-b1b09acb0774")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Part_Number" "IM26GR"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "03dd6e98-fdad-4fed-a10e-2c20bdebcca1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(sheetname "/")
+	(sheetfile "RFA-Board-2026.kicad_sch")
 	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
 	(fp_line
 		(start -5 3)
 		(end -5 -3)
@@ -61,7 +129,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "8b5b1b76-9eac-4d9e-9083-c82635635dcb")
+		(uuid "a79a4e41-a6b1-4f0f-baf4-264349a8e1c3")
 	)
 	(fp_line
 		(start 5 -3)
@@ -71,18 +139,18 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "63005f2d-8ead-470b-8dc2-4cfb1a13cc4a")
+		(uuid "e903a087-b1f1-4c4e-8cf8-8d00f9bc29b7")
 	)
 	(fp_circle
-		(center -3.86 4.553)
-		(end -3.86 4.58977)
+		(center -4.6 4.8)
+		(end -4.6 4.9)
 		(stroke
 			(width 0.2)
 			(type solid)
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "d0571f7d-0a7e-4c48-96ce-f3b3a2d7cdf8")
+		(uuid "4e912a6d-d387-41ab-8462-ee86d23eb626")
 	)
 	(fp_line
 		(start -5 -3)
@@ -92,7 +160,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "57bcdf45-acba-4a64-84f3-9bab1a928d9e")
+		(uuid "c13d9c61-fe8e-4d4a-b011-246046becc9c")
 	)
 	(fp_line
 		(start -5 3)
@@ -102,7 +170,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "d77f6711-30dc-4e99-b0cd-945eef5fabba")
+		(uuid "850b9901-fedd-42dc-ad9f-7174defa0a81")
 	)
 	(fp_line
 		(start 5 -3)
@@ -112,7 +180,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "bd0c0a49-5617-4db0-96c0-2c285210b18e")
+		(uuid "08418d54-f739-466c-b083-997b426338b4")
 	)
 	(fp_line
 		(start 5 3)
@@ -122,12 +190,12 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "b52cad7c-4fce-41df-a0e7-9cb4182dcf5a")
+		(uuid "7903d7e9-bc19-44a8-898d-1c987c468e01")
 	)
 	(fp_text user "${REFERENCE}"
-		(at -0.308 -0.005 0)
+		(at -2.286 0 0)
 		(layer "F.Fab")
-		(uuid "6e1f6514-8f3c-47ce-be45-a29ba4af0c9d")
+		(uuid "6031f2c6-0625-470a-a912-a5f2395fd601")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -137,62 +205,180 @@
 	)
 	(pad "1" smd rect
 		(at -3.8 3)
-		(size 0.7 2)
+		(size 1 3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "23dc8925-588e-4016-aa06-7ca9f49d4381")
+		(teardrops
+			(best_length_ratio 0.5)
+			(max_length 1)
+			(best_width_ratio 1)
+			(max_width 2)
+			(curved_edges no)
+			(filter_ratio 0.9)
+			(enabled yes)
+			(allow_two_segments yes)
+			(prefer_zone_connections yes)
+		)
+		(uuid "91e5fe79-1d7f-4990-b967-e9eb5450f60a")
 	)
 	(pad "2" smd rect
 		(at -0.6 3)
-		(size 0.7 2)
+		(size 1 3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "fd3857af-cd09-47c1-83a2-b33004c9890b")
+		(teardrops
+			(best_length_ratio 0.5)
+			(max_length 1)
+			(best_width_ratio 1)
+			(max_width 2)
+			(curved_edges no)
+			(filter_ratio 0.9)
+			(enabled yes)
+			(allow_two_segments yes)
+			(prefer_zone_connections yes)
+		)
+		(uuid "d88e4c42-0840-4367-8d5b-d493f5788972")
 	)
 	(pad "3" smd rect
 		(at 1.6 3)
-		(size 0.7 2)
+		(size 1 3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "07b75d3d-fb58-4059-a05a-d6aadcef3c30")
+		(teardrops
+			(best_length_ratio 0.5)
+			(max_length 1)
+			(best_width_ratio 1)
+			(max_width 2)
+			(curved_edges no)
+			(filter_ratio 0.9)
+			(enabled yes)
+			(allow_two_segments yes)
+			(prefer_zone_connections yes)
+		)
+		(uuid "9f78e143-2fc7-460f-85f3-6a9be524058c")
 	)
 	(pad "4" smd rect
 		(at 3.8 3)
-		(size 0.7 2)
+		(size 1 3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "3534e916-5076-4681-94e7-dccc3d5cbe7b")
+		(teardrops
+			(best_length_ratio 0.5)
+			(max_length 1)
+			(best_width_ratio 1)
+			(max_width 2)
+			(curved_edges no)
+			(filter_ratio 0.9)
+			(enabled yes)
+			(allow_two_segments yes)
+			(prefer_zone_connections yes)
+		)
+		(uuid "4efcd936-fcf4-4922-b193-1e13327c5359")
 	)
 	(pad "5" smd rect
 		(at 3.8 -3)
-		(size 0.7 2)
+		(size 1 3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "2d53d9f0-6eb1-40d0-a924-c589d55591b4")
+		(teardrops
+			(best_length_ratio 0.5)
+			(max_length 1)
+			(best_width_ratio 1)
+			(max_width 2)
+			(curved_edges no)
+			(filter_ratio 0.9)
+			(enabled yes)
+			(allow_two_segments yes)
+			(prefer_zone_connections yes)
+		)
+		(uuid "8adad6c7-60be-47b8-b061-19dc9e170b12")
 	)
 	(pad "6" smd rect
 		(at 1.6 -3)
-		(size 0.7 2)
+		(size 1 3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "180cb05e-ccb9-455d-a198-b2217d12aed8")
+		(teardrops
+			(best_length_ratio 0.5)
+			(max_length 1)
+			(best_width_ratio 1)
+			(max_width 2)
+			(curved_edges no)
+			(filter_ratio 0.9)
+			(enabled yes)
+			(allow_two_segments yes)
+			(prefer_zone_connections yes)
+		)
+		(uuid "f7cd1374-7b80-4cb2-944d-f7b4229a5db8")
 	)
 	(pad "7" smd rect
 		(at -0.6 -3)
-		(size 0.7 2)
+		(size 1 3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "0c035913-5150-4553-8af1-8b7ac550a83f")
+		(teardrops
+			(best_length_ratio 0.5)
+			(max_length 1)
+			(best_width_ratio 1)
+			(max_width 2)
+			(curved_edges no)
+			(filter_ratio 0.9)
+			(enabled yes)
+			(allow_two_segments yes)
+			(prefer_zone_connections yes)
+		)
+		(uuid "ccb1bd2b-3b6c-4e88-97ed-ca3bfb47d69a")
 	)
 	(pad "8" smd rect
 		(at -3.8 -3)
-		(size 0.7 2)
+		(size 1 3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "51ac3adc-2b39-49d2-823a-81e0da3d5494")
+		(teardrops
+			(best_length_ratio 0.5)
+			(max_length 1)
+			(best_width_ratio 1)
+			(max_width 2)
+			(curved_edges no)
+			(filter_ratio 0.9)
+			(enabled yes)
+			(allow_two_segments yes)
+			(prefer_zone_connections yes)
+		)
+		(uuid "170d11fd-7c4f-4828-8058-8f32deef06c2")
+	)
+	(zone
+		(layer "F.Cu")
+		(uuid "6527c97f-c0e4-4c55-a5c3-009f31208b9e")
+		(hatch edge 0.5)
+		(connect_pads
+			(clearance 0)
+		)
+		(min_thickness 0.25)
+		(keepout
+			(tracks allowed)
+			(vias allowed)
+			(pads allowed)
+			(copperpour allowed)
+			(footprints not_allowed)
+		)
+		(placement
+			(enabled no)
+			(sheetname "")
+		)
+		(fill
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 0)
+		)
+		(polygon
+			(pts
+				(xy 4.7 -3) (xy 4.7 2.8) (xy -4.8 3.2) (xy -4.8 -2.9)
+			)
+		)
 	)
 	(embedded_fonts no)
-	(model "IM26GR.stp"
+	(model "${KIPRJMOD}/IM26GR/3D/IM26GR.stp"
 		(offset
-			(xyz 0 -0.01999999925 0)
+			(xyz 0 0 0)
 		)
 		(scale
 			(xyz 1 1 1)
 		)
 		(rotate
-			(xyz -180 0 0)
+			(xyz -180 -0 -0)
 		)
 	)
 )
