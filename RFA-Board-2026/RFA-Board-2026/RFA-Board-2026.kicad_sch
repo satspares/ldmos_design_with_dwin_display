@@ -2488,7 +2488,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
+		(property "Footprint" "RFA:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder-mod"
 			(at 138.938 90.17 90)
 			(hide yes)
 			(show_name no)
@@ -2570,7 +2570,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
+		(property "Footprint" "RFA:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder-mod"
 			(at 121.412 100.33 90)
 			(hide yes)
 			(show_name no)
@@ -2651,7 +2651,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_MELF-RM10_Universal_Handsoldering"
+		(property "Footprint" "RFA:D_MELF-RM10_Universal_Handsoldering-mod"
 			(at 169.545 120.65 0)
 			(hide yes)
 			(show_name no)
@@ -2889,7 +2889,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_MELF-RM10_Universal_Handsoldering"
+		(property "Footprint" "RFA:D_MELF-RM10_Universal_Handsoldering-mod"
 			(at 118.745 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -3205,7 +3205,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
+		(property "Footprint" "RFA:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder-mod"
 			(at 127 84.582 90)
 			(hide yes)
 			(show_name no)
@@ -3439,7 +3439,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
+		(property "Footprint" "RFA:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder-mod"
 			(at 124.968 92.71 90)
 			(hide yes)
 			(show_name no)
@@ -4224,7 +4224,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
+		(property "Footprint" "RFA:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder-mod"
 			(at 123.19 95.5548 0)
 			(hide yes)
 			(show_name no)
@@ -4303,7 +4303,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
+		(property "Footprint" "RFA:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder-mod"
 			(at 123.19 87.9348 0)
 			(hide yes)
 			(show_name no)
