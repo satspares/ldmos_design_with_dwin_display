@@ -12,7 +12,7 @@ void setupDisplay() {
     hmi.echoEnabled(false);  // dont want to see all the display transactions
     hmi.ackDisabled(true);   //for our no ack kernel
 #ifdef SCREENROTATE
-    /* ======= Screen rotate should be set in .cfg config file ======== */
+    /* ======= Screen rotate should be set in .cfg config file not here ======== */
     const byte rotate0 = 0; const byte rotate90 = 1;
     const byte rotate180 = 2; const byte rotate270 = 3;
     setScreenRotate(rotate90);  // some display set to portrait when new!

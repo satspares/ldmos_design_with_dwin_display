@@ -111,7 +111,7 @@ float readChannel(ADS1015_MUX channel) {
 }
 
 #ifdef YAESU
-void bcd_band() {
+void auto_band() {
     byte bcd0 = 0;
     byte bcd1 = 0;
     byte bcd2 = 0;
@@ -203,10 +203,11 @@ void bcd_band() {
     band_auto_touched = false;
 }
 #else
-void bcd_band(){  // not tested ICOM
+void auto_band(){  // not tested ICOM
 if (!band_auto_touched) return;
  float adc_result = readChannel(ADS1115_COMP_0_GND);
  adc_result = (adc_result * 2); // make up for resistor split
+ 
  #ifdef DISPLAY160M  // alternate icons
    if (inRange(adc_result,7.0,8.0)){
    select_band(band160Mtr_Selected);

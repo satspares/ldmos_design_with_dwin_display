@@ -73,7 +73,7 @@ void setup() {
     clearResetFlags();
 #endif
     Wire.begin();
-    //caution rf about
+    //caution rf about may need changing to slower
     Wire.setClock(400000UL);
     #ifndef DXWORLD_I
         ACS.autoMidPoint();
@@ -134,10 +134,8 @@ void loop() {
     wdt_reset();
     hmi.listen();
     // keep our tickers alive
-    houseKeeping.update();
-    temperatureIDTicker.update();
-    sendPowerSwrRefTicker.update();
-    peakHoldTicker.update();
+    houseKeeping.update();temperatureIDTicker.update();
+    sendPowerSwrRefTicker.update();peakHoldTicker.update();
 
     tx_actions();
     if (tx_status) {
@@ -166,13 +164,13 @@ void keepingHouse() {
     // runs continuous every 2000ms
 #ifdef BLINKLED
     static bool toggle;
-    digitalWrite(13, toggle);
+    digitalWrite(OPTOUT1, toggle);
     toggle = !toggle;
 #endif // blinkLED
 
 #ifdef AUTO_BAND    
     if ((!tx_status) && (band_auto)){
-     bcd_band();
+     auto_band();
     }else if (!band_auto){
      band_auto_touched = true;
     }

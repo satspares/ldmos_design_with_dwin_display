@@ -22,7 +22,6 @@ void readEEPROM() {
         delay(500);
         eeprom_write_power_calc_values();
         eeprom_write_intSetting_values();
-
     } else {
         band_select = EEPROM.read(eeprom_band);
         band_auto = EEPROM.read(eeprom_auto);

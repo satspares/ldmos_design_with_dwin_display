@@ -110,7 +110,7 @@ void calcPowerandDisplay() {
     }
     //Test both should work out the same
     const float SWR = (rawFwdVoltage + rawRefVoltage) / (rawFwdVoltage - rawRefVoltage);
-    //const float SWR = (1.00 + sqrt(refPower_max/fwdPower_max)) / (1.00 - sqrt(refPower_max/fwdPower_max));
+   // const float SWR = (1.00 + sqrt(refPower_max/fwdPower_max)) / (1.00 - sqrt(refPower_max/fwdPower_max));
     float swr_display = ((SWR * 10.00)); // Float x 10 for our display
     if ((swr_display < 10.00) || isNegative(swr_display)) {
         swr_display = 10;

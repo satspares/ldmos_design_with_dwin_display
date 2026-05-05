@@ -355,6 +355,7 @@ void onHMIEvent(String address, int lastByte, String message, String response) {
     break;
 
      case trip_save_button: { 
+        usebeep ? hmi.beepHMI(BEEP_YES) : hmi.playSound(YES);
         tx_status ? hmi.setPage(txPage) : hmi.setPage(startPage);
         intSettingsArray[TEMPSETPOINT] = hmi.readVP(trip_temp_display);
         delay(20);
@@ -367,7 +368,6 @@ void onHMIEvent(String address, int lastByte, String message, String response) {
         eeprom_write_intSetting_values();
         delay(60);
         eeprom_read_intSetting_values(); //test
-        usebeep ? hmi.beepHMI(BEEP_YES) : hmi.playSound(YES);
       }
     break;
 
@@ -384,8 +384,6 @@ void onHMIEvent(String address, int lastByte, String message, String response) {
 
    // ======== page 15 Keyboard Page ============= 
    case keyboard_keys: {
-    uint8_t i; // counters
-    uint8_t j;
     
    switch (lastByte) {
     case escape_key:{
@@ -527,7 +525,7 @@ String bandStrings(uint16_t arrayOffset) {
     return retString;
 }
 
-
+//only used in debugging
 // noWords should be your char length / 2
 // eg. read 12 chars Serial.println(readVPText(0x2300,6)) ;
 String readVPText(uint16_t vpAddress,byte noWords){
@@ -538,11 +536,11 @@ String readVPText(uint16_t vpAddress,byte noWords){
   while(i < noWords){
     byteRead = hmi.readVPByte((vpAddress+i),nextByte);
     // 128 can be 254 for extended ascii
-    if ((byteRead < 32) || (byteRead > 128)){
+    if (byteRead == 0x00 || byteRead < 32 || byteRead > 128){
       break;
     }
     textMessage += char(byteRead);
-    nextByte = ! nextByte;
+    nextByte = !nextByte;
     if (nextByte){i++;}
   }
   return textMessage;

@@ -1,4 +1,4 @@
-#pragma once
+  #pragma once
 #include <Arduino.h>
 #ifndef INCLUDES_H
 #include <includes.h>
@@ -159,13 +159,13 @@ float read_volt()
 
     if (glo_volt_setting <= 50)
     {
-        mapResult = map(glo_volt_setting, 1, 50, 50, 1);
-        Vresult = Vresult - (float)(mapResult * 0.5);
+        mapResult = map(glo_volt_setting, 1, 50, 25, 1);
+        Vresult = Vresult - (float)(mapResult);
     }
     else
     {
-        mapResult = map(glo_volt_setting, 51, 100, 1, 50);
-        Vresult = Vresult + (float)(mapResult * 0.5);
+        mapResult = map(glo_volt_setting, 51, 100, 1, 25);
+        Vresult = Vresult + (float)(mapResult);
     }
     if (setting_volt_calc)
     {
@@ -174,6 +174,7 @@ float read_volt()
     error_vo((float)Vresult / 10);
     return (float)Vresult / 10;
 }
+
 /* ======= Adjust Fanspeed to Temperature ======== */
 void fanspeed(float temperature)
 {
@@ -192,7 +193,7 @@ void fanspeed(float temperature)
     }
     else if (temperature >= 44.0 && temperature < 47.0)
     {
-        analogWrite(FANPWM, 128); // Full;
+        analogWrite(FANPWM, 192); // 75% 
     }
     else if (temperature >= 47.0 && temperature < intSettingsArray[TEMPSETPOINT])
     {
@@ -210,10 +211,9 @@ float readI()
     float currentI = 0;
     float mapResult;
 #ifdef DXWORLD_I
-    // currentI = (analogRead(ID_IN) * 2); // even split on input
-    currentI = (analogRead(ID_IN));
+    currentI = ((analogRead(ID_IN)) * 2); // *2 resistor split on ID_IN
     currentI *= adcRef;
-    currentI = (currentI / 2400); // need working out TO DO
+    currentI = (currentI / 4800); // need working out TO DO
     if (glo_current_setting <= 50)
     {
         mapResult = map(glo_current_setting, 1, 50, 50, 1);
@@ -258,7 +258,7 @@ float readI()
 
 #else  // do acs712
     mapResult = map(glo_current_setting, 1, 50, 50, 1);
-    ACS.setmVperAmp(66);
+    ACS.setmVperAmp(66); // 30 amp acs712
     int mA = ACS.mA_DC();
     mA = mA + (mapResult*10);
     if (isNegative(mA) || mA < 500) mA = 0;

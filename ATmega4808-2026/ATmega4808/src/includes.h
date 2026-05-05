@@ -550,7 +550,7 @@ void a600_bias_off();
 void bias_on();  // 12v bias voltage dxworld etc.
 void bias_off();
 #endif
-void bcd_band();
+void auto_band();
 void dx_error_reset();
 void setup_dallas_sensors();
 void setScreenRotate(byte angle);
@@ -597,7 +597,7 @@ Ticker sendPowerSwrRefTicker(powerSWRTickerReset, powerSwrTickerDelay);
 
 #ifdef AUTO_BAND
 ADS1015_WE adc = ADS1015_WE(0x48);
-const float adc_level = 1.50f;
+const float adc_level = 1.50f;   // voltage on band switch to count as 1 when greater
 float readChannel(ADS1015_MUX channel);
 #endif // AUTO_BAND
 

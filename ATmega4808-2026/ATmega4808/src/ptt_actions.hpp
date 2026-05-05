@@ -16,7 +16,7 @@ void tx_actions() {
         #endif
         (error_i_status) || 
         (swr2IntActiveHigh) || 
-        (swr1IntActiveHigh)  ) {
+        (swr1IntActiveHigh)) {
 #ifndef BIAS_ON
 #ifdef A600_AMP
         a600_bias_off();
