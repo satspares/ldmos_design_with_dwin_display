@@ -53,7 +53,7 @@ void error_swr()
 
     // if (swrSoftTrip == true) error_swr_en = false;
 
-    if (error_swr_en == false && error_swr_status == false)
+    if (!error_swr_en && !error_swr_status)
     {   
         if (swr1IntActiveHigh){
             hmi.setVPByte(swr_error, RED_ICON);
@@ -63,7 +63,7 @@ void error_swr()
         error_swr_status = true;
         usebeep ? hmi.beepHMI(BEEP_ERROR) : hmi.playSound(BEEPERROR);
     }
-    else if (error_swr_en == true  && error_swr_status == true)
+    else if (error_swr_en && error_swr_status)
     {
         hmi.setVPByte(swr_error, GREEN_ICON);
         hmi.setVPByte(swr2_error, GREEN_ICON);
@@ -129,13 +129,13 @@ void errorI(float I){  // not DXWorld
 void error_vo(float V)
 {
     // V = 55; // test
-    if ((V >= intSettingsArray[VOLTSETPOINT]) && (error_vo_status == false))
+    if ((V >= intSettingsArray[VOLTSETPOINT]) && (!error_vo_status))
     {
         hmi.setVPByte(volt_error, RED_ICON);
         error_vo_status = true;
         usebeep ? hmi.beepHMI(BEEP_ERROR) : hmi.playSound(BEEPERROR);
     }
-    else if (error_vo_status == false)
+    else if (!error_vo_status)
     {
         hmi.setVPByte(volt_error, GREEN_ICON);
     }
@@ -258,7 +258,7 @@ float readI()
 
 #else  // do acs712
     mapResult = map(glo_current_setting, 1, 50, 50, 1);
-    ACS.setmVperAmp(66); // 30 amp acs712
+    ACS.setmVperAmp(66); // 30 amp acs712 66mv per amp
     int mA = ACS.mA_DC();
     mA = mA + (mapResult*10);
     if (isNegative(mA) || mA < 500) mA = 0;
@@ -408,7 +408,7 @@ void error_odrive()
 #endif
         usebeep ? hmi.beepHMI(BEEP_CANCEL) : hmi.playSound(BEEPERROR);
     }
-    else if ((error_od_status_stop == false) && (error_od_status == true))
+    else if ((!error_od_status_stop) && (error_od_status))
     {
         error_od_status = false;
         hmi.setVPByte(overdrive_error, GREEN_ICON);

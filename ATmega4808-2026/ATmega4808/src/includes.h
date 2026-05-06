@@ -25,6 +25,8 @@ const uint16_t DRIVECALCMAJOR = 280;   // used in the drive calc (lower = higher
                                        // depends on how you obtain drive power     
 const uint16_t MAXAMPPOWERCALC = 300;   // used in the auto power calculations keep at 600 or less?
 
+const float POWERDECLINE = 0.8f;         // slowly decline meter power level less=faster
+
 //Try to correct the power ratio between fwd/ref power
 // as tandem matches dont appear linear across power levels
 // my tandem high power devices dont like to work well at power levels under about 200w
@@ -100,10 +102,10 @@ const uint16_t COLOR_LIGHT_BLUE = 0x87FF;
 
 
 /* ======= Ticker Delays ======== */
-const uint16_t peakHoldResetDelay = 400;  //should be about 400ms ?
-const uint16_t tempIDTickerDelay = 500; //update temp and ID to display
+const uint16_t peakHoldResetDelay = 500;  //should be about 500ms ?
+const uint16_t tempIDTickerDelay = 300; //update display temp etc.
 const uint16_t keepingHouseTickerDelay = 2000; // general stuff
-const uint16_t powerSwrTickerDelay = 300; // should be 300ms
+const uint16_t powerSwrTickerDelay = 100; // should be 50ms ?
 
 /* ======= Temperature Volt Globals ======== */
 #ifdef USELM35
@@ -173,6 +175,8 @@ uint16_t glo_volt_setting = 0;      // volt calc read from eeprom
 uint16_t glo_current_setting = 0;   // current calc read from eeprom
 float glo_swr_display = 0;
 float glo_volt_display = 0;
+float fwdPower_max; 
+float refPower_max;
 
 
 #ifdef DISPLAY160M
@@ -215,8 +219,8 @@ const uint16_t LCDBackLightAddress = 0x0082;
 #define ANTENNA_TWO 22
 #define SWR_DISPLAY 25
 #define LPF_DISPLAY 26
-#define UPC_ICON 60
-#define LOC_ICON 61
+#define UPC_ICON 60 // upper lower case
+#define LOC_ICON 61 //
 
 // Page numbers
 const uint8_t startPage = 0;
@@ -577,16 +581,18 @@ X map_Generic(X x, M in_min, N in_max, O out_min, Q out_max) {
 /* ======= Global Instances ======== */
 //
 MCP23017 mcp23017 = MCP23017(0x20);
-Ewma refFilter(0.3);
-Ewma fwdFilter(0.3);
+Ewma refFilter1(0.5);
+Ewma refFilter2(0.5);
+//Ewma fwdFilter(0.4);
 Ewma driveFilter(0.1); // for oDrive
 Ewma voltFilter(0.1);
+//Ewma swrFilter(0.4);
 DWIN hmi(Serial2, DGUS_BAUD, false);     // the false do not init the port yet
 #ifndef DXWORLD_I
     ACS712  ACS(ID_IN, 5.0, 1023, 100);
 #endif
 
-Ticker peakHoldTicker(peakHoldReset, peakHoldResetDelay);  //should be about 400ms
+Ticker peakHoldTicker(peakHoldReset, peakHoldResetDelay);  
 Ticker houseKeeping(keepingHouse, keepingHouseTickerDelay);
 //Update temperature and ID every 1500ms
 Ticker temperatureIDTicker(tempIDTickerReset, tempIDTickerDelay);

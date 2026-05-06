@@ -1,8 +1,8 @@
 //#define MYDEBUG
 #define DISPLAYDEBUG
-//#define DISPLAY160M       // alternate icons 160m-6m or 80m-4m mine
+//#define DISPLAY160M       // alternate icons 160m-6m or 80m-4m my own
 //#define USELM35           //else DS1820
-//#define DXWORLD_I           //Id from dxworld protection board else ACS712
+#define DXWORLD_I           //Id from dxworld protection board else ACS712
 //#define DXWORLD_ERROR_LEDS //errors from dxworld protection board
 //#define A600_AMP          // A600 amp else dxworld or similar
 //#define RESETDUBUG
@@ -11,7 +11,7 @@
 //#define MY_ALL_BAND_AMP   // my amp some different pinouts
 //#define AUTO_BAND
 //#define DRIVE_NO_STOP     // overdrive error only dont stop tx
-#define YAESU             // auto band yaesu or otherwise icom
+#define YAESU             // auto band yaesu or otherwise icom not fully tested
 #define BLINKLED            // if we are not using pin13 OPTOUT1 (a600_bias) flash onboard led
 #define SENSOR_DEBUG        // debug dallas sensors
 
@@ -73,7 +73,7 @@ void setup() {
     clearResetFlags();
 #endif
     Wire.begin();
-    //caution rf about may need changing to slower
+    //may need changing to slower eg. 100000UL
     Wire.setClock(400000UL);
     #ifndef DXWORLD_I
         ACS.autoMidPoint();
@@ -89,10 +89,8 @@ void setup() {
     a600_bias_off();
 #endif
     analogWrite(FANPWM, 56);  //start fan
-    houseKeeping.start();
-    temperatureIDTicker.start();
-    peakHoldTicker.start();
-    sendPowerSwrRefTicker.start();
+    houseKeeping.start(); temperatureIDTicker.start();
+    peakHoldTicker.start(); sendPowerSwrRefTicker.start();
     #ifdef DXWORLD_ERROR_LEDS
     dx_error_reset();
     #endif

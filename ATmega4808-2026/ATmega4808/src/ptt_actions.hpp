@@ -26,6 +26,8 @@ void tx_actions() {
 #endif
         tx_status = false;
         tx_running = false;
+        fwdPower_max = 0;
+        refPower_max = 0;
         if (display_dim == true) {
             display_dim = false;
             hmi.setPage(startPage);
@@ -41,6 +43,7 @@ void tx_actions() {
         temp_id_reset = true;
         peak_hold_reset = true;
         power_swr_reset = true;
+
 #ifdef A600_AMP
         a600_bias_on();
 #else

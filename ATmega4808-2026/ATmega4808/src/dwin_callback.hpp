@@ -60,6 +60,7 @@ void onHMIEvent(String address, int lastByte, String message, String response) {
       }
         }
     break;
+
 // ======= Antenna Switch ======== 
     case antenna_switch: { 
       if (!tx_status){
@@ -80,6 +81,7 @@ void onHMIEvent(String address, int lastByte, String message, String response) {
     
       }
     break;
+
 // ========== Text strings change select keyboard page ======    
     case top_bottom_text_touch: {
       whichText = lastByte;
@@ -91,7 +93,8 @@ void onHMIEvent(String address, int lastByte, String message, String response) {
       which_case = 0;  // Upper Case set
     } 
     break;
-// ======= DXWorld error reset relay or fet switch ======== 
+
+// ======= error reset relay or fet switch for dxworld ======== 
     case touch_reset: { 
         usebeep ? hmi.beepHMI(BEEP_YES) : hmi.playSound(YES);
         error_od_status_stop = false;
@@ -104,6 +107,7 @@ void onHMIEvent(String address, int lastByte, String message, String response) {
         #endif
       }
     break; 
+
 // ======= SWR Display input swr/lpf  ======== 
     case swr_meter_change: { 
       peak_hold_reset = true;  // reset peak on swr change
@@ -119,7 +123,8 @@ void onHMIEvent(String address, int lastByte, String message, String response) {
         }
         usebeep ? hmi.beepHMI(BEEP_YES) : hmi.playSound(YES);
       }
-    break; 
+    break;
+
 // ======= Display Power Calc Settings ======== 
     case calc_power_touch: { 
     uint16_t check_Set_Point;
@@ -149,7 +154,8 @@ void onHMIEvent(String address, int lastByte, String message, String response) {
         }   
     
       }
-   break;     
+   break;
+
 // ======= save button page 1 power set ======== 
       case save_power_calc: { 
         setting_power_calc = false;
@@ -525,6 +531,7 @@ String bandStrings(uint16_t arrayOffset) {
     return retString;
 }
 
+#ifdef MYDEBUG
 //only used in debugging
 // noWords should be your char length / 2
 // eg. read 12 chars Serial.println(readVPText(0x2300,6)) ;
@@ -545,4 +552,5 @@ String readVPText(uint16_t vpAddress,byte noWords){
   }
   return textMessage;
 }
+#endif
 

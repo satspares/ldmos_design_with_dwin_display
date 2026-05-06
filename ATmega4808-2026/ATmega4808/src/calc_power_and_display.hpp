@@ -49,6 +49,7 @@ float ref1Voltage() {
         delayMicroseconds(120);
     } 
     Voltage = (Voltage / (float)ADC_SAMPLES);
+    Voltage = refFilter1.filter(Voltage);
     Voltage = map(Voltage, 0, 1023, SWR1MapLow, SWR1MapHigh);
     return Voltage;
 }
@@ -69,6 +70,7 @@ float ref2Voltage() {
         delayMicroseconds(120);
     } 
     Voltage = (Voltage / (float)ADC_SAMPLES);
+    Voltage = refFilter2.filter(Voltage);
     Voltage = map(Voltage, 0, 1023, SWR2MapLow, SWR2MapHigh);
     return Voltage;
 }
@@ -77,9 +79,9 @@ float ref2Voltage() {
 void calcPowerandDisplay() {
     float rawFwdVoltage; float rawRefVoltage;
     float fwdPower; float refPower;
-    static float fwdPower_max; static float refPower_max;
     float powerCalc;
     uint8_t swr_calc_major;
+
 
     if ((which_swr == false)) {  // false the antenna tandem match
         rawFwdVoltage = fwd2Voltage(); rawRefVoltage = ref2Voltage();
@@ -100,17 +102,23 @@ void calcPowerandDisplay() {
     fwdPower = pow((rawFwdVoltage + diodeLossMV), 2.00); refPower = pow((rawRefVoltage), 2.00);
     fwdPower = fwdPower/powerCalc/MAXAMPPOWERCALC; refPower = refPower/powerCalc/MAXAMPPOWERCALC;
 
-    // Peak Hold
-    if (fwdPower >= fwdPower_max) {
-        fwdPower_max = fwdPower; refPower_max = refPower;
-    }
+   // Peak Hold
+    if (refPower >= refPower_max) refPower_max = refPower;
+    if (fwdPower >= fwdPower_max) fwdPower_max = fwdPower;
     if (peak_hold_reset) {
         peak_hold_reset = false;
-        fwdPower_max = fwdPower; refPower_max = refPower;
+        refPower_max = refPower;
+        fwdPower_max = fwdPower;
+    //    refPower_max = refPower_max * POWERDECLINE;  //needs more work
+    //    fwdPower_max = fwdPower_max * POWERDECLINE;
     }
+
+    if (refPower_max < 0.1f) refPower_max = 0;  // clear float to zero
+
+
     //Test both should work out the same
-    const float SWR = (rawFwdVoltage + rawRefVoltage) / (rawFwdVoltage - rawRefVoltage);
-   // const float SWR = (1.00 + sqrt(refPower_max/fwdPower_max)) / (1.00 - sqrt(refPower_max/fwdPower_max));
+    //const float SWR = (rawFwdVoltage + rawRefVoltage) / (rawFwdVoltage - rawRefVoltage);
+    const float SWR = (1.00 + sqrt(refPower_max/fwdPower_max)) / (1.00 - sqrt(refPower_max/fwdPower_max));
     float swr_display = ((SWR * 10.00)); // Float x 10 for our display
     if ((swr_display < 10.00) || isNegative(swr_display)) {
         swr_display = 10;
@@ -134,7 +142,7 @@ void calcPowerandDisplay() {
     }  // end setting_swr_calc
 
     
-    if (power_swr_reset) {  // Ticker reset update display - powerSwrTickerDelay-300ms
+    if (power_swr_reset) {  // Ticker reset update display - powerSwrTickerDelay
         // Ticker timeout to update display
         if (fwdPower_max < 5) fwdPower_max = 0;
         power_swr_reset = false; // ticker reset
@@ -145,6 +153,7 @@ void calcPowerandDisplay() {
         }else{
            hmi.setTextColor(swr_graph_sp,0x06,SWROriginalColor);
         }
+    //    fwdPower_max = fwdFilter.filter(fwdPower_max);
         hmi.setVPWord(power_graph, (int)fwdPower_max);          //1-powerRangeMax
         hmi.setVPWord(swr_graph, ((int)swr_display * 10));      // 100-swrRangeMax
         hmi.setVPWord(power_display, (int)fwdPower_max);        // int 4 digits

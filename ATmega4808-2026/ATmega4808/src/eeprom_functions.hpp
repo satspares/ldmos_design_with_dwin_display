@@ -8,6 +8,7 @@ void readEEPROM() {
     if (EEPROM.read(eeprom_new_on_address) != 0x5b) {
         for (int i = 1; i < EEPROM_SIZE; i++) {
             EEPROM.write(i, 0xff); // wipe eeprom
+            delay(5);
         }
         EEPROM.update(eeprom_new_on_address, 0x5b);
         EEPROM.update(eeprom_band, band80Mtr_Selected);   // set to 80m when new
