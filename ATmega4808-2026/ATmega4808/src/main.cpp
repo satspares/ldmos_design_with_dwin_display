@@ -2,7 +2,7 @@
 #define DISPLAYDEBUG
 //#define DISPLAY160M       // alternate icons 160m-6m or 80m-4m my own
 //#define USELM35           //else DS1820
-#define DXWORLD_I           //Id from dxworld protection board else ACS712
+//#define DXWORLD_I           //Id from dxworld protection board else ACS712
 //#define DXWORLD_ERROR_LEDS //errors from dxworld protection board
 //#define A600_AMP          // A600 amp else dxworld or similar
 //#define RESETDUBUG
