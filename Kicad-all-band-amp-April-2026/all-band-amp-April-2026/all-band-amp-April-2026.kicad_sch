@@ -22441,8 +22441,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1200k"
-			(at 284.734 182.88 0)
+		(property "Value" "220k"
+			(at 285.242 182.626 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -27586,7 +27586,7 @@
 		(dnp no)
 		(uuid "d4ac90ea-2502-41a9-8e60-96cc5f595aa1")
 		(property "Reference" "R39"
-			(at 250.952 181.61 0)
+			(at 251.968 179.832 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -27596,8 +27596,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1200k"
-			(at 249.936 183.642 0)
+		(property "Value" "220k"
+			(at 251.46 181.864 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects

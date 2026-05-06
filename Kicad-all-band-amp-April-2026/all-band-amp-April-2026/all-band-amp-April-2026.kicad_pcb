@@ -173,6 +173,14 @@
 		(path "/d5aff3de-413b-48df-8641-871dc52ef39e")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2" "3" "4" "5" "6" "7" "8" "9" "18" "17" "16" "15" "14" "13"
+					"12" "11" "10"
+				)
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -424,7 +432,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U2-GPB7)")
-			(pinfunction "IN1")
+			(pinfunction "IN1_1")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -446,7 +454,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U2-GPB7)")
-			(pinfunction "IN2")
+			(pinfunction "IN2_2")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -468,7 +476,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U2-GPB6)")
-			(pinfunction "IN3")
+			(pinfunction "IN3_3")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -490,7 +498,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U2-GPB6)")
-			(pinfunction "IN4")
+			(pinfunction "IN4_4")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -512,7 +520,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U2-GPB5)")
-			(pinfunction "IN5")
+			(pinfunction "IN5_5")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -534,7 +542,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U2-GPB5)")
-			(pinfunction "IN6")
+			(pinfunction "IN6_6")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -556,7 +564,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/IN8")
-			(pinfunction "IN7")
+			(pinfunction "IN7_7")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -578,7 +586,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/IN8")
-			(pinfunction "IN8")
+			(pinfunction "IN8_8")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -600,7 +608,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "VPP")
-			(pinfunction "VS")
+			(pinfunction "VS_9")
 			(pintype "power_in")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -622,7 +630,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "GND")
+			(pinfunction "GND_10")
 			(pintype "power_in")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -644,7 +652,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/BIAS_OUT")
-			(pinfunction "OUT8")
+			(pinfunction "OUT8_11")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -666,7 +674,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/BIAS_OUT")
-			(pinfunction "OUT7")
+			(pinfunction "OUT7_12")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -688,7 +696,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J13-Pin_3)")
-			(pinfunction "OUT6")
+			(pinfunction "OUT6_13")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -710,7 +718,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J13-Pin_3)")
-			(pinfunction "OUT5")
+			(pinfunction "OUT5_14")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -732,7 +740,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J13-Pin_2)")
-			(pinfunction "OUT4")
+			(pinfunction "OUT4_15")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -754,7 +762,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J13-Pin_2)")
-			(pinfunction "OUT3")
+			(pinfunction "OUT3_16")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -776,7 +784,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J13-Pin_1)")
-			(pinfunction "OUT2")
+			(pinfunction "OUT2_17")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -798,7 +806,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J13-Pin_1)")
-			(pinfunction "OUT1")
+			(pinfunction "OUT1_18")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -854,7 +862,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -884,6 +892,12 @@
 		(path "/a1a5b352-77d5-452c-8dd8-96568fec73f9")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -1146,7 +1160,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/A4")
-			(pinfunction "K")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -1168,7 +1182,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "A")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -1252,6 +1266,16 @@
 		(path "/998b21e0-3305-4d9f-a05e-2da51010593e")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2" "8" "7")
+			)
+			(unit
+				(name "B")
+				(pins "3" "4" "6" "5")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -1597,7 +1621,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -1625,6 +1649,12 @@
 		(path "/1b8c466b-046d-4fc3-92d0-7c65e0d58b8a")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -3695,7 +3725,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -3723,6 +3753,12 @@
 		(path "/03a993c9-ab55-41f2-88d5-cd6560f2964d")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -3921,7 +3957,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3951,6 +3987,12 @@
 		(path "/d1e1e4c3-2ce9-4d58-82ca-b94e0ead4d68")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -4207,7 +4249,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4237,6 +4279,12 @@
 		(path "/14209171-9ea9-41dc-8295-5dcb9eb3971c")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2" "3")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -4508,7 +4556,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.147059)
 			(net "GND")
-			(pinfunction "Pin_1")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -4530,7 +4578,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/A9")
-			(pinfunction "Pin_2")
+			(pinfunction "Pin_2_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -4552,7 +4600,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "+5V")
-			(pinfunction "Pin_3")
+			(pinfunction "Pin_3_3")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -4608,7 +4656,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4638,6 +4686,12 @@
 		(path "/25a96cfc-5505-4c86-ac8f-6ddc7bb7b663")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -4874,7 +4928,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4904,6 +4958,12 @@
 		(path "/3042a622-2ad0-4558-98a0-824e25cbf720")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -6243,7 +6303,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6273,6 +6333,12 @@
 		(path "/6c2ab53b-0b28-4df9-bd5c-b4fa8811d113")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -6529,7 +6595,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6559,6 +6625,12 @@
 		(path "/e8f68252-7345-4579-b6cc-93b46ab9e725")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -6830,7 +6902,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.147059)
 			(net "GND")
-			(pinfunction "Pin_1")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -6852,7 +6924,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "VCC")
-			(pinfunction "Pin_2")
+			(pinfunction "Pin_2_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -6908,7 +6980,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6938,6 +7010,12 @@
 		(path "/e6fdee1a-738e-472a-9045-d52184587ae4")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -7174,7 +7252,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7204,6 +7282,12 @@
 		(path "/7bdaa05a-7d76-4600-9c99-055003bb91ba")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -7466,7 +7550,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/A6")
-			(pinfunction "K")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -7488,7 +7572,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "A")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -7544,7 +7628,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7574,6 +7658,12 @@
 		(path "/9b3cbc4a-6923-4f50-ab3d-3a7969febca8")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -7845,7 +7935,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.147059)
 			(net "GND")
-			(pinfunction "Pin_1")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -7867,7 +7957,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/RF_LEVEL")
-			(pinfunction "Pin_2")
+			(pinfunction "Pin_2_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -7951,6 +8041,12 @@
 		(path "/9e4cbeff-88db-45cc-8cc7-cdf22a76da09")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -8127,7 +8223,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.15625)
 			(net "Net-(D8-K)")
-			(pinfunction "K")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -8149,7 +8245,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/A2")
-			(pinfunction "A")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -8205,7 +8301,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8235,6 +8331,12 @@
 		(path "/63bdb103-6c7a-4423-98dd-2d1ebc1306c7")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -8471,7 +8573,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8501,6 +8603,12 @@
 		(path "/bc2bcbb8-9a5a-4b91-a223-e7b872e3eefe")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -8772,7 +8880,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.147059)
 			(net "GND")
-			(pinfunction "Pin_1")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -8794,7 +8902,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J18-Pin_2)")
-			(pinfunction "Pin_2")
+			(pinfunction "Pin_2_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -8878,6 +8986,12 @@
 		(path "/8fb07acd-34de-4c7c-ba99-3214cd24f59a")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -9054,7 +9168,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.15625)
 			(net "Net-(D8-K)")
-			(pinfunction "K")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -9076,7 +9190,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/A0")
-			(pinfunction "A")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -9132,7 +9246,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -9160,6 +9274,12 @@
 		(path "/39e7d452-eb0f-478f-a579-407d9c675de4")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -9358,7 +9478,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9388,6 +9508,12 @@
 		(path "/c5d050a6-f3c5-4a83-a6bd-a6e9d9410a85")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -9659,7 +9785,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.147059)
 			(net "GND")
-			(pinfunction "Pin_1")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -9681,7 +9807,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "+5F")
-			(pinfunction "Pin_2")
+			(pinfunction "Pin_2_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -9737,7 +9863,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9767,6 +9893,12 @@
 		(path "/0de4361e-a45f-43ae-a1ea-a2d787fbed3e/6dee5700-3237-4b1b-87cd-349e1e4e944e")
 		(sheetname "/max232-sheet/")
 		(sheetfile "max-232-sheet.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -11106,7 +11238,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -11136,6 +11268,12 @@
 		(path "/8e3d79bb-5b99-49fd-b835-f8e8171ae427")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "1")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -11407,7 +11545,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.147059)
 			(net "RX2A")
-			(pinfunction "Pin_1")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -11429,7 +11567,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "TX2D")
-			(pinfunction "Pin_2")
+			(pinfunction "Pin_2_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -11485,7 +11623,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -11515,6 +11653,12 @@
 		(path "/97f51c9a-207b-4a6f-8401-1e50aec1d32f")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -11771,7 +11915,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -11801,6 +11945,12 @@
 		(path "/37c4d966-50b3-4dbc-9024-d3a0cce57d87")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2" "3")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -12072,7 +12222,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.147059)
 			(net "GND")
-			(pinfunction "Pin_1")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -12094,7 +12244,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/FWD2")
-			(pinfunction "Pin_2")
+			(pinfunction "Pin_2_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -12116,7 +12266,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/REV2")
-			(pinfunction "Pin_3")
+			(pinfunction "Pin_3_3")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -12200,6 +12350,12 @@
 		(path "/d35ecd15-fc95-43bc-8f46-5181f2a4c9be")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -12376,7 +12532,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.15625)
 			(net "Net-(D7-K)")
-			(pinfunction "K")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -12398,7 +12554,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/A3")
-			(pinfunction "A")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -12484,6 +12640,12 @@
 		(path "/1d85251e-3597-4178-9095-9ca19f338cce")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "1" "3")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -12610,7 +12772,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/IN8")
-			(pinfunction "C")
+			(pinfunction "C_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -12635,7 +12797,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.25)
 			(net "Net-(Q2-B)")
-			(pinfunction "B")
+			(pinfunction "B_2")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -12660,7 +12822,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.25)
 			(net "GND")
-			(pinfunction "E")
+			(pinfunction "E_3")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -12716,7 +12878,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -12746,6 +12908,12 @@
 		(path "/a475dfc9-a080-48fe-8dfd-e737cd81adcd")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -12982,7 +13150,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -13012,6 +13180,12 @@
 		(path "/7db07c6e-6924-4f4f-90ce-d77b50d4dd2e")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -13283,7 +13457,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.147059)
 			(net "GND")
-			(pinfunction "Pin_1")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -13305,7 +13479,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/PWM")
-			(pinfunction "Pin_2")
+			(pinfunction "Pin_2_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -13361,7 +13535,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -13391,7 +13565,13 @@
 		(path "/0b7953be-bf0d-4f62-b2d7-40f780694efe")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom)
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -13433,7 +13613,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(teardrops
@@ -13456,7 +13636,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(teardrops
@@ -13479,7 +13659,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(teardrops
@@ -13502,7 +13682,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(teardrops
@@ -13525,7 +13705,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -13547,7 +13727,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(teardrops
@@ -13570,7 +13750,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(teardrops
@@ -13593,7 +13773,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(teardrops
@@ -13616,7 +13796,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(teardrops
@@ -13662,7 +13842,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -13690,6 +13870,12 @@
 		(path "/2dbeb40a-fba5-4ad8-9b5e-b03ce081af70")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -13868,7 +14054,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -13898,6 +14084,12 @@
 		(path "/0de4361e-a45f-43ae-a1ea-a2d787fbed3e/566d2708-40a3-4933-809e-8e0c52d70510")
 		(sheetname "/max232-sheet/")
 		(sheetfile "max-232-sheet.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2" "4" "3")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -14837,7 +15029,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -14865,6 +15057,12 @@
 		(path "/5f23dfe2-76ed-4863-8c30-12662e1cbdfa")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -15043,7 +15241,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -15071,6 +15269,12 @@
 		(path "/72e2e0f9-d40b-4423-abcf-72b32a76b068")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -15249,7 +15453,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -15279,6 +15483,12 @@
 		(path "/186d12e4-f404-4ded-9dec-702f675f2f27")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -15541,7 +15751,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/A7")
-			(pinfunction "K")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -15563,7 +15773,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "A")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -15619,7 +15829,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -15649,6 +15859,12 @@
 		(path "/0de4361e-a45f-43ae-a1ea-a2d787fbed3e/45b77939-2451-4151-8cf0-81bb9011cbfb")
 		(sheetname "/max232-sheet/")
 		(sheetfile "max-232-sheet.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -17018,6 +17234,12 @@
 		(path "/bafbfd6d-55a6-4134-afa7-15c3ca97bd35")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2" "3")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -17188,7 +17410,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "VD")
-			(pinfunction "IN")
+			(pinfunction "IN_1")
 			(pintype "power_in")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -17210,7 +17432,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "GND")
+			(pinfunction "GND_2")
 			(pintype "power_in")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -17232,7 +17454,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "+5F")
-			(pinfunction "OUT")
+			(pinfunction "OUT_3")
 			(pintype "power_out")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -17288,7 +17510,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -17318,6 +17540,12 @@
 		(path "/0de4361e-a45f-43ae-a1ea-a2d787fbed3e/da6e9516-2d9e-401e-8927-dfaf6af95baf")
 		(sheetname "/max232-sheet/")
 		(sheetfile "max-232-sheet.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -17589,7 +17817,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.147059)
 			(net "Net-(J21-Pin_1)")
-			(pinfunction "Pin_1")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -17611,7 +17839,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J21-Pin_2)")
-			(pinfunction "Pin_2")
+			(pinfunction "Pin_2_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -17697,6 +17925,14 @@
 		(path "/27012441-5bcd-4f83-87d6-3c23d4bc564f")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2" "3" "4" "5" "6" "7" "8" "9" "18" "17" "16" "15" "14" "13"
+					"12" "11" "10"
+				)
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -17948,7 +18184,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U2-GPA7)")
-			(pinfunction "IN1")
+			(pinfunction "IN1_1")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -17970,7 +18206,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U2-GPA6)")
-			(pinfunction "IN2")
+			(pinfunction "IN2_2")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -17992,7 +18228,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U2-GPA5)")
-			(pinfunction "IN3")
+			(pinfunction "IN3_3")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -18014,7 +18250,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U2-GPA4)")
-			(pinfunction "IN4")
+			(pinfunction "IN4_4")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -18036,7 +18272,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U2-GPA3)")
-			(pinfunction "IN5")
+			(pinfunction "IN5_5")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -18058,7 +18294,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U2-GPA2)")
-			(pinfunction "IN6")
+			(pinfunction "IN6_6")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -18080,7 +18316,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U2-GPA1)")
-			(pinfunction "IN7")
+			(pinfunction "IN7_7")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -18102,7 +18338,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U2-GPA0)")
-			(pinfunction "IN8")
+			(pinfunction "IN8_8")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -18124,7 +18360,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "VCC")
-			(pinfunction "VS")
+			(pinfunction "VS_9")
 			(pintype "power_in")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -18146,7 +18382,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "GND")
+			(pinfunction "GND_10")
 			(pintype "power_in")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -18168,7 +18404,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J11-Pin_8)")
-			(pinfunction "OUT8")
+			(pinfunction "OUT8_11")
 			(pintype "output")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -18190,7 +18426,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J11-Pin_7)")
-			(pinfunction "OUT7")
+			(pinfunction "OUT7_12")
 			(pintype "output")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -18212,7 +18448,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J11-Pin_6)")
-			(pinfunction "OUT6")
+			(pinfunction "OUT6_13")
 			(pintype "output")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -18234,7 +18470,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J11-Pin_5)")
-			(pinfunction "OUT5")
+			(pinfunction "OUT5_14")
 			(pintype "output")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -18256,7 +18492,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J11-Pin_4)")
-			(pinfunction "OUT4")
+			(pinfunction "OUT4_15")
 			(pintype "output")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -18278,7 +18514,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J11-Pin_3)")
-			(pinfunction "OUT3")
+			(pinfunction "OUT3_16")
 			(pintype "output")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -18300,7 +18536,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J11-Pin_2)")
-			(pinfunction "OUT2")
+			(pinfunction "OUT2_17")
 			(pintype "output")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -18322,7 +18558,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J11-Pin_1)")
-			(pinfunction "OUT1")
+			(pinfunction "OUT1_18")
 			(pintype "output")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -18379,7 +18615,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -18409,6 +18645,12 @@
 		(path "/3381d978-224a-4fed-be3f-cab279b94053")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -18665,7 +18907,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -18695,6 +18937,12 @@
 		(path "/0d570886-2144-4c41-87cf-978c73e71355")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -18946,7 +19194,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/A5")
-			(pinfunction "K")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -18968,7 +19216,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "A")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -19024,7 +19272,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -19054,6 +19302,12 @@
 		(path "/a9de328f-8437-495b-9a33-733a7e23699b")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2" "3")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -19325,7 +19579,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.147059)
 			(net "GND")
-			(pinfunction "Pin_1")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -19347,7 +19601,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "VCC")
-			(pinfunction "Pin_2")
+			(pinfunction "Pin_2_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -19369,7 +19623,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "+5F")
-			(pinfunction "Pin_3")
+			(pinfunction "Pin_3_3")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -19425,7 +19679,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -19455,6 +19709,12 @@
 		(path "/78fff983-b0bb-46e0-8fc4-5cab2c3b2a18")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -19711,7 +19971,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -19739,6 +19999,12 @@
 		(path "/5855b2ff-664d-44d6-86a1-555d451adc0b")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -19917,7 +20183,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -19947,6 +20213,12 @@
 		(path "/83a9b7c8-24e7-44ca-bbc4-eeedaa7e1980")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -20218,7 +20490,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.147059)
 			(net "Net-(J13-Pin_1)")
-			(pinfunction "Pin_1")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -20240,7 +20512,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J13-Pin_2)")
-			(pinfunction "Pin_2")
+			(pinfunction "Pin_2_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -20262,7 +20534,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J13-Pin_3)")
-			(pinfunction "Pin_3")
+			(pinfunction "Pin_3_3")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -20284,7 +20556,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/BIAS_OUT")
-			(pinfunction "Pin_4")
+			(pinfunction "Pin_4_4")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -20340,7 +20612,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20370,6 +20642,12 @@
 		(path "/c8aadbf6-d42f-40a9-a995-06b380d1e0de")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2" "3" "4")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -20641,7 +20919,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.147059)
 			(net "GND")
-			(pinfunction "Pin_1")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -20663,7 +20941,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/SDA")
-			(pinfunction "Pin_2")
+			(pinfunction "Pin_2_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -20685,7 +20963,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/SCL")
-			(pinfunction "Pin_3")
+			(pinfunction "Pin_3_3")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -20707,7 +20985,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "+5V")
-			(pinfunction "Pin_4")
+			(pinfunction "Pin_4_4")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -20763,7 +21041,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20793,6 +21071,12 @@
 		(path "/e8c7c3f1-f2d9-46d8-899f-4be7425ac605")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -21049,7 +21333,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -21079,6 +21363,12 @@
 		(path "/8818231e-59b7-4075-bd9c-b167c99b9818")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -21335,7 +21625,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -21365,6 +21655,12 @@
 		(path "/7a13571d-4fd2-4374-b491-d2df757bb6a2")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -21621,7 +21917,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -21651,6 +21947,12 @@
 		(path "/df74476a-f056-4d5b-8614-05ba052b6412")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -21907,7 +22209,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -21937,6 +22239,12 @@
 		(path "/aa59c5cd-c2ac-4186-a0ed-30556e58baa9")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -22193,7 +22501,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22223,6 +22531,12 @@
 		(path "/21a18843-fb0f-4d58-8e97-f1dbc4886182")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -22494,7 +22808,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.147059)
 			(net "GND")
-			(pinfunction "Pin_1")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -22516,7 +22830,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J16-Pin_2)")
-			(pinfunction "Pin_2")
+			(pinfunction "Pin_2_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -22572,7 +22886,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22602,6 +22916,12 @@
 		(path "/6f31521b-0473-494c-89db-71afdf2b5fc7")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -22873,7 +23193,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.147059)
 			(net "GND")
-			(pinfunction "Pin_1")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -22895,7 +23215,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "VCC")
-			(pinfunction "Pin_2")
+			(pinfunction "Pin_2_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -22951,7 +23271,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22981,6 +23301,12 @@
 		(path "/095ad6fe-6af3-4717-b855-97db5541034f")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -23237,7 +23563,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -23267,6 +23593,12 @@
 		(path "/0de4361e-a45f-43ae-a1ea-a2d787fbed3e/feeb2bcf-43ea-4f47-b48d-cb8a68ffbb76")
 		(sheetname "/max232-sheet/")
 		(sheetfile "max-232-sheet.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -24606,7 +24938,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
@@ -24634,6 +24966,12 @@
 		(path "/bb0fa7ed-c9a6-4032-97f1-2ebb147d963b")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -24835,7 +25173,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.12)
 			(net "/50V_")
-			(pinfunction "Pin_1")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -24858,7 +25196,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.12)
 			(net "/50v_In")
-			(pinfunction "Pin_2")
+			(pinfunction "Pin_2_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -24903,7 +25241,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -24933,6 +25271,12 @@
 		(path "/80c0fbf2-b0e0-48f0-9b10-b780e1d4eb47")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -25204,7 +25548,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.147059)
 			(net "GND")
-			(pinfunction "Pin_1")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -25226,7 +25570,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "VCC")
-			(pinfunction "Pin_2")
+			(pinfunction "Pin_2_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -25312,6 +25656,14 @@
 		(path "/0de4361e-a45f-43ae-a1ea-a2d787fbed3e/bddbef51-ee56-4723-ad8e-3e9536e19145")
 		(sheetname "/max232-sheet/")
 		(sheetfile "max-232-sheet.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "3" "11" "10" "12" "9" "16" "15" "4" "5" "2" "6" "14" "7" "13"
+					"8"
+				)
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -25483,7 +25835,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U7-C1+)")
-			(pinfunction "C1+")
+			(pinfunction "C1+_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -25505,7 +25857,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U7-VS+)")
-			(pinfunction "VS+")
+			(pinfunction "VS+_2")
 			(pintype "power_out")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -25527,7 +25879,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U7-C1-)")
-			(pinfunction "C1-")
+			(pinfunction "C1-_3")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -25549,7 +25901,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U7-C2+)")
-			(pinfunction "C2+")
+			(pinfunction "C2+_4")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -25571,7 +25923,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U7-C2-)")
-			(pinfunction "C2-")
+			(pinfunction "C2-_5")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -25593,7 +25945,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U7-VS-)")
-			(pinfunction "VS-")
+			(pinfunction "VS-_6")
 			(pintype "power_out")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -25615,7 +25967,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J21-Pin_1)")
-			(pinfunction "T2OUT")
+			(pinfunction "T2OUT_7")
 			(pintype "output")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -25637,7 +25989,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J21-Pin_2)")
-			(pinfunction "R2IN")
+			(pinfunction "R2IN_8")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -25659,7 +26011,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U7-R2OUT)")
-			(pinfunction "R2OUT")
+			(pinfunction "R2OUT_9")
 			(pintype "output")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -25681,7 +26033,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U7-T2IN)")
-			(pinfunction "T2IN")
+			(pinfunction "T2IN_10")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -25703,7 +26055,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "unconnected-(U7-T1IN-Pad11)")
-			(pinfunction "T1IN")
+			(pinfunction "T1IN_11")
 			(pintype "input+no_connect")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -25725,7 +26077,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "unconnected-(U7-R1OUT-Pad12)")
-			(pinfunction "R1OUT")
+			(pinfunction "R1OUT_12")
 			(pintype "output+no_connect")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -25747,7 +26099,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "unconnected-(U7-R1IN-Pad13)")
-			(pinfunction "R1IN")
+			(pinfunction "R1IN_13")
 			(pintype "input+no_connect")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -25769,7 +26121,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "unconnected-(U7-T1OUT-Pad14)")
-			(pinfunction "T1OUT")
+			(pinfunction "T1OUT_14")
 			(pintype "output+no_connect")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -25791,7 +26143,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "GND")
+			(pinfunction "GND_15")
 			(pintype "power_in")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -25813,7 +26165,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "+5F")
-			(pinfunction "VCC")
+			(pinfunction "VCC_16")
 			(pintype "power_in")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -25869,7 +26221,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -25899,6 +26251,12 @@
 		(path "/7789825b-7ad0-471b-ac64-42b618c67bde")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -26161,7 +26519,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/A3")
-			(pinfunction "K")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -26183,7 +26541,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "A")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -26239,7 +26597,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -26269,6 +26627,12 @@
 		(path "/e9e79f08-e9bf-461a-a9e4-ea9593fefb5c")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -26505,7 +26869,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -26535,6 +26899,12 @@
 		(path "/db3326db-55ea-445d-bec4-82f77f120806")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "8" "7" "6" "5" "4" "3" "2" "1")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -26806,7 +27176,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.147059)
 			(net "Net-(J11-Pin_1)")
-			(pinfunction "Pin_1")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -26828,7 +27198,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J11-Pin_2)")
-			(pinfunction "Pin_2")
+			(pinfunction "Pin_2_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -26850,7 +27220,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J11-Pin_3)")
-			(pinfunction "Pin_3")
+			(pinfunction "Pin_3_3")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -26872,7 +27242,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J11-Pin_4)")
-			(pinfunction "Pin_4")
+			(pinfunction "Pin_4_4")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -26894,7 +27264,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J11-Pin_5)")
-			(pinfunction "Pin_5")
+			(pinfunction "Pin_5_5")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -26916,7 +27286,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J11-Pin_6)")
-			(pinfunction "Pin_6")
+			(pinfunction "Pin_6_6")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -26938,7 +27308,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J11-Pin_7)")
-			(pinfunction "Pin_7")
+			(pinfunction "Pin_7_7")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -26960,7 +27330,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J11-Pin_8)")
-			(pinfunction "Pin_8")
+			(pinfunction "Pin_8_8")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -27046,6 +27416,24 @@
 		(path "/34eccfc7-3183-4162-8b0d-d420902a54b4")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2" "16" "15")
+			)
+			(unit
+				(name "B")
+				(pins "3" "4" "14" "13")
+			)
+			(unit
+				(name "C")
+				(pins "5" "6" "12" "11")
+			)
+			(unit
+				(name "D")
+				(pins "7" "8" "10" "9")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -27587,7 +27975,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -27617,6 +28005,12 @@
 		(path "/96043005-366c-4cf4-9026-ffc5a08a20cb")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -27873,7 +28267,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -27903,6 +28297,12 @@
 		(path "/3c4ab953-df25-4381-b171-4c6c3bf85ee8")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -28148,7 +28548,7 @@
 				)
 			)
 		)
-		(property "Value" "1200k"
+		(property "Value" "220k"
 			(at 3.81 2.37 0)
 			(layer "F.Fab")
 			(uuid "8c5e9d74-e19d-4f36-9d7d-94fae9a6295c")
@@ -28159,7 +28559,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -28187,6 +28587,12 @@
 		(path "/86e2f688-da4c-4b6a-b6d1-e29792cd88f3")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -28385,7 +28791,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -28415,6 +28821,12 @@
 		(path "/2a3b35ec-f33a-4466-947f-3aebe76b25eb")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -28651,7 +29063,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -28681,6 +29093,12 @@
 		(path "/0de4361e-a45f-43ae-a1ea-a2d787fbed3e/abf3e8c8-8c7b-4ffa-885a-6921daa3e745")
 		(sheetname "/max232-sheet/")
 		(sheetfile "max-232-sheet.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -30020,7 +30438,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -30050,6 +30468,12 @@
 		(path "/d0e1464a-183f-4bbe-91e2-696c7a6f97aa")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "1")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -30321,7 +30745,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.147059)
 			(net "Net-(A1-RXD0)")
-			(pinfunction "Pin_1")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -30343,7 +30767,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(A1-TXD0)")
-			(pinfunction "Pin_2")
+			(pinfunction "Pin_2_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -30399,7 +30823,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -30427,6 +30851,12 @@
 		(path "/6ed23555-3aa0-45d8-ba10-b9fa6cdfb5e6")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -30625,7 +31055,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -30655,7 +31085,13 @@
 		(path "/cf142598-6f3c-48ab-958f-912807c9599e")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom)
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -30697,7 +31133,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(teardrops
@@ -30720,7 +31156,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(teardrops
@@ -30743,7 +31179,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(teardrops
@@ -30766,7 +31202,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(teardrops
@@ -30789,7 +31225,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -30811,7 +31247,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(teardrops
@@ -30834,7 +31270,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(teardrops
@@ -30857,7 +31293,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(teardrops
@@ -30880,7 +31316,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(teardrops
@@ -30926,7 +31362,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -30956,6 +31392,12 @@
 		(path "/9f10968c-ac6a-4fae-b185-a77c8050fd8a")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -31212,7 +31654,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -31242,6 +31684,12 @@
 		(path "/2eae1b14-d2b4-4eed-8d31-25a2fa74049b")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -31513,7 +31961,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.147059)
 			(net "/GPB3")
-			(pinfunction "Pin_1")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -31535,7 +31983,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/GPB2")
-			(pinfunction "Pin_2")
+			(pinfunction "Pin_2_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -31557,7 +32005,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J12-Pin_3)")
-			(pinfunction "Pin_3")
+			(pinfunction "Pin_3_3")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -31579,7 +32027,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J12-Pin_4)")
-			(pinfunction "Pin_4")
+			(pinfunction "Pin_4_4")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -31635,7 +32083,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -31665,6 +32113,12 @@
 		(path "/f94abb35-f382-4360-a9f1-63c26381a34d")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -31901,7 +32355,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -31931,6 +32385,12 @@
 		(path "/1b696c79-4a7c-4e7a-bb36-f23909347273")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -32202,7 +32662,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.147059)
 			(net "GND")
-			(pinfunction "Pin_1")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -32224,7 +32684,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/50V_")
-			(pinfunction "Pin_2")
+			(pinfunction "Pin_2_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -32280,7 +32740,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -32310,7 +32770,13 @@
 		(path "/814833d5-f31f-4100-9f95-bee5c1737712")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom)
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -32352,7 +32818,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(teardrops
@@ -32375,7 +32841,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(teardrops
@@ -32398,7 +32864,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(teardrops
@@ -32421,7 +32887,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(teardrops
@@ -32444,7 +32910,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -32466,7 +32932,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(teardrops
@@ -32489,7 +32955,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(teardrops
@@ -32512,7 +32978,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(teardrops
@@ -32535,7 +33001,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(teardrops
@@ -32581,7 +33047,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -32611,6 +33077,12 @@
 		(path "/b0cd004d-26ea-4ba6-8b1f-d52e52e67f8f")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -32867,7 +33339,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -32897,6 +33369,12 @@
 		(path "/3b6d2950-394c-4f73-b6ce-91324abae3db")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -33153,7 +33631,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -33183,6 +33661,12 @@
 		(path "/298add4a-915d-4028-813b-911da58df6d9")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -33439,7 +33923,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -33469,6 +33953,12 @@
 		(path "/ecf21f39-dcc2-4f9f-90ac-3c3701f72d16")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -33725,7 +34215,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -33753,6 +34243,12 @@
 		(path "/e18c1bd7-fb47-4340-80c3-66a3566493e7")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -33931,7 +34427,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -33961,6 +34457,12 @@
 		(path "/2c366047-7f2d-4237-890a-f4f5114a37e0")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -34217,7 +34719,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -34245,6 +34747,12 @@
 		(path "/b4a1f8fd-6bbc-41f7-b744-91b9568cb358")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -34443,7 +34951,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -34473,6 +34981,12 @@
 		(path "/226ae87b-fa02-49c0-a1b9-c996025980b0")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -34729,7 +35243,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -34759,6 +35273,12 @@
 		(path "/f4799add-8d0b-435e-96c9-67ac4525608a")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2" "3")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -35030,7 +35550,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.147059)
 			(net "GND")
-			(pinfunction "Pin_1")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -35052,7 +35572,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(A1-UDPI)")
-			(pinfunction "Pin_2")
+			(pinfunction "Pin_2_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -35074,7 +35594,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "+5V")
-			(pinfunction "Pin_3")
+			(pinfunction "Pin_3_3")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -35130,7 +35650,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -35158,6 +35678,12 @@
 		(path "/3a5541cf-03f3-45d5-a943-235ccb8c9f5f")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -35384,6 +35910,12 @@
 		(path "/c35715aa-dd66-4c65-87ac-c4d2f790a6f2")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -35560,7 +36092,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.15625)
 			(net "Net-(D12-K)")
-			(pinfunction "K")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -35582,7 +36114,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/A7")
-			(pinfunction "A")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -35638,7 +36170,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -35668,6 +36200,12 @@
 		(path "/df7cd5fe-7af3-45f4-8a31-9390ee6c44c1")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -35924,7 +36462,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -35954,6 +36492,12 @@
 		(path "/c2cd69a6-182a-4292-a17a-d267bee11cca")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -36210,7 +36754,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -36240,6 +36784,12 @@
 		(path "/c3bc2464-1025-4cab-b345-b4cf92e646fd")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -36496,7 +37046,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -36526,6 +37076,12 @@
 		(path "/34f37ab7-0b91-454c-b65e-b698873e1b42")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2" "3")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -36797,7 +37353,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.147059)
 			(net "GND")
-			(pinfunction "Pin_1")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -36819,7 +37375,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/FWD1")
-			(pinfunction "Pin_2")
+			(pinfunction "Pin_2_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -36841,7 +37397,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/REV1")
-			(pinfunction "Pin_3")
+			(pinfunction "Pin_3_3")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -36897,7 +37453,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -36927,6 +37483,12 @@
 		(path "/bf09199d-5ee5-4194-b497-e0f0a05e8d44")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -37189,7 +37751,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/A10")
-			(pinfunction "K")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -37211,7 +37773,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "A")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -37267,7 +37829,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -37297,6 +37859,12 @@
 		(path "/e1518849-aaf1-42bf-8687-24a60350b313")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -37553,7 +38121,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -37583,6 +38151,12 @@
 		(path "/0de4361e-a45f-43ae-a1ea-a2d787fbed3e/e248f999-acb0-467a-8322-3d999e603adf")
 		(sheetname "/max232-sheet/")
 		(sheetfile "max-232-sheet.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -38922,7 +39496,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -38950,6 +39524,12 @@
 		(path "/40d25cb7-cf3b-4318-ba7c-2035edcedef8")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -39148,7 +39728,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -39176,6 +39756,12 @@
 		(path "/371f6752-8d16-4206-b39f-d9a19542f308")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -39354,7 +39940,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -39382,6 +39968,12 @@
 		(path "/dc038dd1-625b-4b3f-a244-429741502d38")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -39580,7 +40172,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -39610,6 +40202,12 @@
 		(path "/be46f3c7-ecde-42f0-89f1-76c687e6cc73")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -39897,6 +40495,15 @@
 		(path "/95665525-bb04-4966-be1a-aca1fdda5fc5")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "34" "33" "32" "31" "30" "29" "28" "27" "26" "25" "24" "23" "22"
+					"21" "18" "19" "5" "20" "17" "16" "15" "14" "13" "12" "11" "10" "9"
+					"8" "7" "6" "4" "3" "2" "1"
+				)
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -40028,7 +40635,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(A1-UDPI)")
-			(pinfunction "UDPI")
+			(pinfunction "UDPI_1")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -40050,7 +40657,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(A1-TXD0)")
-			(pinfunction "TXD0")
+			(pinfunction "TXD0_2")
 			(pintype "output")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -40072,7 +40679,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(A1-RXD0)")
-			(pinfunction "RXD0")
+			(pinfunction "RXD0_3")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -40094,7 +40701,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "unconnected-(A1-RST_D26-Pad4)")
-			(pinfunction "RST_D26")
+			(pinfunction "RST_D26_4")
 			(pintype "bidirectional+no_connect")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -40116,7 +40723,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "GND")
+			(pinfunction "GND_5")
 			(pintype "power_in")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -40138,7 +40745,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "TX2D")
-			(pinfunction "TXD2")
+			(pinfunction "TXD2_6")
 			(pintype "output")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -40160,7 +40767,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "RX2A")
-			(pinfunction "RXD2")
+			(pinfunction "RXD2_7")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -40182,7 +40789,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/SDA")
-			(pinfunction "SDA_D4")
+			(pinfunction "SDA_D4_8")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -40204,7 +40811,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/SCL")
-			(pinfunction "SCL_D5")
+			(pinfunction "SCL_D5_9")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -40226,7 +40833,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/D6")
-			(pinfunction "D6")
+			(pinfunction "D6_10")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -40248,7 +40855,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/D7")
-			(pinfunction "D7")
+			(pinfunction "D7_11")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -40270,7 +40877,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/D8")
-			(pinfunction "D8")
+			(pinfunction "D8_12")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -40292,7 +40899,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/D9")
-			(pinfunction "D9")
+			(pinfunction "D9_13")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -40314,7 +40921,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/D10")
-			(pinfunction "D10")
+			(pinfunction "D10_14")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -40336,7 +40943,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/D11")
-			(pinfunction "D11")
+			(pinfunction "D11_15")
 			(pintype "bidirectional+no_connect")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -40358,7 +40965,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/D12")
-			(pinfunction "SCK")
+			(pinfunction "SCK_16")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -40380,7 +40987,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/PWM")
-			(pinfunction "D22/A8")
+			(pinfunction "D22/A8_17")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -40402,7 +41009,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/A10")
-			(pinfunction "D24/A10")
+			(pinfunction "D24/A10_18")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -40424,7 +41031,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "VCC")
-			(pinfunction "VIN")
+			(pinfunction "VIN_19")
 			(pintype "power_in")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -40446,7 +41053,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "GND")
+			(pinfunction "GND_20")
 			(pintype "power_in")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -40468,7 +41075,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "unconnected-(A1-D26-Pad21)")
-			(pinfunction "D26")
+			(pinfunction "D26_21")
 			(pintype "bidirectional+no_connect")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -40490,7 +41097,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "+5V")
-			(pinfunction "+5V")
+			(pinfunction "+5V_22")
 			(pintype "power_out")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -40512,7 +41119,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/A7")
-			(pinfunction "D21/A7")
+			(pinfunction "D21/A7_23")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -40534,7 +41141,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/A6")
-			(pinfunction "D20/A6")
+			(pinfunction "D20/A6_24")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -40556,7 +41163,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/A5")
-			(pinfunction "D19/A5")
+			(pinfunction "D19/A5_25")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -40578,7 +41185,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/A4")
-			(pinfunction "D18/A4")
+			(pinfunction "D18/A4_26")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -40600,7 +41207,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/A3")
-			(pinfunction "D17/A3")
+			(pinfunction "D17/A3_27")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -40622,7 +41229,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/A2")
-			(pinfunction "D16/A2")
+			(pinfunction "D16/A2_28")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -40644,7 +41251,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/D15")
-			(pinfunction "D15/A1")
+			(pinfunction "D15/A1_29")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -40666,7 +41273,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/A0")
-			(pinfunction "D14/A0")
+			(pinfunction "D14/A0_30")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -40688,7 +41295,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/A11")
-			(pinfunction "D25/A11")
+			(pinfunction "D25/A11_31")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -40710,7 +41317,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "unconnected-(A1-+3.3v-Pad32)")
-			(pinfunction "+3.3v")
+			(pinfunction "+3.3v_32")
 			(pintype "power_out+no_connect")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -40732,7 +41339,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/D13")
-			(pinfunction "D13")
+			(pinfunction "D13_33")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -40754,7 +41361,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/A9")
-			(pinfunction "D23/A9")
+			(pinfunction "D23/A9_34")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -40838,6 +41445,12 @@
 		(path "/cc3028c4-935f-400d-842d-bf431193ab00")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -41014,7 +41627,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.15625)
 			(net "Net-(D10-K)")
-			(pinfunction "K")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -41036,7 +41649,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/A6")
-			(pinfunction "A")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -41092,7 +41705,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -41122,6 +41735,12 @@
 		(path "/c3d354a6-be90-42dd-a579-febe4ea99a52")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -41378,7 +41997,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -41408,6 +42027,12 @@
 		(path "/a50cb7b9-8bed-4bc1-9c34-278c90a51ba7")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -41664,7 +42289,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -41692,6 +42317,12 @@
 		(path "/4a65a810-e074-4ba8-83d1-9f93c295986d")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -41870,7 +42501,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -41898,6 +42529,12 @@
 		(path "/af287d66-db98-41d4-8134-ea13a4698e4a")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -42082,7 +42719,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.147059)
 			(net "Net-(J10-Pin_1)")
-			(pinfunction "Pin_1")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -42104,7 +42741,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J10-Pin_2)")
-			(pinfunction "Pin_2")
+			(pinfunction "Pin_2_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -42160,7 +42797,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -42190,6 +42827,12 @@
 		(path "/79723f37-777a-467b-b643-8f8ff20709fb")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -42446,7 +43089,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -42476,6 +43119,12 @@
 		(path "/43f65be7-9a68-4377-9022-389d3ba804c0")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -42732,7 +43381,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -42762,6 +43411,12 @@
 		(path "/96620a1d-434f-4b8c-8d7d-b785db7e8378")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -43026,6 +43681,20 @@
 		(path "/cac90c45-db0b-4640-970e-636d95c07c4f")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "3" "2" "1")
+			)
+			(unit
+				(name "B")
+				(pins "5" "6" "7")
+			)
+			(unit
+				(name "C")
+				(pins "8" "4")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -43190,7 +43859,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U3A--)")
-			(pinfunction "-")
+			(pinfunction "-_2")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -43212,7 +43881,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(D7-K)")
-			(pinfunction "+")
+			(pinfunction "+_3")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -43234,7 +43903,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "V-")
+			(pinfunction "V-_4")
 			(pintype "power_in")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -43256,7 +43925,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(D10-K)")
-			(pinfunction "+")
+			(pinfunction "+_5")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -43278,7 +43947,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U3B--)")
-			(pinfunction "-")
+			(pinfunction "-_6")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -43321,7 +43990,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "+5V")
-			(pinfunction "V+")
+			(pinfunction "V+_8")
 			(pintype "power_in")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -43377,7 +44046,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -43407,7 +44076,12 @@
 		(path "/d1eb10d8-2058-4670-aa05-072f05a480a0")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
-		(attr exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.9 -1.65)
@@ -43530,7 +44204,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.108696)
 			(net "+5F")
-			(pinfunction "A")
+			(pinfunction "A_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -43552,7 +44226,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "VPP")
-			(pinfunction "B")
+			(pinfunction "B_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -43608,7 +44282,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -43638,6 +44312,12 @@
 		(path "/173d9e66-e369-4bc2-b461-82bd73fa1379")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -43894,7 +44574,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -43924,6 +44604,12 @@
 		(path "/82810a73-d9d8-40c5-9b35-87424c671f02")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2" "3")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -44195,7 +44881,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.147059)
 			(net "GND")
-			(pinfunction "Pin_1")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -44217,7 +44903,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/A9")
-			(pinfunction "Pin_2")
+			(pinfunction "Pin_2_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -44239,7 +44925,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "+5V")
-			(pinfunction "Pin_3")
+			(pinfunction "Pin_3_3")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -44295,7 +44981,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -44325,7 +45011,12 @@
 		(path "/f9c90a61-ac7a-4697-bc5f-80bf1f5f3bd7")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
-		(attr exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 6.7 1.65)
@@ -44448,7 +45139,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.108696)
 			(net "VCC")
-			(pinfunction "A")
+			(pinfunction "A_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -44470,7 +45161,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "VPP")
-			(pinfunction "B")
+			(pinfunction "B_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -44526,7 +45217,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -44556,6 +45247,12 @@
 		(path "/319d2699-6495-4470-8ce1-4e41b0238cd1")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -45925,6 +46622,12 @@
 		(path "/0e86d7dc-e789-4ac5-92b8-2f866d299f67")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "1" "3")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -46051,7 +46754,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J12-Pin_3)")
-			(pinfunction "C")
+			(pinfunction "C_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -46076,7 +46779,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.25)
 			(net "Net-(Q1-B)")
-			(pinfunction "B")
+			(pinfunction "B_2")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -46101,7 +46804,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.25)
 			(net "GND")
-			(pinfunction "E")
+			(pinfunction "E_3")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -46157,7 +46860,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -46185,6 +46888,12 @@
 		(path "/0d9780fe-2422-4ebf-a228-57c5818f47f9")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -46369,7 +47078,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.147059)
 			(net "GND")
-			(pinfunction "Pin_1")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -46391,7 +47100,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J3-Pin_2)")
-			(pinfunction "Pin_2")
+			(pinfunction "Pin_2_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -46447,7 +47156,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -46477,6 +47186,12 @@
 		(path "/b7f4bcbd-43d4-4fcf-a174-5dde7700840d")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "3" "2" "1")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -46748,7 +47463,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.147059)
 			(net "Net-(J7-Pin_1)")
-			(pinfunction "Pin_1")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -46770,7 +47485,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J7-Pin_2)")
-			(pinfunction "Pin_2")
+			(pinfunction "Pin_2_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -46792,7 +47507,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(J7-Pin_3)")
-			(pinfunction "Pin_3")
+			(pinfunction "Pin_3_3")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -46848,7 +47563,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -46878,6 +47593,12 @@
 		(path "/32e54d57-30d5-4cea-bf34-f9ad8b9d8dd5")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -47103,7 +47824,7 @@
 				)
 			)
 		)
-		(property "Value" "1200k"
+		(property "Value" "220k"
 			(at 3.81 2.37 0)
 			(layer "F.Fab")
 			(uuid "6c0d0dbc-fe80-40e5-b7df-865e4d3344f9")
@@ -47114,7 +47835,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -47142,6 +47863,12 @@
 		(path "/d4ac90ea-2502-41a9-8e60-96cc5f595aa1")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -47340,7 +48067,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -47368,6 +48095,12 @@
 		(path "/830c9172-bc66-4e13-8313-d32edeb0d10e")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -47566,7 +48299,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -47596,6 +48329,12 @@
 		(path "/fd3e9df6-5f2d-45e0-b521-6c94743df134")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -47852,7 +48591,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -47882,6 +48621,12 @@
 		(path "/88615fc2-0fc7-4078-a390-723903d786aa")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -49249,6 +49994,12 @@
 		(path "/ba2c216e-a1d5-41d0-a022-5c0ec444f2d5")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -49425,7 +50176,7 @@
 			(remove_unused_layers no)
 			(roundrect_rratio 0.15625)
 			(net "Net-(D11-K)")
-			(pinfunction "K")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -49447,7 +50198,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/A10")
-			(pinfunction "A")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -49503,7 +50254,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -49533,6 +50284,12 @@
 		(path "/f4caaaad-0c2e-4699-98a5-e34629bf302b")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
@@ -49586,7 +50343,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "VD")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -49608,7 +50365,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "VCC")
-			(pinfunction "2")
+			(pinfunction "2_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -49664,7 +50421,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -49694,6 +50451,12 @@
 		(path "/0c6f85f5-7037-40e6-abb4-1c6d436b84b4")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -49950,7 +50713,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -49980,6 +50743,12 @@
 		(path "/e9571e77-8d71-487c-b9fa-3c444c1fedc6")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -50236,7 +51005,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -50266,7 +51035,13 @@
 		(path "/68f3d469-f076-422a-9859-0cd879269b76")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom)
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -50308,7 +51083,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(teardrops
@@ -50331,7 +51106,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(teardrops
@@ -50354,7 +51129,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(teardrops
@@ -50377,7 +51152,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(teardrops
@@ -50400,7 +51175,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -50422,7 +51197,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(teardrops
@@ -50445,7 +51220,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(teardrops
@@ -50468,7 +51243,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(teardrops
@@ -50491,7 +51266,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "1")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(teardrops
@@ -50537,7 +51312,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -50565,6 +51340,12 @@
 		(path "/4ac3cf73-069c-4ec9-a6c6-d5539d90c486")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -50793,6 +51574,14 @@
 		(path "/865c179d-45eb-49b3-8881-859a8453f496")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "13" "12" "19" "20" "18" "1" "2" "3" "4" "5" "6" "7" "8" "11" "14"
+					"17" "16" "15" "9" "10" "28" "27" "26" "25" "24" "23" "22" "21"
+				)
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -50964,7 +51753,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/GPB0")
-			(pinfunction "GPB0")
+			(pinfunction "GPB0_1")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -50986,7 +51775,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/GPB1")
-			(pinfunction "GPB1")
+			(pinfunction "GPB1_2")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51008,7 +51797,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/GPB2")
-			(pinfunction "GPB2")
+			(pinfunction "GPB2_3")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51030,7 +51819,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/GPB3")
-			(pinfunction "GPB3")
+			(pinfunction "GPB3_4")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51052,7 +51841,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U2-GPB4)")
-			(pinfunction "GPB4")
+			(pinfunction "GPB4_5")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51074,7 +51863,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U2-GPB5)")
-			(pinfunction "GPB5")
+			(pinfunction "GPB5_6")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51096,7 +51885,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U2-GPB6)")
-			(pinfunction "GPB6")
+			(pinfunction "GPB6_7")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51118,7 +51907,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U2-GPB7)")
-			(pinfunction "GPB7")
+			(pinfunction "GPB7_8")
 			(pintype "output")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51140,7 +51929,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "+5V")
-			(pinfunction "VDD")
+			(pinfunction "VDD_9")
 			(pintype "power_in")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51162,7 +51951,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "VSS")
+			(pinfunction "VSS_10")
 			(pintype "power_in")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51184,7 +51973,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "unconnected-(U2-NC-Pad11)")
-			(pinfunction "NC")
+			(pinfunction "NC_11")
 			(pintype "no_connect")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51206,7 +51995,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/SCL")
-			(pinfunction "SCK")
+			(pinfunction "SCK_12")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51228,7 +52017,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/SDA")
-			(pinfunction "SDA")
+			(pinfunction "SDA_13")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51250,7 +52039,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "unconnected-(U2-NC-Pad14)")
-			(pinfunction "NC")
+			(pinfunction "NC_14")
 			(pintype "no_connect")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51272,7 +52061,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "A0")
+			(pinfunction "A0_15")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51294,7 +52083,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "A1")
+			(pinfunction "A1_16")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51316,7 +52105,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
-			(pinfunction "A2")
+			(pinfunction "A2_17")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51338,7 +52127,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "+5V")
-			(pinfunction "~{RESET}")
+			(pinfunction "~{RESET}_18")
 			(pintype "input")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51360,7 +52149,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "/D6")
-			(pinfunction "INTB")
+			(pinfunction "INTB_19")
 			(pintype "tri_state")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51382,7 +52171,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "unconnected-(U2-INTA-Pad20)")
-			(pinfunction "INTA")
+			(pinfunction "INTA_20")
 			(pintype "tri_state+no_connect")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51404,7 +52193,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U2-GPA0)")
-			(pinfunction "GPA0")
+			(pinfunction "GPA0_21")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51426,7 +52215,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U2-GPA1)")
-			(pinfunction "GPA1")
+			(pinfunction "GPA1_22")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51448,7 +52237,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U2-GPA2)")
-			(pinfunction "GPA2")
+			(pinfunction "GPA2_23")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51470,7 +52259,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U2-GPA3)")
-			(pinfunction "GPA3")
+			(pinfunction "GPA3_24")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51492,7 +52281,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U2-GPA4)")
-			(pinfunction "GPA4")
+			(pinfunction "GPA4_25")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51514,7 +52303,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U2-GPA5)")
-			(pinfunction "GPA5")
+			(pinfunction "GPA5_26")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51536,7 +52325,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U2-GPA6)")
-			(pinfunction "GPA6")
+			(pinfunction "GPA6_27")
 			(pintype "bidirectional")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51558,7 +52347,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "Net-(U2-GPA7)")
-			(pinfunction "GPA7")
+			(pinfunction "GPA7_28")
 			(pintype "output")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51646,6 +52435,12 @@
 		(path "/53c3b8d1-e33e-45d5-ba5e-1aa7d21a53d9")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2" "3" "4" "8" "5" "7" "6")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -51740,7 +52535,7 @@
 			(size 2.5 2)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "/50v_In")
-			(pinfunction "IP+")
+			(pinfunction "IP+_1")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51760,7 +52555,7 @@
 			(size 1.95 1.65)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "/50v_In")
-			(pinfunction "IP+")
+			(pinfunction "IP+_2")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51780,7 +52575,7 @@
 			(size 1.95 1.7)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "/50V_")
-			(pinfunction "IP-")
+			(pinfunction "IP-_3")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51800,7 +52595,7 @@
 			(size 2.5 2)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "/50V_")
-			(pinfunction "IP-")
+			(pinfunction "IP-_4")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51821,7 +52616,7 @@
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.25)
 			(net "GND")
-			(pinfunction "GND")
+			(pinfunction "GND_5")
 			(pintype "power_in")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51842,7 +52637,7 @@
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.25)
 			(net "Net-(U9-FILTER)")
-			(pinfunction "FILTER")
+			(pinfunction "FILTER_6")
 			(pintype "passive")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51863,7 +52658,7 @@
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.25)
 			(net "/712OUT")
-			(pinfunction "VIOUT")
+			(pinfunction "VIOUT_7")
 			(pintype "output")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51884,7 +52679,7 @@
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.25)
 			(net "+5V")
-			(pinfunction "VCC")
+			(pinfunction "VCC_8")
 			(pintype "power_in")
 			(teardrops
 				(best_length_ratio 0.5)
@@ -51943,7 +52738,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "B.Fab")
 			(hide yes)
@@ -51973,6 +52768,12 @@
 		(path "/ef91f238-e07d-407d-b058-8a671607ab6e")
 		(sheetname "/")
 		(sheetfile "all-band-amp-April-2026.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -59069,7 +59870,7 @@
 		(net "Net-(J13-Pin_3)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30058)
+		(priority 30059)
 		(attr
 			(teardrop
 				(type padvia)
@@ -59135,7 +59936,7 @@
 		(net "/FWD2")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30086)
+		(priority 30089)
 		(attr
 			(teardrop
 				(type padvia)
@@ -59167,7 +59968,7 @@
 		(net "/D13")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30288)
+		(priority 30286)
 		(attr
 			(teardrop
 				(type padvia)
@@ -59299,7 +60100,7 @@
 		(net "Net-(D7-K)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30252)
+		(priority 30242)
 		(attr
 			(teardrop
 				(type padvia)
@@ -59398,7 +60199,7 @@
 		(net "Net-(U7-C2+)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30337)
+		(priority 30338)
 		(attr
 			(teardrop
 				(type padvia)
@@ -59583,14 +60384,11 @@
 		(filled_polygon
 			(layer "F.Cu")
 			(pts
-				(xy 187.865679 71.629038) (xy 189.206028 72.086545) (xy 189.209978 72.088836) (xy 189.212133 72.090733)
-				(xy 189.215793 72.096842) (xy 189.215839 72.097038) (xy 189.216148 72.099711) (xy 189.216148 72.679302)
-				(xy 189.215257 72.68378) (xy 189.214157 72.686435) (xy 189.209512 72.691901) (xy 189.209341 72.692007)
-				(xy 189.206956 72.693136) (xy 188.269654 73.013068) (xy 188.269655 73.013069) (xy 187.865823 73.150911)
-				(xy 187.861294 73.151514) (xy 187.859518 73.1514) (xy 187.85149 73.14746) (xy 187.85042 73.146246)
-				(xy 187.848022 73.141974) (xy 187.616743 72.39515) (xy 187.616219 72.391689) (xy 187.616219 72.388309)
-				(xy 187.616743 72.384848) (xy 187.847978 71.638164) (xy 187.850152 71.634156) (xy 187.851293 71.632782)
-				(xy 187.859204 71.628612) (xy 187.860823 71.628462)
+				(xy 187.863559 71.628315) (xy 189.208229 72.087297) (xy 189.21495 72.093212) (xy 189.216148 72.098369)
+				(xy 189.216148 72.68163) (xy 189.212721 72.689903) (xy 189.208228 72.692703) (xy 188.269655 73.013069)
+				(xy 187.865295 73.151092) (xy 187.863622 73.151663) (xy 187.854685 73.151092) (xy 187.848769 73.14437)
+				(xy 187.848666 73.144051) (xy 187.616219 72.393458) (xy 187.616219 72.386541) (xy 187.848666 71.635946)
+				(xy 187.854387 71.629059) (xy 187.863303 71.628233)
 			)
 		)
 	)
@@ -59699,7 +60497,7 @@
 		(net "+5V")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30111)
+		(priority 30108)
 		(attr
 			(teardrop
 				(type padvia)
@@ -59993,7 +60791,7 @@
 		(net "/50V_")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30244)
+		(priority 30245)
 		(attr
 			(teardrop
 				(type padvia)
@@ -60025,7 +60823,7 @@
 		(net "+5V")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30151)
+		(priority 30152)
 		(attr
 			(teardrop
 				(type padvia)
@@ -60090,7 +60888,7 @@
 		(net "Net-(R19-Pad2)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30135)
+		(priority 30139)
 		(attr
 			(teardrop
 				(type padvia)
@@ -60122,7 +60920,7 @@
 		(net "Net-(U2-GPB7)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30099)
+		(priority 30098)
 		(attr
 			(teardrop
 				(type padvia)
@@ -60154,7 +60952,7 @@
 		(net "/A6")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30249)
+		(priority 30254)
 		(attr
 			(teardrop
 				(type padvia)
@@ -60255,7 +61053,7 @@
 		(net "Net-(U3B--)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30164)
+		(priority 30161)
 		(attr
 			(teardrop
 				(type padvia)
@@ -60288,7 +61086,7 @@
 		(net "Net-(U2-GPB7)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30159)
+		(priority 30168)
 		(attr
 			(teardrop
 				(type padvia)
@@ -60485,7 +61283,7 @@
 		(net "+5V")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30131)
+		(priority 30132)
 		(attr
 			(teardrop
 				(type padvia)
@@ -60980,7 +61778,7 @@
 		(net "Net-(J13-Pin_3)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30024)
+		(priority 30023)
 		(attr
 			(teardrop
 				(type padvia)
@@ -61012,7 +61810,7 @@
 		(net "Net-(J3-Pin_2)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30109)
+		(priority 30110)
 		(attr
 			(teardrop
 				(type padvia)
@@ -61077,7 +61875,7 @@
 		(net "VPP")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30019)
+		(priority 30021)
 		(attr
 			(teardrop
 				(type padvia)
@@ -61316,7 +62114,7 @@
 		(net "Net-(R17-Pad2)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30130)
+		(priority 30126)
 		(attr
 			(teardrop
 				(type padvia)
@@ -61445,7 +62243,7 @@
 		(net "Net-(U3B--)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30166)
+		(priority 30160)
 		(attr
 			(teardrop
 				(type padvia)
@@ -61479,7 +62277,7 @@
 		(net "Net-(J13-Pin_2)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30023)
+		(priority 30022)
 		(attr
 			(teardrop
 				(type padvia)
@@ -61613,7 +62411,7 @@
 		(net "+5V")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30152)
+		(priority 30151)
 		(attr
 			(teardrop
 				(type padvia)
@@ -61777,7 +62575,7 @@
 		(net "Net-(U2-GPA2)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30067)
+		(priority 30079)
 		(attr
 			(teardrop
 				(type padvia)
@@ -61846,7 +62644,7 @@
 		(net "Net-(U2-GPA4)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30063)
+		(priority 30069)
 		(attr
 			(teardrop
 				(type padvia)
@@ -61879,7 +62677,7 @@
 		(net "Net-(J16-Pin_2)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30143)
+		(priority 30146)
 		(attr
 			(teardrop
 				(type padvia)
@@ -62014,7 +62812,7 @@
 		(net "Net-(U2-GPA0)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30074)
+		(priority 30053)
 		(attr
 			(teardrop
 				(type padvia)
@@ -62178,7 +62976,7 @@
 		(net "/BIAS_OUT")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30021)
+		(priority 30019)
 		(attr
 			(teardrop
 				(type padvia)
@@ -62276,7 +63074,7 @@
 		(net "Net-(R18-Pad2)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30128)
+		(priority 30125)
 		(attr
 			(teardrop
 				(type padvia)
@@ -62340,7 +63138,7 @@
 		(net "/REV1")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30134)
+		(priority 30138)
 		(attr
 			(teardrop
 				(type padvia)
@@ -62372,7 +63170,7 @@
 		(net "Net-(R19-Pad2)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30133)
+		(priority 30137)
 		(attr
 			(teardrop
 				(type padvia)
@@ -62440,7 +63238,7 @@
 		(net "+5V")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30138)
+		(priority 30135)
 		(attr
 			(teardrop
 				(type padvia)
@@ -62538,7 +63336,7 @@
 		(net "Net-(J13-Pin_1)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30064)
+		(priority 30078)
 		(attr
 			(teardrop
 				(type padvia)
@@ -62906,7 +63704,7 @@
 		(net "+5V")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30140)
+		(priority 30134)
 		(attr
 			(teardrop
 				(type padvia)
@@ -62938,7 +63736,7 @@
 		(net "/IN8")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30227)
+		(priority 30228)
 		(attr
 			(teardrop
 				(type padvia)
@@ -63035,7 +63833,7 @@
 		(net "Net-(U2-GPA5)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30068)
+		(priority 30070)
 		(attr
 			(teardrop
 				(type padvia)
@@ -63068,7 +63866,7 @@
 		(net "/D12")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30160)
+		(priority 30167)
 		(attr
 			(teardrop
 				(type padvia)
@@ -63101,7 +63899,7 @@
 		(net "/A6")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30254)
+		(priority 30272)
 		(attr
 			(teardrop
 				(type padvia)
@@ -63200,7 +63998,7 @@
 		(net "Net-(D10-K)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30120)
+		(priority 30121)
 		(attr
 			(teardrop
 				(type padvia)
@@ -63232,7 +64030,7 @@
 		(net "+5V")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30144)
+		(priority 30145)
 		(attr
 			(teardrop
 				(type padvia)
@@ -63265,7 +64063,7 @@
 		(net "Net-(R28-Pad2)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30188)
+		(priority 30183)
 		(attr
 			(teardrop
 				(type padvia)
@@ -63330,7 +64128,7 @@
 		(net "+5V")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30095)
+		(priority 30096)
 		(attr
 			(teardrop
 				(type padvia)
@@ -63362,7 +64160,7 @@
 		(net "Net-(U2-GPB7)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30075)
+		(priority 30073)
 		(attr
 			(teardrop
 				(type padvia)
@@ -63427,7 +64225,7 @@
 		(net "Net-(R17-Pad2)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30129)
+		(priority 30128)
 		(attr
 			(teardrop
 				(type padvia)
@@ -63527,7 +64325,7 @@
 		(net "Net-(A1-UDPI)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30117)
+		(priority 30115)
 		(attr
 			(teardrop
 				(type padvia)
@@ -63828,7 +64626,7 @@
 		(net "Net-(U2-GPA6)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30073)
+		(priority 30072)
 		(attr
 			(teardrop
 				(type padvia)
@@ -63930,7 +64728,7 @@
 		(net "/A10")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30266)
+		(priority 30267)
 		(attr
 			(teardrop
 				(type padvia)
@@ -63962,7 +64760,7 @@
 		(net "Net-(J21-Pin_1)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30165)
+		(priority 30162)
 		(attr
 			(teardrop
 				(type padvia)
@@ -64028,7 +64826,7 @@
 		(net "Net-(J13-Pin_2)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30057)
+		(priority 30054)
 		(attr
 			(teardrop
 				(type padvia)
@@ -64094,7 +64892,7 @@
 		(net "/A10")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30267)
+		(priority 30266)
 		(attr
 			(teardrop
 				(type padvia)
@@ -64226,7 +65024,7 @@
 		(net "/A9")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30087)
+		(priority 30086)
 		(attr
 			(teardrop
 				(type padvia)
@@ -64392,7 +65190,7 @@
 		(net "Net-(J13-Pin_1)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30059)
+		(priority 30077)
 		(attr
 			(teardrop
 				(type padvia)
@@ -64425,7 +65223,7 @@
 		(net "+5V")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30085)
+		(priority 30087)
 		(attr
 			(teardrop
 				(type padvia)
@@ -64457,7 +65255,7 @@
 		(net "Net-(U2-GPA1)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30070)
+		(priority 30075)
 		(attr
 			(teardrop
 				(type padvia)
@@ -64490,7 +65288,7 @@
 		(net "GND")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30066)
+		(priority 30068)
 		(attr
 			(teardrop
 				(type padvia)
@@ -64551,7 +65349,7 @@
 		(net "/BIAS_OUT")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30062)
+		(priority 30064)
 		(attr
 			(teardrop
 				(type padvia)
@@ -64616,7 +65414,7 @@
 		(net "+5V")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30242)
+		(priority 30252)
 		(attr
 			(teardrop
 				(type padvia)
@@ -64746,7 +65544,7 @@
 		(net "GND")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30065)
+		(priority 30067)
 		(attr
 			(teardrop
 				(type padvia)
@@ -65036,7 +65834,7 @@
 		(net "Net-(U2-GPA4)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30052)
+		(priority 30066)
 		(attr
 			(teardrop
 				(type padvia)
@@ -65069,7 +65867,7 @@
 		(net "Net-(U2-GPA3)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30053)
+		(priority 30063)
 		(attr
 			(teardrop
 				(type padvia)
@@ -65102,7 +65900,7 @@
 		(net "Net-(R16-Pad2)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30132)
+		(priority 30140)
 		(attr
 			(teardrop
 				(type padvia)
@@ -65134,7 +65932,7 @@
 		(net "TX2D")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30042)
+		(priority 30041)
 		(attr
 			(teardrop
 				(type padvia)
@@ -65274,7 +66072,7 @@
 		(net "/A3")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30262)
+		(priority 30276)
 		(attr
 			(teardrop
 				(type padvia)
@@ -65306,7 +66104,7 @@
 		(net "Net-(U7-R2OUT)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30142)
+		(priority 30147)
 		(attr
 			(teardrop
 				(type padvia)
@@ -65436,7 +66234,7 @@
 		(net "VCC")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30126)
+		(priority 30130)
 		(attr
 			(teardrop
 				(type padvia)
@@ -65469,7 +66267,7 @@
 		(net "/A7")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30237)
+		(priority 30210)
 		(attr
 			(teardrop
 				(type padvia)
@@ -65533,7 +66331,7 @@
 		(net "Net-(U2-GPA5)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30072)
+		(priority 30071)
 		(attr
 			(teardrop
 				(type padvia)
@@ -65566,7 +66364,7 @@
 		(net "TX2D")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30147)
+		(priority 30144)
 		(attr
 			(teardrop
 				(type padvia)
@@ -65730,7 +66528,7 @@
 		(net "/A10")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30161)
+		(priority 30166)
 		(attr
 			(teardrop
 				(type padvia)
@@ -65795,7 +66593,7 @@
 		(net "/D12")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30247)
+		(priority 30244)
 		(attr
 			(teardrop
 				(type padvia)
@@ -65928,7 +66726,7 @@
 		(net "+5V")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30139)
+		(priority 30133)
 		(attr
 			(teardrop
 				(type padvia)
@@ -65961,7 +66759,7 @@
 		(net "/A5")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30183)
+		(priority 30188)
 		(attr
 			(teardrop
 				(type padvia)
@@ -66027,7 +66825,7 @@
 		(net "Net-(J7-Pin_3)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30141)
+		(priority 30142)
 		(attr
 			(teardrop
 				(type padvia)
@@ -66060,7 +66858,7 @@
 		(net "/FWD1")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30146)
+		(priority 30141)
 		(attr
 			(teardrop
 				(type padvia)
@@ -66159,7 +66957,7 @@
 		(net "/SDA")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30145)
+		(priority 30143)
 		(attr
 			(teardrop
 				(type padvia)
@@ -66257,7 +67055,7 @@
 		(net "Net-(J13-Pin_1)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30022)
+		(priority 30024)
 		(attr
 			(teardrop
 				(type padvia)
@@ -66386,7 +67184,7 @@
 		(net "Net-(D7-K)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30122)
+		(priority 30119)
 		(attr
 			(teardrop
 				(type padvia)
@@ -66418,7 +67216,7 @@
 		(net "Net-(U2-GPA1)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30071)
+		(priority 30074)
 		(attr
 			(teardrop
 				(type padvia)
@@ -66451,7 +67249,7 @@
 		(net "Net-(J7-Pin_1)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30125)
+		(priority 30127)
 		(attr
 			(teardrop
 				(type padvia)
@@ -66582,7 +67380,7 @@
 		(net "/IN8")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30228)
+		(priority 30227)
 		(attr
 			(teardrop
 				(type padvia)
@@ -66703,11 +67501,17 @@
 		(filled_polygon
 			(layer "F.Cu")
 			(pts
-				(xy 190.806563 94.087223) (xy 191.999839 94.706911) (xy 192.55618 94.995828) (xy 192.561943 95.002682)
-				(xy 192.562193 95.008823) (xy 192.302345 96.143552) (xy 192.297158 96.150851) (xy 192.293552 96.152345)
-				(xy 191.158823 96.412193) (xy 191.149993 96.410699) (xy 191.145828 96.40618) (xy 190.856911 95.849839)
-				(xy 190.237223 94.656564) (xy 190.236452 94.647644) (xy 190.239332 94.642902) (xy 190.792901 94.089333)
-				(xy 190.801173 94.085907)
+				(xy 190.805211 94.086892) (xy 190.807811 94.087871) (xy 191.999839 94.706911) (xy 192.554115 94.994755)
+				(xy 192.557677 94.997608) (xy 192.559371 94.999623) (xy 192.562105 95.006669) (xy 192.562129 95.00725)
+				(xy 192.56205 95.008097) (xy 192.562071 95.008161) (xy 192.562039 95.008221) (xy 192.561844 95.010345)
+				(xy 192.302864 96.141285) (xy 192.300994 96.145453) (xy 192.29917 96.148018) (xy 192.292247 96.152643)
+				(xy 191.161091 96.411673) (xy 191.156526 96.411804) (xy 191.153933 96.411365) (xy 191.147289 96.407765)
+				(xy 191.146893 96.407336) (xy 191.146404 96.40664) (xy 191.146348 96.406605) (xy 191.146332 96.406537)
+				(xy 191.145107 96.404792) (xy 190.856911 95.849839) (xy 190.414333 94.997608) (xy 190.238295 94.658629)
+				(xy 190.237022 94.654247) (xy 190.236781 94.651451) (xy 190.238434 94.64438) (xy 190.238602 94.644102)
+				(xy 190.239449 94.643023) (xy 190.239484 94.642915) (xy 190.23957 94.64287) (xy 190.240323 94.64191)
+				(xy 190.791257 94.090976) (xy 190.79505 94.088443) (xy 190.79598 94.088057) (xy 190.797638 94.08737)
+				(xy 190.804896 94.086816)
 			)
 		)
 	)
@@ -66715,7 +67519,7 @@
 		(net "+5V")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30110)
+		(priority 30109)
 		(attr
 			(teardrop
 				(type padvia)
@@ -66748,7 +67552,7 @@
 		(net "/BIAS_OUT")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30061)
+		(priority 30065)
 		(attr
 			(teardrop
 				(type padvia)
@@ -66814,7 +67618,7 @@
 		(net "Net-(U7-VS-)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30246)
+		(priority 30247)
 		(attr
 			(teardrop
 				(type padvia)
@@ -67110,7 +67914,7 @@
 		(net "Net-(J11-Pin_4)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30037)
+		(priority 30039)
 		(attr
 			(teardrop
 				(type padvia)
@@ -67175,7 +67979,7 @@
 		(net "Net-(R18-Pad2)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30127)
+		(priority 30129)
 		(attr
 			(teardrop
 				(type padvia)
@@ -67471,7 +68275,7 @@
 		(net "/D8")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30210)
+		(priority 30237)
 		(attr
 			(teardrop
 				(type padvia)
@@ -67568,7 +68372,7 @@
 		(net "Net-(D10-K)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30121)
+		(priority 30120)
 		(attr
 			(teardrop
 				(type padvia)
@@ -67633,7 +68437,7 @@
 		(net "Net-(J11-Pin_7)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30078)
+		(priority 30052)
 		(attr
 			(teardrop
 				(type padvia)
@@ -67730,7 +68534,7 @@
 		(net "Net-(J11-Pin_8)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30069)
+		(priority 30076)
 		(attr
 			(teardrop
 				(type padvia)
@@ -67795,7 +68599,7 @@
 		(net "Net-(U7-VS-)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30338)
+		(priority 30337)
 		(attr
 			(teardrop
 				(type padvia)
@@ -67861,7 +68665,7 @@
 		(net "/A7")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30167)
+		(priority 30159)
 		(attr
 			(teardrop
 				(type padvia)
@@ -67991,7 +68795,7 @@
 		(net "Net-(J11-Pin_8)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30039)
+		(priority 30037)
 		(attr
 			(teardrop
 				(type padvia)
@@ -68124,7 +68928,7 @@
 		(net "Net-(U2-GPA2)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30054)
+		(priority 30056)
 		(attr
 			(teardrop
 				(type padvia)
@@ -68157,7 +68961,7 @@
 		(net "/A4")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30115)
+		(priority 30117)
 		(attr
 			(teardrop
 				(type padvia)
@@ -68222,7 +69026,7 @@
 		(net "Net-(J18-Pin_2)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30041)
+		(priority 30042)
 		(attr
 			(teardrop
 				(type padvia)
@@ -68254,7 +69058,7 @@
 		(net "Net-(D8-K)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30119)
+		(priority 30122)
 		(attr
 			(teardrop
 				(type padvia)
@@ -68318,7 +69122,7 @@
 		(net "+5F")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30098)
+		(priority 30099)
 		(attr
 			(teardrop
 				(type padvia)
@@ -68590,7 +69394,7 @@
 		(net "/712OUT")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30245)
+		(priority 30246)
 		(attr
 			(teardrop
 				(type padvia)
@@ -68622,7 +69426,7 @@
 		(net "Net-(J7-Pin_3)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30089)
+		(priority 30085)
 		(attr
 			(teardrop
 				(type padvia)
@@ -68654,7 +69458,7 @@
 		(net "Net-(J13-Pin_2)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30055)
+		(priority 30057)
 		(attr
 			(teardrop
 				(type padvia)
@@ -68790,7 +69594,7 @@
 		(net "Net-(U3B--)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30163)
+		(priority 30164)
 		(attr
 			(teardrop
 				(type padvia)
@@ -68956,7 +69760,7 @@
 		(net "/A9")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30096)
+		(priority 30095)
 		(attr
 			(teardrop
 				(type padvia)
@@ -69010,13 +69814,10 @@
 		(filled_polygon
 			(layer "F.Cu")
 			(pts
-				(xy 121.166946 93.08149) (xy 121.91513 93.304099) (xy 121.919164 93.306227) (xy 121.921847 93.308405)
-				(xy 121.925687 93.314151) (xy 122.148448 94.06285) (xy 122.148871 94.067395) (xy 122.148663 94.069398)
-				(xy 122.144705 94.077017) (xy 122.14359 94.077987) (xy 122.140008 94.080119) (xy 120.906646 94.541261)
-				(xy 120.902142 94.541995) (xy 120.899039 94.541887) (xy 120.891173 94.538467) (xy 120.692253 94.339547)
-				(xy 120.689717 94.335752) (xy 120.688527 94.33288) (xy 120.688379 94.324308) (xy 120.779679 94.080119)
-				(xy 121.149808 93.090179) (xy 121.152205 93.086305) (xy 121.153585 93.084824) (xy 121.161329 93.081135)
-				(xy 121.162804 93.081033)
+				(xy 121.917361 93.304763) (xy 121.924312 93.310406) (xy 121.925237 93.312639) (xy 122.149112 94.065081)
+				(xy 122.148187 94.073988) (xy 122.141995 94.079377) (xy 120.904467 94.542077) (xy 120.895518 94.541765)
+				(xy 120.892097 94.539391) (xy 120.690608 94.337902) (xy 120.687181 94.329629) (xy 120.687921 94.325534)
+				(xy 121.150622 93.088003) (xy 121.156729 93.081454) (xy 121.164917 93.080887)
 			)
 		)
 	)
@@ -69381,7 +70182,7 @@
 		(net "/A7")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30162)
+		(priority 30165)
 		(attr
 			(teardrop
 				(type padvia)
@@ -69481,7 +70282,7 @@
 		(net "/A10")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30272)
+		(priority 30249)
 		(attr
 			(teardrop
 				(type padvia)
@@ -69545,7 +70346,7 @@
 		(net "Net-(U3B--)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30168)
+		(priority 30163)
 		(attr
 			(teardrop
 				(type padvia)
@@ -69578,7 +70379,7 @@
 		(net "GND")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30076)
+		(priority 30062)
 		(attr
 			(teardrop
 				(type padvia)
@@ -69706,7 +70507,7 @@
 		(net "Net-(U2-GPA7)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30079)
+		(priority 30055)
 		(attr
 			(teardrop
 				(type padvia)
@@ -69869,7 +70670,7 @@
 		(net "/A7")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30286)
+		(priority 30288)
 		(attr
 			(teardrop
 				(type padvia)
@@ -69901,7 +70702,7 @@
 		(net "+5V")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30108)
+		(priority 30111)
 		(attr
 			(teardrop
 				(type padvia)
@@ -70037,7 +70838,7 @@
 		(net "Net-(J13-Pin_3)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30056)
+		(priority 30058)
 		(attr
 			(teardrop
 				(type padvia)
@@ -70167,7 +70968,7 @@
 		(net "+5V")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30137)
+		(priority 30131)
 		(attr
 			(teardrop
 				(type padvia)
@@ -70267,7 +71068,7 @@
 		(net "Net-(U2-GPA6)")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30077)
+		(priority 30061)
 		(attr
 			(teardrop
 				(type padvia)
@@ -70333,7 +71134,7 @@
 		(net "/A3")
 		(layer "F.Cu")
 		(hatch none 0.1)
-		(priority 30276)
+		(priority 30262)
 		(attr
 			(teardrop
 				(type padvia)
@@ -70738,8 +71539,8 @@
 				(xy 179.039628 84.145892) (xy 179.11336 84.3239) (xy 179.113365 84.323909) (xy 179.113375 84.323926)
 				(xy 179.193329 84.443586) (xy 179.22286 84.487781) (xy 179.222863 84.487785) (xy 179.254013 84.518935)
 				(xy 179.26218 84.527947) (xy 179.29065 84.562642) (xy 179.490142 84.762132) (xy 179.544607 84.8099)
-				(xy 179.550509 84.815429) (xy 189.717823 94.982743) (xy 189.740188 95.013275) (xy 190.267751 96.029153)
-				(xy 190.51201 96.4995) (xy 190.535546 96.54482) (xy 190.5495 96.601969) (xy 190.5495 97.126313)
+				(xy 179.550509 84.815429) (xy 189.717822 94.982742) (xy 189.740187 95.013274) (xy 190.287243 96.066688)
+				(xy 190.503071 96.482288) (xy 190.535546 96.544821) (xy 190.5495 96.60197) (xy 190.5495 97.126313)
 				(xy 190.549892 97.12973) (xy 190.552032 97.161298) (xy 190.552119 97.163888) (xy 190.552316 97.165493)
 				(xy 190.596963 97.345023) (xy 190.679157 97.510751) (xy 190.712846 97.552661) (xy 190.79466 97.654443)
 				(xy 190.79506 97.65494) (xy 190.939247 97.770841) (xy 191.104979 97.853037) (xy 191.211897 97.879626)
@@ -71123,7 +71924,7 @@
 				(xy 168.406276 93.782666) (xy 168.407723 93.781743) (xy 168.411483 93.778907) (xy 168.413276 93.777579)
 				(xy 168.451616 93.749723) (xy 168.46609 93.724517) (xy 168.516383 93.674224) (xy 168.568242 93.622365)
 				(xy 168.697815 93.444022) (xy 168.797895 93.247606) (xy 168.866015 93.037951) (xy 168.887486 92.902393)
-				(xy 168.89125 92.878626) (xy 168.9005 92.820224) (xy 168.9005 92.599778) (xy 168.895416 92.56768)
+				(xy 168.892119 92.873138) (xy 168.9005 92.820224) (xy 168.9005 92.599778) (xy 168.895416 92.56768)
 				(xy 168.886005 92.508261) (xy 168.866015 92.382049) (xy 168.858486 92.358878) (xy 168.842605 92.31)
 				(xy 168.824461 92.254156) (xy 168.797896 92.172396) (xy 168.797895 92.172393) (xy 168.753359 92.084989)
 				(xy 168.697815 91.975978) (xy 168.634455 91.88877) (xy 168.568247 91.797641) (xy 168.568243 91.797636)
@@ -74077,7 +74878,7 @@
 				(xy 145.030222 92.8405) (xy 145.247951 92.806015) (xy 145.313441 92.784735) (xy 145.327341 92.781097)
 				(xy 145.359221 92.7747) (xy 145.731688 92.647562) (xy 145.73169 92.647562) (xy 145.765251 92.636106)
 				(xy 145.765252 92.636107) (xy 146.149944 92.504797) (xy 146.219747 92.501771) (xy 146.230045 92.504795)
-				(xy 146.78771 92.695145) (xy 146.864652 92.721408) (xy 146.886589 92.731369) (xy 147.101158 92.855233)
+				(xy 146.78771 92.695145) (xy 146.864652 92.721408) (xy 146.886589 92.731369) (xy 147.102789 92.856174)
 				(xy 147.933768 93.335872) (xy 147.93662 93.337518) (xy 147.962308 93.357228) (xy 166.270574 111.665494)
 				(xy 166.291723 111.693745) (xy 166.304331 111.716834) (xy 166.3195 111.776263) (xy 166.3195 138.107911)
 				(xy 166.317809 138.128322) (xy 166.289075 138.3005) (xy 166.058527 139.681981) (xy 166.058524 139.681997)
@@ -74336,28 +75137,28 @@
 				(xy 193.894047 94.755914) (xy 193.804942 94.645062) (xy 193.804933 94.645053) (xy 193.719835 94.57665)
 				(xy 193.660751 94.529157) (xy 193.495024 94.446964) (xy 193.495022 94.446963) (xy 193.412897 94.426539)
 				(xy 193.378836 94.406611) (xy 193.293644 94.400835) (xy 193.284338 94.400204) (xy 193.284337 94.400203)
-				(xy 193.273954 94.3995) (xy 193.273953 94.3995) (xy 193.273951 94.3995) (xy 192.75197 94.3995) (xy 192.694821 94.385546)
-				(xy 192.680754 94.378241) (xy 192.42513 94.245491) (xy 191.163276 93.590189) (xy 191.132744 93.567824)
-				(xy 187.200751 89.635831) (xy 193.8995 89.635831) (xy 193.8995 89.864167) (xy 193.935214 90.089654)
-				(xy 193.935215 90.08966) (xy 193.981593 90.232396) (xy 194.005771 90.306807) (xy 194.091172 90.474413)
-				(xy 194.103715 90.499031) (xy 194.109421 90.510228) (xy 194.243621 90.694937) (xy 194.405063 90.856379)
-				(xy 194.512227 90.934239) (xy 194.589773 90.99058) (xy 194.632602 91.012402) (xy 194.685884 91.03955)
-				(xy 194.769908 91.082363) (xy 194.786749 91.090944) (xy 194.788349 91.091881) (xy 194.792058 91.093678)
-				(xy 194.794054 91.09467) (xy 194.797822 91.095733) (xy 194.872266 91.119921) (xy 194.909592 91.132049)
-				(xy 195.010339 91.164784) (xy 195.235838 91.2005) (xy 195.235843 91.2005) (xy 195.764161 91.2005)
-				(xy 195.764162 91.2005) (xy 195.98966 91.164784) (xy 196.058664 91.142363) (xy 196.206799 91.094231)
-				(xy 196.410228 90.990579) (xy 196.594937 90.856379) (xy 196.756379 90.694937) (xy 196.890579 90.510228)
-				(xy 196.994231 90.306799) (xy 197.064784 90.08966) (xy 197.070833 90.05147) (xy 197.1005 89.864162)
-				(xy 197.1005 89.635837) (xy 197.064784 89.410339) (xy 197.012594 89.249717) (xy 196.994231 89.193201)
-				(xy 196.994229 89.193198) (xy 196.994229 89.193196) (xy 196.991989 89.1888) (xy 196.991679 89.188005)
-				(xy 196.990946 89.186752) (xy 196.912189 89.032185) (xy 196.890579 88.989772) (xy 196.756379 88.805063)
-				(xy 196.641004 88.689688) (xy 196.619858 88.661441) (xy 196.613203 88.649253) (xy 196.598352 88.580983)
-				(xy 196.622766 88.515522) (xy 196.628479 88.50789) (xy 196.662639 88.476675) (xy 196.718343 88.442317)
-				(xy 196.842315 88.318345) (xy 196.934356 88.169124) (xy 196.934358 88.169119) (xy 196.989506 88.002694)
-				(xy 196.989976 87.999778) (xy 196.990148 87.996406) (xy 196.991017 87.987896) (xy 196.999999 87.899986)
-				(xy 197 87.899973) (xy 197 87.5) (xy 196.11225 87.5) (xy 196.045211 87.480315) (xy 195.999456 87.427511)
-				(xy 195.989512 87.358353) (xy 195.992476 87.343905) (xy 195.999509 87.317658) (xy 196 87.315826)
-				(xy 196 87.184174) (xy 195.992476 87.156094) (xy 195.994137 87.086245) (xy 196.033299 87.028382)
+				(xy 193.273954 94.3995) (xy 193.273953 94.3995) (xy 193.273951 94.3995) (xy 192.751971 94.3995)
+				(xy 192.694822 94.385546) (xy 192.64128 94.357741) (xy 192.037186 94.044025) (xy 191.163276 93.590189)
+				(xy 191.132744 93.567824) (xy 187.200751 89.635831) (xy 193.8995 89.635831) (xy 193.8995 89.864167)
+				(xy 193.935214 90.089654) (xy 193.935215 90.08966) (xy 193.981593 90.232396) (xy 194.005771 90.306807)
+				(xy 194.091172 90.474413) (xy 194.103715 90.499031) (xy 194.109421 90.510228) (xy 194.243621 90.694937)
+				(xy 194.405063 90.856379) (xy 194.512227 90.934239) (xy 194.589773 90.99058) (xy 194.632602 91.012402)
+				(xy 194.685884 91.03955) (xy 194.769908 91.082363) (xy 194.786749 91.090944) (xy 194.788349 91.091881)
+				(xy 194.792058 91.093678) (xy 194.794054 91.09467) (xy 194.797822 91.095733) (xy 194.872266 91.119921)
+				(xy 194.909592 91.132049) (xy 195.010339 91.164784) (xy 195.235838 91.2005) (xy 195.235843 91.2005)
+				(xy 195.764161 91.2005) (xy 195.764162 91.2005) (xy 195.98966 91.164784) (xy 196.058664 91.142363)
+				(xy 196.206799 91.094231) (xy 196.410228 90.990579) (xy 196.594937 90.856379) (xy 196.756379 90.694937)
+				(xy 196.890579 90.510228) (xy 196.994231 90.306799) (xy 197.064784 90.08966) (xy 197.070833 90.05147)
+				(xy 197.1005 89.864162) (xy 197.1005 89.635837) (xy 197.064784 89.410339) (xy 197.012594 89.249717)
+				(xy 196.994231 89.193201) (xy 196.994229 89.193198) (xy 196.994229 89.193196) (xy 196.991989 89.1888)
+				(xy 196.991679 89.188005) (xy 196.990946 89.186752) (xy 196.912189 89.032185) (xy 196.890579 88.989772)
+				(xy 196.756379 88.805063) (xy 196.641004 88.689688) (xy 196.619858 88.661441) (xy 196.613203 88.649253)
+				(xy 196.598352 88.580983) (xy 196.622766 88.515522) (xy 196.628479 88.50789) (xy 196.662639 88.476675)
+				(xy 196.718343 88.442317) (xy 196.842315 88.318345) (xy 196.934356 88.169124) (xy 196.934358 88.169119)
+				(xy 196.989506 88.002694) (xy 196.989976 87.999778) (xy 196.990148 87.996406) (xy 196.991017 87.987896)
+				(xy 196.999999 87.899986) (xy 197 87.899973) (xy 197 87.5) (xy 196.11225 87.5) (xy 196.045211 87.480315)
+				(xy 195.999456 87.427511) (xy 195.989512 87.358353) (xy 195.992476 87.343905) (xy 195.999509 87.317658)
+				(xy 196 87.315826) (xy 196 87.184174) (xy 195.992476 87.156094) (xy 195.994137 87.086245) (xy 196.033299 87.028382)
 				(xy 196.097527 87.000877) (xy 196.11225 87) (xy 196.999999 87) (xy 196.999999 86.600032) (xy 196.999999 86.600028)
 				(xy 196.999998 86.600013) (xy 196.989505 86.497302) (xy 196.934358 86.33088) (xy 196.934356 86.330875)
 				(xy 196.842315 86.181654) (xy 196.718345 86.057684) (xy 196.569124 85.965643) (xy 196.569119 85.965641)
@@ -74417,7 +75218,7 @@
 				(xy 181.197815 74.195978) (xy 181.155 74.137048) (xy 181.154998 74.137045) (xy 181.154998 74.137044)
 				(xy 181.068261 74.01766) (xy 181.068243 74.017636) (xy 181.068235 74.017627) (xy 180.912369 73.861761)
 				(xy 180.912366 73.861759) (xy 180.912363 73.861756) (xy 180.912358 73.861752) (xy 180.787167 73.770796)
-				(xy 180.761862 73.746205) (xy 180.761104 73.745222) (xy 180.753385 73.735213) (xy 180.728034 73.670109)
+				(xy 180.761862 73.746205) (xy 180.761105 73.745223) (xy 180.753385 73.735213) (xy 180.728034 73.670109)
 				(xy 180.741903 73.601632) (xy 180.745172 73.595437) (xy 180.781954 73.552991) (xy 180.787174 73.549199)
 				(xy 180.86626 73.491739) (xy 180.906276 73.462666) (xy 180.907723 73.461743) (xy 180.911483 73.458907)
 				(xy 180.913276 73.457579) (xy 180.951616 73.429723) (xy 180.96609 73.404517) (xy 181.016622 73.353985)
@@ -74800,7 +75601,7 @@
 				(xy 168.697815 74.195978) (xy 168.655 74.137048) (xy 168.654998 74.137045) (xy 168.654998 74.137044)
 				(xy 168.568261 74.01766) (xy 168.568243 74.017636) (xy 168.568235 74.017627) (xy 168.412369 73.861761)
 				(xy 168.412366 73.861759) (xy 168.412363 73.861756) (xy 168.412358 73.861752) (xy 168.287167 73.770796)
-				(xy 168.261862 73.746205) (xy 168.261104 73.745222) (xy 168.253385 73.735213) (xy 168.228034 73.670109)
+				(xy 168.261862 73.746205) (xy 168.261105 73.745223) (xy 168.253385 73.735213) (xy 168.228034 73.670109)
 				(xy 168.241903 73.601632) (xy 168.245172 73.595437) (xy 168.281954 73.552991) (xy 168.287174 73.549199)
 				(xy 168.36626 73.491739) (xy 168.406276 73.462666) (xy 168.407723 73.461743) (xy 168.411483 73.458907)
 				(xy 168.413276 73.457579) (xy 168.451616 73.429723) (xy 168.46609 73.404517) (xy 168.516622 73.353985)
