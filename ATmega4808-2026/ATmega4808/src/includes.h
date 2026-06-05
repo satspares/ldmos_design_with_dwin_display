@@ -24,19 +24,37 @@ const uint16_t ICALCMAJOR = 80;        // I step change in I set
 const uint16_t DRIVECALCMAJOR = 280;   // used in the drive calc (lower = higher)
                                        // depends on how you obtain drive power     
 const uint16_t MAXAMPPOWERCALC = 300;   // used in the auto power calculations keep at 600 or less?
-
-const float POWERDECLINE = 0.8f;         // slowly decline meter power level less=faster
+const uint16_t PEAKREFRESH = 1400;        // peak refresk in ms
 
 //Try to correct the power ratio between fwd/ref power
 // as tandem matches dont appear linear across power levels
 // my tandem high power devices dont like to work well at power levels under about 200w
 // used in ref1Voltage and ref2Voltage
 // correct would be Low = 0 - High = 4300
-// more than 4300 (adc 4.3 volts) we are adding voltage to the reflected power
-const uint16_t SWR2MapLow = 0;
-const uint16_t SWR2MapHigh = 4300;
-const uint16_t SWR1MapLow = 0;
-const uint16_t SWR1MapHigh = 4300;
+// more than 4300 (adc 4.3 volts) we are adding voltage to the reflected/fwd power
+
+//test values
+
+
+const uint16_t SWR1RefMapLow = 0;
+const uint16_t SWR1RefMapHigh = 4300;
+const uint16_t SWR1FwdMapLow = 0;
+const uint16_t SWR1FwdMapHigh = 4300;
+
+#ifdef MY_ALL_BAND_AMP
+const uint16_t SWR2RefMapLow = 50;      // my test values
+const uint16_t SWR2RefMapHigh = 2800;
+const uint16_t SWR2FwdMapLow = 400;
+const uint16_t SWR2FwdMapHigh = 3700;
+#else
+const uint16_t SWR2FwdMapLow = 0;
+const uint16_t SWR2FwdMapHigh = 4300;
+const uint16_t SWR2RefMapLow = 0;
+const uint16_t SWR2RefMapHigh = 4300;
+#endif
+
+
+
 
 const uint16_t SWRColorChange = 16;         //change swr bar color on high swr (swr * 10 eg 16 = 1.6swr )
 const uint16_t SWROriginalColor = 0xFC00;   // orange
@@ -48,7 +66,7 @@ const uint16_t SWRHighSWRColor = 0xF800;    //red
 // some experimentation is required a incorrect value will make power and swr display not linear
 const float diodeLossMV = 140;  // diode loss in volts
 // if drive detect device is using a diode eg 400 milivolts loss / input resistor split
-const uint16_t diodeLossMVdrive = 140;
+const uint16_t diodeLossMVdrive = 130;
 
 // user temperature settings
 #define SENSOR_COUNT (1)                //ds18b20 one sensor or multiple upto 4 not used yet!
@@ -511,7 +529,7 @@ void select_band(uint8_t lastByteRX);
 //void setGlobalVars();
 void mcp23017_setup();
 String checkHex(byte currentNo);
-static int isNegative(float swr);
+static int isNegative(float negTest);
 void keepingHouse();
 void tempIDTickerReset();
 void powerSWRTickerReset();
@@ -592,12 +610,14 @@ DWIN hmi(Serial2, DGUS_BAUD, false);     // the false do not init the port yet
     ACS712  ACS(ID_IN, 5.0, 1023, 100);
 #endif
 
+
 Ticker peakHoldTicker(peakHoldReset, peakHoldResetDelay);  
 Ticker houseKeeping(keepingHouse, keepingHouseTickerDelay);
 //Update temperature and ID every 1500ms
 Ticker temperatureIDTicker(tempIDTickerReset, tempIDTickerDelay);
 // Update display with Power/SWR/Ref
 Ticker sendPowerSwrRefTicker(powerSWRTickerReset, powerSwrTickerDelay);
+
 
 
 

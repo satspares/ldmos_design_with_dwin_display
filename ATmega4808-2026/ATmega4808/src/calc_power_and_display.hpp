@@ -39,7 +39,8 @@ float fwd1Voltage() {
         delayMicroseconds(120);
      }
     Voltage = (Voltage / (float)ADC_SAMPLES);
-    Voltage = map(Voltage, 0, 1023, 0, 4300);
+    Voltage = map(Voltage, 0, 1023, SWR1FwdMapLow, SWR1FwdMapHigh);
+    Voltage += diodeLossMV;
     return Voltage;
 }
 float ref1Voltage() {
@@ -50,7 +51,7 @@ float ref1Voltage() {
     } 
     Voltage = (Voltage / (float)ADC_SAMPLES);
     Voltage = refFilter1.filter(Voltage);
-    Voltage = map(Voltage, 0, 1023, SWR1MapLow, SWR1MapHigh);
+    Voltage = map(Voltage, 0, 1023, SWR1RefMapLow, SWR1RefMapHigh);
     return Voltage;
 }
 float fwd2Voltage() {
@@ -60,7 +61,8 @@ float fwd2Voltage() {
         delayMicroseconds(120);
      }
     Voltage = (Voltage / (float)ADC_SAMPLES);
-    Voltage = map(Voltage, 0, 1023, 0, 4300);
+    Voltage = map(Voltage, 0, 1023, SWR2FwdMapLow, SWR2FwdMapHigh);
+    Voltage += diodeLossMV;
     return Voltage;
 }
 float ref2Voltage() {
@@ -68,10 +70,10 @@ float ref2Voltage() {
      for (int i = 0; i < ADC_SAMPLES; i++) {
         Voltage += analogRead(REF2);
         delayMicroseconds(120);
-    } 
+    }
     Voltage = (Voltage / (float)ADC_SAMPLES);
     Voltage = refFilter2.filter(Voltage);
-    Voltage = map(Voltage, 0, 1023, SWR2MapLow, SWR2MapHigh);
+    Voltage = map(Voltage, 0, 1023, SWR2RefMapLow, SWR2RefMapHigh);
     return Voltage;
 }
 
@@ -81,6 +83,8 @@ void calcPowerandDisplay() {
     float fwdPower; float refPower;
     float powerCalc;
     uint8_t swr_calc_major;
+    static unsigned long peakTime;
+    static float decayTime;
 
 
     if ((which_swr == false)) {  // false the antenna tandem match
@@ -99,26 +103,30 @@ void calcPowerandDisplay() {
     }
     // swr/ref power adjustment
     rawRefVoltage = correctRefVoltage(rawRefVoltage + diodeLossMV, rawFwdVoltage, swr_calc_major);
-    fwdPower = pow((rawFwdVoltage + diodeLossMV), 2.00); refPower = pow((rawRefVoltage), 2.00);
+ 
+    fwdPower = pow((rawFwdVoltage), 2.00); refPower = pow((rawRefVoltage), 2.00);
     fwdPower = fwdPower/powerCalc/MAXAMPPOWERCALC; refPower = refPower/powerCalc/MAXAMPPOWERCALC;
 
-   // Peak Hold
-    if (refPower >= refPower_max) refPower_max = refPower;
-    if (fwdPower >= fwdPower_max) fwdPower_max = fwdPower;
-    if (peak_hold_reset) {
-        peak_hold_reset = false;
-        refPower_max = refPower;
+
+   // Peak Hold 
+    if ((fwdPower > fwdPower_max)) {
         fwdPower_max = fwdPower;
-    //    refPower_max = refPower_max * POWERDECLINE;  //needs more work
-    //    fwdPower_max = fwdPower_max * POWERDECLINE;
+        refPower_max = refPower;
+        peakTime = millis();
+        decayTime = 1;
     }
-
+    else if ((millis() - peakTime) > PEAKREFRESH){
+        fwdPower_max = fwdPower_max / float(decayTime + 0.05); 
+        refPower_max = refPower_max  / float(decayTime + 0.05);
+        peakTime = millis();
+        decayTime += 0.1;
+    }
+    // end Peak Hold
+   
     if (refPower_max < 0.1f) refPower_max = 0;  // clear float to zero
-
-
     //Test both should work out the same
     //const float SWR = (rawFwdVoltage + rawRefVoltage) / (rawFwdVoltage - rawRefVoltage);
-    const float SWR = (1.00 + sqrt(refPower_max/fwdPower_max)) / (1.00 - sqrt(refPower_max/fwdPower_max));
+    const float SWR = (1.00 + sqrtf(refPower_max/fwdPower_max)) / (1.00 - sqrtf(refPower_max/fwdPower_max));
     float swr_display = ((SWR * 10.00)); // Float x 10 for our display
     if ((swr_display < 10.00) || isNegative(swr_display)) {
         swr_display = 10;
@@ -133,11 +141,11 @@ void calcPowerandDisplay() {
         hmi.setFloatValue(swr_display_glo_swr, glo_swr_display);
         // power_swr_reset = false;
         if (which_swr == false) {
-            hmi.setVPWord(fwd_millivolts, map(analogRead(SWR2), 0, 1023, 0, 4300));
-            hmi.setVPWord(ref_millivolts, map(analogRead(REF2), 0, 1023, 0, 4300));
+            hmi.setVPWord(fwd_millivolts, map(analogRead(SWR2), 0, 1023, SWR2FwdMapLow, SWR2FwdMapHigh));
+            hmi.setVPWord(ref_millivolts, map(analogRead(REF2), 0, 1023, SWR2RefMapLow, SWR2RefMapHigh));
         } else {
-            hmi.setVPWord(fwd_millivolts, map(analogRead(SWR1), 0, 1023, 0, 4300));
-            hmi.setVPWord(ref_millivolts, map(analogRead(REF1), 0, 1023, 0, 4300));
+            hmi.setVPWord(fwd_millivolts, map(analogRead(SWR1), 0, 1023, SWR1FwdMapLow, SWR1FwdMapHigh));
+            hmi.setVPWord(ref_millivolts, map(analogRead(REF1), 0, 1023, SWR1RefMapLow, SWR1RefMapHigh));
         }
     }  // end setting_swr_calc
 
@@ -190,6 +198,6 @@ float correctRefVoltage(float refVoltage, float fwdVoltage, uint8_t swr_calc_maj
     return refVoltage;
 }
 
-static int isNegative(float swr) {
-    return ((static_cast<int>(swr + 1) > 0) ? 0 : 1);
+static int isNegative(float negTest) {
+    return ((static_cast<int>(negTest + 1) > 0) ? 0 : 1);
 }

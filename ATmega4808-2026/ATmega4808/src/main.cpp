@@ -1,14 +1,15 @@
 //#define MYDEBUG
 #define DISPLAYDEBUG
+//#define MY_ALL_BAND_AMP     // my amp some different test configs
 //#define DISPLAY160M       // alternate icons 160m-6m or 80m-4m my own
 //#define USELM35           //else DS1820
-//#define DXWORLD_I           //Id from dxworld protection board else ACS712
-//#define DXWORLD_ERROR_LEDS //errors from dxworld protection board
+//#define DXWORLD_I     //Id from dxworld protection board else ACS712    
+//#define DXWORLD_ERROR_LEDS //errors from dxworld protection board - needs #define DXWORLD_I set
 //#define A600_AMP          // A600 amp else dxworld or similar
 //#define RESETDUBUG
 //#define SCREENROTATE      // see setupdisplay function
 //#define BIAS_ON           // keep bias on test etc
-//#define MY_ALL_BAND_AMP   // my amp some different pinouts
+
 //#define AUTO_BAND
 //#define DRIVE_NO_STOP     // overdrive error only dont stop tx
 #define YAESU             // auto band yaesu or otherwise icom not fully tested
@@ -54,6 +55,8 @@ DSTherm drv(ow);
 #include <band_select_functions.hpp>
 
 
+
+
 void setup() {
     setupPins();
     analogReference(INTERNAL4V3);
@@ -78,6 +81,7 @@ void setup() {
     #ifndef DXWORLD_I
         ACS.autoMidPoint();
     #endif
+    //PeakDetector detector(20,2.5,0.3);
     mcp23017_setup();
     readEEPROM();
     setupDisplay();

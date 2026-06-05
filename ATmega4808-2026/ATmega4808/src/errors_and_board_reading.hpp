@@ -229,8 +229,9 @@ float readI()
     {
         hmi.setFloatValue(current_calc_current_display, currentI);
     }
-    
+    #ifndef DXWORLD_ERROR_LEDS 
     errorI(currentI);
+    #endif
     return currentI;
         
 #elif MAX40010HAUT
