@@ -24,7 +24,7 @@ const uint16_t ICALCMAJOR = 80;        // I step change in I set
 const uint16_t DRIVECALCMAJOR = 280;   // used in the drive calc (lower = higher)
                                        // depends on how you obtain drive power     
 const uint16_t MAXAMPPOWERCALC = 300;   // used in the auto power calculations keep at 600 or less?
-const uint16_t PEAKREFRESH = 1400;        // peak refresk in ms
+const uint16_t PEAKREFRESH = 1400;        // peak hold refresk in ms
 
 //Try to correct the power ratio between fwd/ref power
 // as tandem matches dont appear linear across power levels
@@ -52,8 +52,6 @@ const uint16_t SWR2FwdMapHigh = 4300;
 const uint16_t SWR2RefMapLow = 0;
 const uint16_t SWR2RefMapHigh = 4300;
 #endif
-
-
 
 
 const uint16_t SWRColorChange = 16;         //change swr bar color on high swr (swr * 10 eg 16 = 1.6swr )

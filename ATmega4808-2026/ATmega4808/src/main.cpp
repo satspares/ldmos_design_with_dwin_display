@@ -1,9 +1,9 @@
 //#define MYDEBUG
 #define DISPLAYDEBUG
-//#define MY_ALL_BAND_AMP     // my amp some different test configs
+#define MY_ALL_BAND_AMP     // my amp some different test configs
 //#define DISPLAY160M       // alternate icons 160m-6m or 80m-4m my own
 //#define USELM35           //else DS1820
-//#define DXWORLD_I     //Id from dxworld protection board else ACS712    
+#define DXWORLD_I     //Id from dxworld protection board else ACS712    
 //#define DXWORLD_ERROR_LEDS //errors from dxworld protection board - needs #define DXWORLD_I set
 //#define A600_AMP          // A600 amp else dxworld or similar
 //#define RESETDUBUG
@@ -12,7 +12,7 @@
 
 //#define AUTO_BAND
 //#define DRIVE_NO_STOP     // overdrive error only dont stop tx
-#define YAESU             // auto band yaesu or otherwise icom not fully tested
+#define YAESU               // auto band yaesu or otherwise icom not fully tested
 #define BLINKLED            // if we are not using pin13 OPTOUT1 (a600_bias) flash onboard led
 #define SENSOR_DEBUG        // debug dallas sensors
 
@@ -77,11 +77,10 @@ void setup() {
 #endif
     Wire.begin();
     //may need changing to slower eg. 100000UL
-    Wire.setClock(400000UL);
+    Wire.setClock(400000UL); // probably needs 3k3 pullups
     #ifndef DXWORLD_I
         ACS.autoMidPoint();
     #endif
-    //PeakDetector detector(20,2.5,0.3);
     mcp23017_setup();
     readEEPROM();
     setupDisplay();
