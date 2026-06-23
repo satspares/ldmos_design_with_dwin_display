@@ -60,6 +60,7 @@ void error_swr()
         }else{
             hmi.setVPByte(swr2_error, RED_ICON);
         }
+        mcp23017.digitalWrite(SWR_TRIP, true);
         error_swr_status = true;
         usebeep ? hmi.beepHMI(BEEP_ERROR) : hmi.playSound(BEEPERROR);
     }
@@ -68,6 +69,7 @@ void error_swr()
         hmi.setVPByte(swr_error, GREEN_ICON);
         hmi.setVPByte(swr2_error, GREEN_ICON);
         error_swr_status = false;
+        mcp23017.digitalWrite(SWR_TRIP, false);
     }
 }
 

@@ -72,6 +72,7 @@ void mcp23017_setup() {
     // Reset MCP23017 ports
     mcp23017.writeRegister(MCP23017Register::GPIO_A, 0x00);
     mcp23017.writeRegister(MCP23017Register::GPIO_B, 0x00);
+    mcp23017.digitalWrite(SWR_TRIP, false);
 }
 
 

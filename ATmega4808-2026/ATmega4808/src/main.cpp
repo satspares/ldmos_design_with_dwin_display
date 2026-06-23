@@ -10,7 +10,7 @@
 //#define SCREENROTATE      // see setupdisplay function
 //#define BIAS_ON           // keep bias on test etc
 
-//#define AUTO_BAND
+#define AUTO_BAND
 //#define DRIVE_NO_STOP     // overdrive error only dont stop tx
 #define YAESU               // auto band yaesu or otherwise icom not fully tested
 #define BLINKLED            // if we are not using pin13 OPTOUT1 (a600_bias) flash onboard led

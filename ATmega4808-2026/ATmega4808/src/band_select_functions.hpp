@@ -113,6 +113,7 @@ float readChannel(ADS1015_MUX channel) {
 
 #ifdef YAESU
 void auto_band() {
+
     byte bcd0 = 0;
     byte bcd1 = 0;
     byte bcd2 = 0;
@@ -135,7 +136,8 @@ void auto_band() {
 
     bcd_result = bcd0 + bcd1 + bcd2 + bcd3;
 
-    //Serial.println(bcd_result,BIN);
+//    Serial.print("BCD Result ");
+//    Serial.println(bcd_result,BIN);
 
     //bcd_result = 0b1100;  //TEST
     /* 

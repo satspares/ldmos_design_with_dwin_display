@@ -478,7 +478,7 @@ const uint8_t DX_RESET = 10;  //< pin GPB2 (3) of the MCP23017.
 #endif
 const uint8_t RELAY2 = 11;      //< pin GPB3 (4) of the MCP23017.
 const uint8_t GPB4 = 12;        //< pin GPB4 (5) of the MCP23017.
-const uint8_t GPB5 = 13;        //< pin GPB5 (6) of the MCP23017.
+const uint8_t SWR_TRIP = 13;    //< pin GPB5 (6) of the MCP23017.
 const uint8_t ANTSWITCH = 14;   //< pin GPB6 (7) of the MCP23017.
 const uint8_t GPB7 = 15;        //< pin GPB7 (8) of the MCP23017.
 const uint8_t DXBIAS = 12;      //< pin GPB4 (5) of the MCP23017.
