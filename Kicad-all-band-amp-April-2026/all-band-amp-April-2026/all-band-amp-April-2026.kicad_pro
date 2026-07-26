@@ -40,8 +40,8 @@
         "other_text_upright": false,
         "pads": {
           "drill": 0.0,
-          "height": 1.7,
-          "width": 1.95
+          "height": 7.0,
+          "width": 3.5
         },
         "silk_line_width": 0.1524,
         "silk_text_italic": false,
@@ -52,15 +52,15 @@
         "zones": {
           "border_display_style": 2,
           "border_hatch_pitch": 0.5,
-          "corner_radius": 0.0,
-          "corner_smoothing": 0,
+          "corner_radius": 1.0,
+          "corner_smoothing": 2,
           "fill_mode": 0,
           "hatch_gap": 1.5,
           "hatch_orientation": 0.0,
           "hatch_smoothing_level": 0,
           "hatch_smoothing_value": 0.1,
           "hatch_thickness": 1.0,
-          "min_clearance": 0.6,
+          "min_clearance": 0.5,
           "min_island_area": 10.0,
           "min_thickness": 0.25,
           "pad_connection": 1,
@@ -76,7 +76,20 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "missing_courtyard|121920000|121250000|bacb414d-82f2-4d5d-8fa6-e15141ae3fe4|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "missing_courtyard|66000000|63754000|17286caf-abe3-464b-bd4c-08fa443402f8|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "missing_courtyard|66500000|53594000|8527562c-9ea8-42f2-b5d9-ca2e06b43560|00000000-0000-0000-0000-000000000000",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -291,7 +304,12 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      [
+        "lib_symbol_mismatch|3771900|1854200|76992681-68b9-41e7-8923-07f7d9f52285|00000000-0000-0000-0000-000000000000|||",
+        ""
+      ]
+    ],
     "meta": {
       "version": 0
     },
@@ -784,7 +802,7 @@
         "uuid": "d991e324-b963-41b8-a96f-be60180c13fc"
       }
     ],
-    "used_designators": "C26,R46-47,#PWR92-93,J27",
+    "used_designators": "RV1-2,J27-31,#PWR92-102,R46-49,JP3-4,C26-30,U10,Q2,H5-6",
     "variants": []
   },
   "sheets": [
